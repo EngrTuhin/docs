@@ -1,0 +1,87 @@
+---
+title: "Sales & Delivery Lifecycle"
+description: "Understand the end-to-end sales, billing, delivery, and return processes"
+---
+
+# Sales Process Workflow
+
+This section outlines the business paths for standard retail purchases, credit sales, corporate order dispatches, and return handling.
+
+---
+
+## 1. Retail POS Checkout Process
+
+For counter-based sales, transactions are instant and follow a direct path:
+
+```mermaid
+graph TD
+    A[Start POS Checkout] --> B[Scan Product Barcode / Search Catalog]
+    B --> C{Product in Stock?}
+    C -- No --> D[Requisition Stock / Block Sale]
+    C -- Yes --> E[Add Product to Cart]
+    E --> F[Select Customer Profile / Walk-in]
+    F --> G[Select Payment Method]
+    G --> H{Sufficient Funds Received?}
+    H -- No --> I[Request Additional Funds / Edit Cart]
+    H -- Yes --> J[Confirm Payment & Generate Invoice]
+    J --> K[Print Receipt & Deduct Shop Inventory]
+    K --> L[End Transaction]
+```
+
+---
+
+## 2. Wholesale Delivery Process (CPO Workflow)
+
+When corporate clients issue Customer Purchase Orders (CPOs), items are processed, packaged, and shipped through warehouses:
+
+```mermaid
+graph TD
+    A[Receive Customer Purchase Order CPO] --> B[Log Order in Customer Purchase Orders]
+    B --> C[Validate Stock in Central Warehouse]
+    C --> D{Stock Available?}
+    D -- No --> E[Create Purchase Order / Warehouse Transfer]
+    D -- Yes --> F[Generate Delivery Challan - Items list]
+    F --> G[Dispatch Cargo Shipment to Customer]
+    G --> H[Customer Acknowledges Shipment Receipt]
+    H --> I[Generate Final Bill & Tax mushak Documents]
+    I --> J[Collect Balance Due / Customer Ledger Update]
+```
+
+---
+
+## 3. Billing Document Types
+
+During the sales process, different billing documents are issued based on transaction phases:
+
+| Document Type | Purpose | Financial Impact |
+| :--- | :--- | :--- |
+| **Sales Invoice (POS Receipt)** | Handed to walk-in retail customers. | Increases income account; decreases inventory. |
+| **Delivery Challan** | Shipping slip for transport logistics. | Moves stock from "In Warehouse" to "In Transit" status. |
+| **Mushak (VAT Invoice)** | Official tax statement for compliance. | Records VAT payable on government registers. |
+| **Final Bill** | Invoice detailing payment terms and totals. | Adjusts customer ledger accounts receivable. |
+
+---
+
+## 4. Product Return Lifecycle
+
+When a customer brings back purchased merchandise:
+
+```mermaid
+graph TD
+    A[Customer Requests Return] --> B{Has Invoice?}
+    B -- Yes --> C[Open Sales Return List & Enter Invoice ID]
+    B -- No --> D[Open Direct Product Return Form]
+    C --> E[Verify Item Quantities]
+    D --> F[Search Catalog and Input Returned Items]
+    E --> G[Select Return Destination: Cash or Ledger Due Credit]
+    F --> G
+    G --> H[Process Return & Print Refund Receipt]
+    H --> I[Stock Returned to Warehouse Inventory]
+```
+
+---
+
+## Business Rules & Compliance
+
+* **Invoice Modifications**: Once a POS checkout transaction is printed, it is closed. It cannot be edited. Errors must be corrected by creating a **Sales Return** or writing off stock.
+* **Delivery-Billing Match**: The final bill totals must exactly match the quantities shipped on the delivery challan. Any shipping damages must be adjusted prior to final billing.

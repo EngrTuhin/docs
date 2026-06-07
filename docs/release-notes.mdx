@@ -1,0 +1,56 @@
+---
+title: "Release Notes"
+description: "Review recent system features, workflow optimizations, and updates"
+---
+
+# Product Release Notes
+
+This page summarizes new features, user experience enhancements, and business rules adjustments made in recent system versions.
+
+---
+
+## Version 1.2.0 (June 2026)
+
+### Key Improvements:
+
+#### 1. Point of Sale POS Attribute Merging
+* **What is it**: When selling products with multiple variations (like size, color, or style), the system now merges them under a single card on the POS screen. 
+* **Business Benefit**: Cashiers can click a single item card, and a clean **Attribute Selection Modal** will appear to let them choose the specific variant. This reduces screen clutter by up to 80% and allows cashiers to process transactions faster.
+* **Scan Support**: Scanning the barcode of a specific variant automatically bypasses the modal and adds that exact variant to the checkout cart immediately.
+
+#### 2. Unified Printing Dispatcher
+* **What is it**: We consolidated all printing templates—A4 customer invoices, delivery challans, Mushak compliance receipts, and thermal checkout receipts—into a centralized system.
+* **Business Benefit**: Ensures consistent branding and logo alignment across all printed materials, with automatic printer scaling.
+
+#### 3. Custom Warehouse Column Rules
+* **What is it**: Administrators can now hide specific pricing metrics and technical details (like SKU, Model, Size, cost values) on stock grids for specific business units.
+* **Business Benefit**: Streamlines staff interfaces, showing only the fields relevant to their daily operations.
+
+---
+
+## Version 1.1.0 (March 2026)
+
+### Key Improvements:
+
+#### 1. Import Costing & LC Module
+* **What is it**: A new module that links letters of credit (LC) to purchase work orders, tracking port duties, freight charges, and agent commissions.
+* **Business Benefit**: Calculates a precise **Landed Cost Factor** for imported products, helping managers calculate exact margins.
+
+#### 2. Dual-Verification (Maker-Checker) for Purchases
+* **What is it**: An optional workflow where staff entries (Maker) must be verified and approved by a supervisor (Checker) before inventory updates.
+* **Business Benefit**: Reduces human entry errors, preventing typos from throwing off balance sheets.
+
+#### 3. Used Products Log
+* **What is it**: A tracking system for inventory items pulled from stock for internal showroom or administrative use.
+* **Business Benefit**: Ensures stock reductions for internal usage are logged as operational costs rather than disappearing.
+
+---
+
+## Version 1.0.0 (January 2026)
+
+### Core Launch:
+* **Point of Sale (POS)**: Real-time checkout with barcode scan and split payment options.
+* **Multi-Warehouse & Multi-Shop Routing**: Move goods between central depots and retail counters.
+* **Customer & Supplier Directories**: Store contact histories, branch addresses, and rolling financial ledgers.
+* **Expense & Banking Ledgers**: Log expenses against bank accounts and mobile money channels.
+* **Role-Based Access Control**: Lock down pages based on user roles (Cashier, Accountant, Admin).

@@ -1,0 +1,97 @@
+---
+title: "Settings"
+description: "Configure your company profile, default tax rates, currency, system rules, and templates"
+---
+
+# System Settings
+
+The **Settings** module allows business administrators to customize the application to suit their business model, upload company branding, and define system-wide transaction rules.
+
+---
+
+## Who Can Access
+
+* Only users with the **Administrator** role (or specific `setting_view` permission) can access the system settings pages.
+
+---
+
+## Navigation
+
+* **Sidebar**: Settings → System Settings → **General Settings** or **Product Quotation Settings**
+
+[Insert Screenshot Here - General Settings Panel with Input Fields and Switches]
+
+---
+
+## 1. General Settings
+
+The General Settings screen houses core system defaults. These values print on invoices, bills, and purchase orders.
+
+### Field Descriptions
+
+| Section / Field | Description | Rules / Validations |
+| :--- | :--- | :--- |
+| **Shop Name** | Display name of the business (e.g. Alpha Stationery). | Appears in header and invoices. |
+| **Email & Phone** | Contact details. | Prints on customer receipts. |
+| **Address** | Physical address of the main branch. | Prints on customer receipts. |
+| **Currency Symbol** | Currency used in transactions (e.g. $, £, BDT). | System-wide symbol. |
+| **Tax Rate (%)** | Standard default VAT/sales tax rate. | Automatically applied to POS carts unless overridden. |
+| **System Logo** | High-resolution image. | JPG/PNG only. Prints on A4 bills and invoices. |
+| **Sidebar Mode** | Default sidebar mode (Full Text or Icon Only). | Syncs to user interface configurations. |
+
+### System Toggles & Rules:
+Under the **Business Rules** section in settings, administrators can toggle key parameters:
+* **Allow Negative Stock**: If enabled, POS cashiers can sell products even if the system quantity is `0` (useful for high-volume environments where physical receiving logs lag). If disabled, the system blocks sales of out-of-stock items.
+* **Enable Maker-Checker**: Toggles whether purchases require second-tier verification before adjusting inventory.
+* **Receipt Footer Text**: Custom message printed at the bottom of thermal sales receipts (e.g. "Thank you for shopping with us!").
+
+---
+
+## 2. Product Quotation Settings
+
+Configure default terms for product quotation PDF templates sent to clients.
+
+### Step-by-Step Instructions:
+1. Navigate to Settings → **Product Quotation Settings**.
+2. Update the default values:
+   * **Quotation Header**: Text shown at the top of quotation proposals.
+   * **Terms & Conditions**: Standard terms (e.g. "Validity: 15 Days", "Delivery: 7 days from purchase order confirmation").
+   * **Footer Note**: E.g. "Signed by Manager".
+3. Click **Update Settings**. All future quotations generated will use these new terms.
+
+---
+
+## Step-by-Step Instructions (Updating Company Logo)
+
+1. Navigate to Settings → System Settings → **General Settings**.
+2. Scroll to the **Company Branding** card.
+3. Click on the logo box to browse your computer files, or drag and drop a logo image file (dimensions 150x150 pixels recommended).
+4. Enter the **Shop Name** and contact details.
+5. Click **Save Settings** at the bottom of the screen.
+6. To make sure the new logo is active, click your profile menu and select **Clear Cache**.
+
+---
+
+## Business Rules
+
+* **Currency Changes**: Changing the currency symbol updates the display character system-wide but does not convert existing financial ledger figures.
+* **Tax Rate Scope**: If the default tax rate is updated, it applies only to *new* transactions. Existing invoices remain unchanged.
+
+---
+
+## Example
+
+An Administrator wants to change the receipt footer message for the upcoming holidays:
+1. Opens **General Settings**.
+2. Scroll to the **POS Receipt Customization** section.
+3. Locates the **Receipt Footer Message** text box.
+4. Replaces "Thank you for your business" with "Season's Greetings! No returns after 7 days".
+5. Clicks **Save**.
+The cashier prints a receipt at the checkout counter, and the new message immediately prints at the bottom.
+
+---
+
+## Related Features
+
+* **POS Invoicing**: Reads default tax rates and print details from General Settings.
+* **Product Quotation**: Uses Terms & Conditions defined in settings.

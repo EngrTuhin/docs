@@ -1,0 +1,111 @@
+---
+title: "Purchase & Procurement"
+description: "Manage local purchases, work orders, work order merging, LC import costing, suppliers, and C&F agents"
+---
+
+# Purchase & Procurement Operations
+
+This guide explains how to manage your supply chain operations—from local suppliers and work orders to global import shipments (LC) and custom clearances.
+
+---
+
+## Who Can Access
+
+* **Create Purchase Order (Maker)**: Purchase Officers, Inventory Staff.
+* **Verify Purchase (Checker)**: Purchase Managers, Store Supervisors, Admins.
+* **Work Orders & LC Module**: Procurement Directors, Operations Managers.
+* **Suppliers & C&F Agent Directories**: Accounts, Procurement Admins.
+
+---
+
+## 1. Local Purchases & Maker-Checker Approvals
+
+### Overview
+Local purchases follow a two-tier control structure:
+* **Purchase Entry (Maker)**: Logs purchase items, supplier details, warehouse, cost pricing, and deposits.
+* **Purchase Record Verification (Checker)**: Approved by a supervisor to update inventory count.
+
+### Navigation
+* **Maker Entry**: Purchase Management → **Create Purchase Order**
+* **Verification**: **Approval Inbox**
+
+[Insert Screenshot Here - Purchase Order Maker List]
+
+---
+
+## 2. Supplier & C&F Agent Directories
+
+### Overview
+* **Suppliers Directory**: Registry of suppliers, opening balances, payment terms, and ledger history.
+* **C&F Agent Directory**: Registry of clearing and forwarding agents who handle customs clearance for import LCs.
+
+### Navigation
+* **Suppliers**: Business Contacts → **Suppliers Directory**
+* **C&F Directory**: Business Contacts → **C&F Directory**
+
+### Step-by-Step Instructions (Create Supplier):
+1. Navigate to Business Contacts → **Suppliers Directory** and click **Add Supplier**.
+2. Enter the Supplier Name, Company Name, Email, Phone, and Address.
+3. Enter their **Opening Balance** (outstanding due, if any, at system setup).
+4. Click **Save Supplier**.
+
+---
+
+## 3. Work Orders & Work Order Merging
+
+### Overview
+* **Work Order List**: Track client specifications and requirements for custom production or bulk procurement.
+* **Work Order Merger**: Combine multiple separate work orders into a single consolidated purchase order. This is helpful when importing bulk materials from a single vendor to reduce shipping overhead.
+
+### Navigation
+* **Work Orders**: Work Order Info → **Work Order List**
+* **Work Order Merger**: Work Order Info → **Work Order Merger**
+
+[Insert Screenshot Here - Work Order Merger Tool Interface]
+
+### Step-by-Step Instructions (Merge Work Orders):
+1. Go to Work Order Info → **Work Order Merger**.
+2. Select the **Supplier** from whom you will purchase the merged items.
+3. Select the active **Work Orders** you want to combine.
+4. Click **Preview Merge** to review the consolidated items list.
+5. Click **Confirm Merge & Create Purchase Order**. This compiles them into a single Purchase Order in the Maker queue.
+
+---
+
+## 4. LC Module (Import Costing)
+
+### Overview
+Manage international shipments. The Letter of Credit (LC) module tracks freight, customs duties, port charges, and C&F agent commissions, distributing them to compute the loaded **Landed Cost** of each item.
+
+### Navigation
+* **LC Module**: Purchase Management → **LC Module (Import Costing)**
+
+### Field Descriptions (LC Details)
+
+| Field | Description | Rules / Validations |
+| :--- | :--- | :--- |
+| **LC Number** | Letter of credit ID from the bank. | Unique. |
+| **Opening Bank** | Bank issuing the credit line. | Selected from Bank registry. |
+| **Work Orders** | Linked work orders. | Must choose at least one work order. |
+| **Import Expenses** | Port, custom, C&F agent fees. | Logged in the Expenses tab. |
+
+### Step-by-Step Instructions (Configure LC Costing):
+1. Go to Purchase Management → **LC Module** and click **Add LC**.
+2. Fill in the LC Number, bank, open date, and choose the linked Work Orders.
+3. In the **Expenses** tab, enter costs for customs clearance, insurance, transport, and select the C&F Agent.
+4. The system calculates the Landed Cost Factor. Click **Save LC**.
+5. Once the shipment arrives, click **Close LC & Receive Stock** to load the items into your warehouse at their loaded cost.
+
+---
+
+## Business Rules
+
+* **Checker Restrictions**: A user who created a purchase order as a "Maker" is blocked from approving it as a "Checker" to prevent self-approval.
+* **CPO to Work Order**: Customer Purchase Orders must be verified before they can be linked to a Work Order.
+
+---
+
+## Related Features
+
+* **Supplier Ledger Report**: Audit historical payments and purchases.
+* **Warehouse Stock**: Stores the received import goods.

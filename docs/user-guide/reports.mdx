@@ -1,0 +1,116 @@
+---
+title: "Reports & Analytics"
+description: "Generate sales, purchases, stock, customer ledgers, and financial reports"
+---
+
+# Reports & Analytics Overview
+
+The system offers a comprehensive suite of reports to help business owners, accountants, and store managers review performance, track inventory movements, and reconcile accounts.
+
+---
+
+## Who Can Access
+
+* **Administrators / Owners**: Full access to all reports (financial statements, activity logs, profit margins).
+* **Accountants**: Full access to Financial Reports, Dues Summaries, and Customer/Supplier Ledgers.
+* **Store Managers**: Scoped access to Stock, Sales, and Requisition reports for their assigned location.
+
+---
+
+## Navigation
+
+* **Menu Path**: Sidebar → **Reports & Analytics** → [Select Sub-menu]
+
+[Insert Screenshot Here - Report Filters Panel and Export Buttons]
+
+---
+
+## Available Report Modules
+
+The report suite is structured into nine major categories:
+
+### 1. Sales Reports
+* **Sales Summary Report**: High-level daily or monthly sales volumes, discounts, and net collections.
+* **Detailed Sales Report**: Line-item breakdown of every product sold, invoice references, and cashiers.
+* **Sales Return Report**: Track returned items, refunds issued, and inventory re-entries.
+* **Sales Discount Report**: Review promotional discounts applied at checkout.
+
+### 2. Purchase Reports
+* **Purchase Summary Report**: Summarize all stock purchases, costs, shipping charges, and supplier bills.
+* **Detailed Purchase Report**: Line-item breakdown of every purchased item and unit costs.
+* **Purchase Return Report**: Logs items sent back to suppliers and associated refunds.
+
+### 3. Inventory Reports
+* **Current Stock Position**: Real-time overview of product stock levels, safety stock thresholds, and monetary values by location.
+* **Opening Stock Report**: Review initialized inventory settings.
+* **Product-wise Stock Report**: Drill down into the transaction history of a single product SKU.
+* **Warehouse Transfer Report**: Track stock dispatches and receipts between locations.
+* **Damaged Product Report**: Monitor write-offs, listing products, quantities, and damage reasons.
+* **Expired Product Report**: Track items nearing their expiration dates to prevent inventory waste.
+* **Comprehensive Inventory Ledger**: A detailed transaction history showing opening stock, sales, purchases, transfers, adjustments, and closing stock for all items.
+
+### 4. Requisition Reports
+* **Requisition Client Report**: Review stock requisitions requested by shop branches or retail outlets.
+
+### 5. Financial Reports
+* **Income Statement Report**: Net revenue minus Cost of Goods Sold (COGS) and expenses to calculate Net Profit/Loss.
+* **Income & Expense Summary**: Category-wise summary of operational cash flows.
+* **Daily Ledger (Khata)**: Daily transaction diary reconciling opening cash, daily cash sales, expense disbursements, credit collections, and closing cash.
+
+### 6. Customer & Supplier Reports
+* **Due Summary**: List of all clients/suppliers with outstanding credit balances.
+* **Ledgers**: Audit trial of every transaction (invoices, returns, payments) linked to a specific contact.
+* **Opening Balances / Payment Histories**: Records of opening setups and historical installments.
+
+### 7. Sales Person & HR Reports
+* **Sales Person Salary Report**: Review sales commissions and salaries earned by field agents (SRs) or executives.
+
+### 8. Activity Log
+* **User Activity History**: Audit trail recording user logins, updates, deletions, and page access.
+
+---
+
+## Report Filter Parameters
+
+All reports contain a standard top filters bar. Key filter options include:
+
+| Filter Parameter | Description | Valid Choices |
+| :--- | :--- | :--- |
+| **Date Range** | Time interval for the report data. | Preset (Today, Last 7 Days, Month) or Custom dates. |
+| **Location** | Scopes data to a specific branch. | Central Warehouse, Shop 1, Shop 2, or All. |
+| **Customer / Supplier** | Filters data by contact. | Select specific customer/supplier or All. |
+| **Product** | Scopes data to a single item. | Search by name/SKU. |
+
+---
+
+## Step-by-Step Instructions
+
+### Generating and Exporting a Customer Ledger:
+1. Navigate to Reports & Analytics → Customer Reports → **Customer Ledger Report**.
+2. Select the **Customer Name** from the dropdown.
+3. Choose your desired **Date Range** (e.g., last 30 days).
+4. Click **Filter**.
+5. The system will load a table showing starting balances, invoice additions, payment subtractions, and rolling due balances.
+6. Click the export buttons at the top of the table:
+   * **Export Excel**: Saves raw data in Excel format.
+   * **Export PDF / Print**: Generates a print-ready PDF statement.
+
+---
+
+## Business Rules
+
+* **Valuation Method**: Inventory stock value is calculated using the weighted average cost method based on approved Purchase Invoices.
+* **Daily Khata Closing**: The Daily Ledger (Khata) closing cash must be physically counted and reconciled against the system closing balance at the end of each shift.
+
+---
+
+## FAQs
+
+<AccordionGroup>
+  <Accordion title="Why does the stock report show negative quantities?">
+    This occurs if the system rule 'Allow Negative Sales' is enabled in settings and cashiers invoice items that haven't been entered via Purchase Invoices yet. Adjust your stock levels or approve pending purchases to resolve this.
+  </Accordion>
+  <Accordion title="How do I check which staff member deleted an invoice?">
+    Go to Reports & Analytics → Activity Log → **User Activity History**. Select the date, select 'Delete' as the action type, and search. The log will display the user, timestamp, IP address, and details of the deleted record.
+  </Accordion>
+</AccordionGroup>

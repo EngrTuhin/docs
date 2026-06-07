@@ -1,0 +1,79 @@
+---
+title: "Frequently Asked Questions"
+description: "Answers to common customer questions about the Enterprise POS & ERP System"
+---
+
+# Frequently Asked Questions (FAQ)
+
+Find quick answers to common questions about using the system.
+
+---
+
+## Sales & POS
+
+<AccordionGroup>
+  <Accordion title="How do I add a new customer while checking out in the POS?">
+    On the POS Billing screen, click the **[+]** (plus sign) icon next to the customer dropdown. A quick modal will open. Enter the customer's name, phone number, and address, then click **Save**. The customer is instantly selected for the cart.
+  </Accordion>
+  <Accordion title="Can I apply a custom discount to a single item in the POS cart?">
+    Yes. In your cart list, click on the **Discount** field next to the specific product row. You can enter a percentage discount or a flat currency deduction. The subtotal will update instantly.
+  </Accordion>
+  <Accordion title="The checkout print button is not responding. How do I reprint?">
+    First, check if your thermal printer is turned on, has paper, and is connected to the computer. To reprint, go to Sales Management → **All Sales Records**, locate the transaction invoice, click the **Print** icon, and choose the correct layout format.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Inventory & Warehouse
+
+<AccordionGroup>
+  <Accordion title="What is 'In Transit' stock?">
+    When stock is transferred from a warehouse to a shop, it is marked as 'In Transit'. This means it has left the source location but has not yet been accepted by the receiving shop. The destination manager must click **Accept** under Requisition Received to add these items to their local inventory count.
+  </Accordion>
+  <Accordion title="How do I log stock that was damaged during transport?">
+    Go to Inventory Management → **Damage Product Entry**. Select the destination warehouse/shop, add the damaged products, input the quantities, and select 'Transport Damage' as the reason. This writes off the inventory.
+  </Accordion>
+  <Accordion title="Can I change a location from a Warehouse to a Shop?">
+    No. Once a location is created, its type (Warehouse or Shop) is locked because warehouses and shops have different transaction types and ledger roles. If you created a location incorrectly, mark it as inactive and create a new one.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Purchases & Supplier Balances
+
+<AccordionGroup>
+  <Accordion title="Why can't I see a Purchase Order I just entered in my stock totals?">
+    The system has a Maker-Checker workflow enabled. Any Purchase Order created by a Maker is held in a pending verification state. A Checker (supervisor or admin) must open the **Approval Inbox** and click **Approve** to commit the stock.
+  </Accordion>
+  <Accordion title="How do I pay off outstanding balances owed to suppliers?">
+    Go to Purchase Management → **Supplier Payment Records**, click **Add Payment**, select the supplier, check their unpaid invoice list, enter the payment amount, select your funding bank account, and save the payment.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Finance & Accounts
+
+<AccordionGroup>
+  <Accordion title="Why does the system block me from saving an expense?">
+    The system validates balances. If you try to pay a $500 expense from a cash drawer that only has $300 in the system ledger, the transaction is blocked to prevent negative accounting balances. Deposit funds or choose a bank account with a sufficient balance.
+  </Accordion>
+  <Accordion title="How do I record bank fees or interest payments?">
+    Go to Finance → Income & Expense → **Transactions**, click **Create Expense**, select 'Bank Charges' or 'Interest' as the category, select the source bank account, enter the fee amount, and save.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## System Access & Updates
+
+<AccordionGroup>
+  <Accordion title="How do I grant a user access to the Financial Reports?">
+    Users with Administrator access must go to Settings → User Management → **Roles & Permissions**. Select the user's role (e.g. Sales Manager), click Permissions, scroll to the Reports section, check the financial report boxes, and save.
+  </Accordion>
+  <Accordion title="Is the system update process safe? Does it delete data?">
+    Yes, it is safe. The **System Update** flow backup-checks active structures and runs database migrations automatically. However, as an enterprise best practice, we recommend executing a database backup before installing updates.
+  </Accordion>
+</AccordionGroup>

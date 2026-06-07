@@ -1,0 +1,112 @@
+---
+title: "Inventory & Catalog Configuration"
+description: "Manage product catalogs, attributes, barcodes, warehouses, stock transfers, adjustments, and internal stock logs"
+---
+
+# Inventory & Catalog Configuration
+
+This guide details product definitions, variations, location management, stock transfers, physical audits, and internal usage.
+
+---
+
+## Who Can Access
+
+* **Product Catalog & Attributes**: Procurement Staff, Product Managers, Admins.
+* **Barcode Generator**: Warehouse staff, cashiers.
+* **Warehouse setup, Stock transfers, adjustments**: Warehouse supervisors, Shop managers.
+
+---
+
+## 1. Product Catalog & Attribute Configurations
+
+### Overview
+Define the core items sold or purchased. The catalog supports rich attribute details:
+* **Product List**: CRUD operations for products and their variations.
+* **Product Exchange**: Configure product exchange rules.
+* **Attributes**: Setup categories, units, sizes, brands, product types, colors, shelves, models, and origins.
+
+### Navigation
+* **Product List**: Product Configuration → **Product List**
+* **Attributes**: Product Configuration → [Select Attribute, e.g. Product Categories, Sizes, Brands]
+
+[Insert Screenshot Here - Product Create Form with Attribute Selectors]
+
+### Field Descriptions (Product Setup)
+
+| Field | Description | Rules / Validations |
+| :--- | :--- | :--- |
+| **Product Name** | Clear name of the item. | Mandatory |
+| **Category** | Primary department. | Select from pre-setup Categories. |
+| **SKU Code** | Unique stock keeping unit. | System generates automatically if left blank. |
+| **Measurement Unit**| Unit of sale (Pcs, Box, Ream). | Select from Units setup. |
+| **Attributes** | Variation combinations (Color, Size). | Creates unique stock nodes. |
+| **Alert Qty** | Safety stock threshold. | Triggers low stock alert on Dashboard. |
+
+### Step-by-Step Instructions (Add Product):
+1. Navigate to Product Configuration → **Product List** and click **Add Product**.
+2. Enter the Product Name, select its Category, Brand, Origin, Model, and Unit.
+3. If the product has attributes (e.g. Size: Medium, Color: Blue), toggle **Has Attributes** and check the relevant combinations.
+4. Input the Purchase Cost and Selling Price.
+5. Set the safety stock **Alert Quantity**.
+6. Click **Save Product**.
+
+---
+
+## 2. Barcode Generator
+
+### Overview
+Generate and print barcode labels for products or specific incoming purchase shipments.
+
+### Navigation
+* **Sidebar**: Product Configuration → **Barcode Generator**
+
+### Step-by-Step Instructions:
+1. Navigate to **Barcode Generator**.
+2. Search and select products.
+3. Choose the print format (e.g. 24-sticker sheet or continuous roll).
+4. Select the print elements (Show Price, Show Name, Show Brand).
+5. Click **Generate Barcode** to download a print-ready PDF.
+
+---
+
+## 3. Warehouse Setup & Stock Transfers
+
+### Overview
+* **Warehouse/Shop Setup**: Establish storage depots and retail shops.
+* **Transfer Stock**: Dispatch inventory from one warehouse/shop to another.
+* **Requisition Received**: View and ship items requested by retail shops.
+* **Shipment Products**: Track dispatches currently in transit.
+
+### Navigation
+* **Transfer Stock**: Inventory Management → **Transfer Stock**
+* **Requisition Received**: Inventory Management → **Requisition Received**
+
+[Insert Screenshot Here - Stock Transfer Dispatch Screen]
+
+### Step-by-Step Instructions (Warehouse Stock Transfer):
+1. Go to **Transfer Stock** and click **New Transfer**.
+2. Choose the source warehouse and destination location.
+3. Add products, select quantities, and click **Submit Dispatch**.
+4. The destination location goes to **Requisition Received**, selects the incoming transfer shipment, verifies the quantities, and clicks **Accept** to increase their local stock.
+
+---
+
+## 4. Stock Adjustments & Damage Entries
+
+### Overview
+* **Stock Adjustment**: Manually correct inventory count mismatches following audits.
+* **Damage Product Entry**: Write off broken, expired, or spoiled merchandise.
+* **Used Product**: Log inventory items pulled for internal office or showroom usage.
+
+### Step-by-Step Instructions (Log Damage Entry):
+1. Go to Inventory Management → **Damage Product Entry** and click **Create Damage Log**.
+2. Select the **Warehouse** where the damaged items are stored.
+3. Add the product row, quantity, and choose the damage reason (e.g. Broken, Expired).
+4. Click **Save**. The stock balance is adjusted, and the loss is logged.
+
+---
+
+## Business Rules
+
+* **Attribute Merging**: For products with multiple sizes or colors, the POS screen groups them under a single card. Cashiers select the specific combination in a popup modal.
+* **Safety Threshold Alerts**: Low stock warnings appear on the dashboard only if the available quantity is less than or equal to the defined **Alert Qty**.

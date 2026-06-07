@@ -1,0 +1,114 @@
+---
+title: "Administration, Security & HR"
+description: "Manage system logins, permissions, employee HR files, payroll salaries, approvals, documents, and system updates"
+---
+
+# Administration, Security & HR
+
+This guide covers system user directories, role permissions, human resources setup, employee payroll, documents storage, notification center, and system updates.
+
+---
+
+## Who Can Access
+
+* **User Management, Roles & System Updates**: System Administrators only.
+* **Employee Setup & Salaries**: HR Managers, Accountant Supervisors, Admins.
+* **Approval Inbox**: Designated managers and supervisors.
+
+---
+
+## 1. Access Control (Users, Roles & Permissions)
+
+### Overview
+* **Users Directory**: Create logins, assign passwords, set default stores, and link employees to user profiles.
+* **Roles & Permissions**: Access control checkboxes to manage page and menu visibility for user roles (e.g. Cashier, Accountant).
+
+### Navigation
+* **Users**: Settings → User Management → **Users**
+* **Roles & Permissions**: Settings → User Management → **Roles & Permissions**
+
+[Insert Screenshot Here - User Profile Settings]
+
+### Step-by-Step Instructions:
+1. Go to Settings → User Management → **Users** and click **Add User**.
+2. Enter the name, email address, password, select their **Role**, and assign their primary **Shop/Warehouse** location.
+3. Click **Save**.
+4. To customize role access, go to **Roles & Permissions**, click **Permissions** beside the target role, check/uncheck access items (e.g., `pos_view` or `reports_finance`), and click **Save Permissions**.
+
+---
+
+## 2. Human Resources (Employees, Salary, Departments & Designations)
+
+### Overview
+* **Employee Setup**: HR registry storing employee profiles, hiring dates, contact info, and basic salary metrics.
+* **Employee Salary**: Monthly salary payouts and commission allocations.
+* **Departments & Designations**: Setup divisions (e.g., Sales, Accounts) and roles (e.g., Senior Officer, SR) for tracking.
+
+### Navigation
+* **Employee Setup**: Employee Management → **Employee Setup**
+* **Employee Salary**: Employee Management → **Employee Salary**
+* **Departments & Designations**: Business Contacts → **Departments** / **Designations**
+
+### Step-by-Step Instructions (Add Employee & Disburse Salary):
+1. Navigate to Employee Management → **Employee Setup** and click **Add Employee**.
+2. Fill in the employee's personal details, joining date, department, designation, and basic salary rate. Click **Save**.
+3. At the end of the month, go to **Employee Salary** and click **Disburse Salary**.
+4. Select the **Employee** and the target **Salary Month**.
+5. The system automatically loads their basic salary rate. Enter any commissions or bonuses.
+6. Select the funding **Bank Account** or **Cash Drawer** and click **Process Payment**.
+
+---
+
+## 3. Approval Inbox Workflow
+
+### Overview
+Track and verify critical transactions (large stock adjustments, purchases, or expense disbursements) that require manager authorization.
+
+### Navigation
+* **Sidebar**: **Approval Inbox**
+
+### Step-by-Step Instructions:
+1. Open the **Approval Inbox**.
+2. Click on a pending task.
+3. Review the transaction details, costs, and maker's notes.
+4. Select an action:
+   * **Approve**: Finalizes the transaction.
+   * **Reject**: Cancels the request.
+   * **Reassign**: Delegates the task to another supervisor.
+5. Click **Submit**.
+
+---
+
+## 4. Notifications & Document Archive
+
+### Overview
+* **Notification Center**: Real-time alerts (bell icon in the top header) detailing pending tasks, safety stock alerts, or workflow updates.
+* **Document Management**: Attachment folder to store contracts, tax receipts, or invoices.
+
+### Step-by-Step Instructions (Upload Document):
+1. Navigate to **Documents** and click **Upload File**.
+2. Select the category (e.g. Purchases, HR contracts), add a title, and drag and drop the file (PDF, JPG, PNG up to 10MB).
+3. Click **Upload**. The document is now archived and accessible to authorized staff.
+
+---
+
+## 5. System Update Flow
+
+### Overview
+Apply software patches and system updates without developer intervention.
+
+### Navigation
+* **Sidebar**: Settings → System Settings → **System Update**
+
+### Step-by-Step Instructions:
+1. Go to **System Update**.
+2. Click **Check for Updates**.
+3. If a patch is available, click **Download Update**.
+4. Click **Install Update**. The system will install the patch, run database migrations, clear system caches, and restore normal operations automatically.
+
+---
+
+## Business Rules
+
+* **Salary Funding**: Salaries cannot be processed from bank accounts that have a balance lower than the total payroll sum.
+* **Role Locking**: The default 'Administrator' role cannot be deleted or have its permission checkmarks removed to prevent system lockout.

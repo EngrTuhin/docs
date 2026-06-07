@@ -1,0 +1,82 @@
+---
+title: "Purchase & Procurement Lifecycle"
+description: "Process local purchase orders, Maker-Checker authorization, supplier payments, and import logistics"
+---
+
+# Procurement Workflow
+
+This section outlines the business flows for procurement, starting from local purchase entry to imports (LC module), and purchase returns.
+
+---
+
+## 1. Local Purchase Order Lifecycle (Maker-Checker)
+
+Local purchases are subject to dual-verification checks to ensure data accuracy and financial auditability:
+
+```mermaid
+graph TD
+    A[Identify Low Stock / Restock Requirement] --> B[Purchase Maker: Create Purchase Entry]
+    B --> C[Enter Supplier, Warehouse, Products, Costs, Qty]
+    C --> D[Submit Purchase Order for Verification]
+    D --> E[Status Set to: Pending Verification]
+    E --> F[Purchase Checker / Supervisor Logs In]
+    F --> G[Open Inbox and Verify Line Costs & Quantities]
+    G --> H{Are Details Correct?}
+    H -- No --> I[Reject PO & Return to Maker with Comment]
+    H -- Yes --> J[Approve PO & Finalize Transaction]
+    J --> K[Deduct Cash/Bank & Update Supplier Account Payable]
+    K --> L[Increase Destination Warehouse Stock]
+```
+
+---
+
+## 2. Import Costing & LC Workflow
+
+For overseas imports, procurement follows a structured cargo tracking and landed cost calculation process:
+
+```mermaid
+graph TD
+    A[Create Quotations / Work Orders] --> B[Procurement: Open Letter of Credit LC]
+    B --> C[Link LC to Work Orders]
+    C --> D[Log Cargo Freight & Shipping Expenses]
+    D --> E[Log Import Custom Duties & C&F Agent Fees]
+    E --> F[System Calculates Landed Cost Factor]
+    F --> G[Port Clearance & Cargo Arrival at Warehouse]
+    G --> H[Supervisor Approves LC Receiving]
+    H --> I[Warehouse Stock Loaded at Calculated Landed Costs]
+```
+
+---
+
+## 3. Supplier Settlement Process
+
+Clearing payables for past credit purchases:
+
+```mermaid
+graph TD
+    A[Open Supplier Payment Records] --> B[Select Supplier Name]
+    B --> C[System Loads Outstanding Purchase Invoices]
+    C --> D[Enter Payment Amount & Source Account]
+    D --> E[Process Payment]
+    E --> F[Update Supplier Balance & Debit Bank/Cash]
+```
+
+---
+
+## 4. Supplier Return Process (Purchase Return)
+
+Returning defective or incorrect inventory items to suppliers:
+
+| Step | Action | Details / Rules |
+| :--- | :--- | :--- |
+| **1. Initiate Return** | Go to **Purchase Return List** or **Direct Purchase Return** (if original invoice is unavailable). | Select supplier. |
+| **2. Select Items** | Select the products and input return quantities. | Cannot exceed original invoice quantities. |
+| **3. Adjust Balances** | Deduct return totals from the Supplier Due balance. | If invoice is already paid, request a cash refund or ledger credit. |
+| **4. Update Stock** | Save return. | System reduces the warehouse stock balance immediately. |
+
+---
+
+## Business Rules for Procurement
+
+* **Landed Cost Allocation**: Supplementary import costs (customs, freight, agent commissions) are apportioned across the imported product line based on value or weight, yielding a realistic item-level landed cost.
+* **Payment Validation**: Upfront payments recorded in the Purchase Entry Form cannot exceed the total invoice value.

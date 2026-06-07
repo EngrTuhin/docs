@@ -1,0 +1,731 @@
+---
+title: Product Configuration
+description: Learn how to set up categories, units, brands, product details, and products
+---
+
+# Product Configuration
+
+Product Configuration is used to set up all product-related information in **Koorri POS & Inventory System**.
+
+Before adding sales, purchase, or stock, you should set up your products properly.
+
+<Info>
+Start with Product Categories, then add Measurement Units, Brands, and finally add Products.
+</Info>
+
+---
+
+# Setup Order
+
+Follow this order for product setup:
+
+<Steps>
+  <Step title="Create Product Categories">
+    Add product groups like Medicine, Cosmetics, Grocery, Electronics, or Accessories.
+  </Step>
+
+  <Step title="Create Measurement Units">
+    Add units like pcs, box, kg, liter, packet, carton, or pair.
+  </Step>
+
+  <Step title="Create Product Brands">
+    Add product brand names if your products have brands.
+  </Step>
+
+  <Step title="Add Other Details">
+    Add product type, color, shelf, model, and origin if needed.
+  </Step>
+
+  <Step title="Add Products">
+    Add your actual products from the Product List page.
+  </Step>
+
+  <Step title="Generate Barcode">
+    Generate product barcodes after products are created.
+  </Step>
+</Steps>
+
+---
+
+# Product Configuration Menu
+
+You will find these options under **Product Configuration**.
+
+| Menu | Use |
+|---|---|
+| Product List | Add and manage products |
+| Product Exchange | Manage product exchange |
+| Product Categories | Add product categories |
+| Measurement Units | Add product units |
+| Product Brands | Add product brands |
+| Product Types | Add product types |
+| Product Colors | Add product colors |
+| Shelf No | Add shelf or rack numbers |
+| Product Models | Add product models |
+| Product Origins | Add product origin/source |
+| Barcode Generator | Generate product barcodes |
+
+---
+
+# 1. Product Categories
+
+Product Categories help you organize products into groups.
+
+Example:
+
+| Category | Example Products |
+|---|---|
+| Medicine | Tablet, syrup, injection |
+| Healthcare | Sanitary napkin, diaper, pregnancy test kit |
+| Cosmetics | Cream, shampoo, face wash |
+| Grocery | Rice, oil, sugar |
+| Electronics | Mobile, charger, headphone |
+
+---
+
+## Add Product Category
+
+<Steps>
+  <Step title="Open Product Categories">
+    From the left menu, go to **Product Configuration** and click **Product Categories**.
+  </Step>
+
+  <Step title="Click Add">
+    Click the green **Add** button.
+  </Step>
+
+  <Step title="Enter Category Name">
+    Type the category name.
+
+    Example: `Healthcare & Medicine`
+  </Step>
+
+  <Step title="Select Under Category">
+    If this is a sub-category, select the parent category.
+
+    Example: `Diaper` can be under `Healthcare & Medicine`.
+
+    If this is a main category, leave it empty.
+  </Step>
+
+  <Step title="Enter Ordering">
+    Enter a number if you want to control the category order.
+
+    Example: `1`, `2`, `3`
+  </Step>
+
+  <Step title="Save">
+    Click **Save Product** to save the category.
+  </Step>
+</Steps>
+
+<Info>
+Use short and clear category names. This helps users find products easily.
+</Info>
+
+---
+
+## Category Example
+
+Main category example:
+
+| Field | Example |
+|---|---|
+| Category Name | `Healthcare & Medicine` |
+| Under Category | Empty |
+| Ordering | `1` |
+
+Sub-category example:
+
+| Field | Example |
+|---|---|
+| Category Name | `Diaper` |
+| Under Category | `Healthcare & Medicine` |
+| Ordering | `2` |
+
+---
+
+# 2. Measurement Units
+
+Measurement Units are used to count product quantity.
+
+Example:
+
+| Unit | Meaning |
+|---|---|
+| pcs | Piece |
+| box | Box |
+| kg | Kilogram |
+| liter | Liter |
+| carton | Carton |
+| packet | Packet |
+| pair | Pair |
+
+---
+
+## Add Measurement Unit
+
+<Steps>
+  <Step title="Open Measurement Units">
+    From the left menu, go to **Product Configuration** and click **Measurement Units**.
+  </Step>
+
+  <Step title="Click Add">
+    Click the green **Add** button.
+  </Step>
+
+  <Step title="Enter Unit Name">
+    Type the full unit name.
+
+    Example: `Piece`
+  </Step>
+
+  <Step title="Enter Short Name">
+    Type the short name.
+
+    Example: `pcs`
+  </Step>
+
+  <Step title="Enter Base Unit">
+    If this unit is connected with another unit, enter the base unit.
+
+    Example: `pcs`
+  </Step>
+
+  <Step title="Enter Converted Ratio">
+    Enter the conversion number if needed.
+
+    Example: If `1 box = 12 pcs`, enter `12`.
+  </Step>
+
+  <Step title="Enter Tolerance">
+    Enter tolerance if your business uses it.
+
+    If not needed, keep it empty.
+  </Step>
+
+  <Step title="Save">
+    Click **Save Product** to save the unit.
+  </Step>
+</Steps>
+
+<Info>
+If you do not use unit conversion, you can keep Base Unit, Converted Ratio, and Tolerance empty.
+</Info>
+
+---
+
+## Unit Example
+
+Simple unit example:
+
+| Field | Example |
+|---|---|
+| Unit Name | `Piece` |
+| Short Name | `pcs` |
+| Base Unit | Empty |
+| Converted Ratio | Empty |
+| Tolerance | Empty |
+
+Conversion example:
+
+| Field | Example |
+|---|---|
+| Unit Name | `Box` |
+| Short Name | `box` |
+| Base Unit | `pcs` |
+| Converted Ratio | `12` |
+| Tolerance | Empty |
+
+---
+
+# 3. Product Brands
+
+Product Brands are used to save product brand names.
+
+Example:
+
+- Savlon
+- Fresh
+- Freedom
+- Bashundhara
+- Raneta
+
+---
+
+## Add Product Brand
+
+<Steps>
+  <Step title="Open Product Brands">
+    From the left menu, go to **Product Configuration** and click **Product Brands**.
+  </Step>
+
+  <Step title="Click Add">
+    Click the green **Add** button.
+  </Step>
+
+  <Step title="Enter Brand Name">
+    Type the brand name.
+
+    Example: `Savlon`
+  </Step>
+
+  <Step title="Save">
+    Click **Save Product** to save the brand.
+  </Step>
+</Steps>
+
+---
+
+## Brand Example
+
+| Field | Example |
+|---|---|
+| Brand Name | `Savlon` |
+
+---
+
+# 4. Product Types
+
+Product Types help you group products by type.
+
+Example:
+
+| Product Type | Use |
+|---|---|
+| Finished Goods | Ready-to-sell products |
+| Raw Material | Materials used to make products |
+| Service Item | Service-based item |
+| Consumable | Used or consumed items |
+
+---
+
+## Add Product Type
+
+<Steps>
+  <Step title="Open Product Types">
+    From the left menu, go to **Product Configuration** and click **Product Types**.
+  </Step>
+
+  <Step title="Click Add">
+    Click the green **Add** button.
+  </Step>
+
+  <Step title="Enter Product Type">
+    Type the product type name.
+
+    Example: `Finished Goods`
+  </Step>
+
+  <Step title="Save">
+    Click **Save Product** to save the product type.
+  </Step>
+</Steps>
+
+---
+
+# 5. Product Colors
+
+Product Colors are used when products have different colors.
+
+Example:
+
+- Black
+- White
+- Red
+- Blue
+- Green
+
+---
+
+## Add Product Color
+
+<Steps>
+  <Step title="Open Product Colors">
+    From the left menu, go to **Product Configuration** and click **Product Colors**.
+  </Step>
+
+  <Step title="Click Add">
+    Click the green **Add** button.
+  </Step>
+
+  <Step title="Enter Color Name">
+    Type the color name.
+
+    Example: `Black`
+  </Step>
+
+  <Step title="Save">
+    Click **Save Product** to save the color.
+  </Step>
+</Steps>
+
+<Info>
+If your business does not use product colors, you can skip this setup.
+</Info>
+
+---
+
+# 6. Shelf No
+
+Shelf No helps you find where the product is stored.
+
+Example:
+
+| Shelf No | Meaning |
+|---|---|
+| A1 | Shelf A, Row 1 |
+| B2 | Shelf B, Row 2 |
+| Store-1 | Store room 1 |
+| Counter-3 | Counter shelf 3 |
+
+---
+
+## Add Shelf No
+
+<Steps>
+  <Step title="Open Shelf No">
+    From the left menu, go to **Product Configuration** and click **Shelf No**.
+  </Step>
+
+  <Step title="Click Add">
+    Click the green **Add** button.
+  </Step>
+
+  <Step title="Enter Shelf Name">
+    Type the shelf or rack number.
+
+    Example: `A1`
+  </Step>
+
+  <Step title="Save">
+    Click **Save Product** to save the shelf.
+  </Step>
+</Steps>
+
+---
+
+# 7. Product Models
+
+Product Models are used when products have model names or model numbers.
+
+Example:
+
+- X200
+- A15
+- Pro Max
+- Model 500
+- RX-100
+
+---
+
+## Add Product Model
+
+<Steps>
+  <Step title="Open Product Models">
+    From the left menu, go to **Product Configuration** and click **Product Models**.
+  </Step>
+
+  <Step title="Click Add">
+    Click the green **Add** button.
+  </Step>
+
+  <Step title="Enter Model Name">
+    Type the model name or model number.
+
+    Example: `A15`
+  </Step>
+
+  <Step title="Save">
+    Click **Save Product** to save the model.
+  </Step>
+</Steps>
+
+---
+
+# 8. Product Origins
+
+Product Origins are used to save product source or country information.
+
+Example:
+
+- Bangladesh
+- China
+- India
+- Germany
+- Local
+- Imported
+
+---
+
+## Add Product Origin
+
+<Steps>
+  <Step title="Open Product Origins">
+    From the left menu, go to **Product Configuration** and click **Product Origins**.
+  </Step>
+
+  <Step title="Click Add">
+    Click the green **Add** button.
+  </Step>
+
+  <Step title="Enter Origin Name">
+    Type the origin name.
+
+    Example: `Bangladesh`
+  </Step>
+
+  <Step title="Save">
+    Click **Save Product** to save the origin.
+  </Step>
+</Steps>
+
+---
+
+# 9. Product List
+
+Product List is the main page where you add and manage products.
+
+After creating categories, units, and brands, you can add your products.
+
+---
+
+## Before Adding a Product
+
+Make sure these basic items are ready:
+
+<AccordionGroup>
+  <Accordion title="Required Information">
+    - Product name  
+    - Product category  
+    - Product status  
+    - Unit  
+  </Accordion>
+
+  <Accordion title="Useful Information">
+    - Brand  
+    - Product type  
+    - Size  
+    - Shelf  
+    - Unit price  
+    - MRP  
+    - Opening stock  
+    - Barcode  
+  </Accordion>
+
+  <Accordion title="Optional Information">
+    - Product image  
+    - Generic name  
+    - Strength  
+    - Warranty day  
+    - Batch number  
+    - Manufacturing date  
+    - Expire date  
+  </Accordion>
+</AccordionGroup>
+
+---
+
+# Add Product
+
+<Steps>
+  <Step title="Open Product List">
+    From the left menu, go to **Product Configuration** and click **Product List**.
+  </Step>
+
+  <Step title="Click Add">
+    Click the green **Add** button.
+  </Step>
+
+  <Step title="Enter Product Name">
+    Type the product name.
+
+    Example: `Savlon Hand Wash 250ml`
+  </Step>
+
+  <Step title="Select Category">
+    Select the product category.
+
+    Example: `Healthcare & Medicine`
+  </Step>
+
+  <Step title="Select Status">
+    Select `Active` if you want to use this product in sales, purchase, and stock.
+  </Step>
+
+  <Step title="Add Description">
+    Write a short product description if needed.
+  </Step>
+
+  <Step title="Upload Image">
+    Upload a product image if needed.
+  </Step>
+
+  <Step title="Fill Product Attributes">
+    Add unit, brand, type, size, shelf, price, opening stock, barcode, and other details.
+  </Step>
+
+  <Step title="Save Product">
+    Click **Save Product** to save the product.
+  </Step>
+</Steps>
+
+---
+
+# Product Form Fields
+
+| Field | Use |
+|---|---|
+| Product Name | Name of the product |
+| Category | Product category |
+| Status | Active or inactive |
+| Description | Short product note |
+| Image | Product image |
+| Stock Alert | Low stock warning quantity |
+| Generic Name | Generic or common name |
+| Strength | Product strength, useful for medicine |
+| Unit | Product measurement unit |
+| Brand | Product brand |
+| Product Type | Product type |
+| Size | Product size |
+| Warranty Day | Product warranty period |
+| Shelf | Product shelf or rack location |
+| Conversion | Unit conversion information |
+| Batch No | Product batch number |
+| Batch Wise Qty | Batch quantity |
+| Unit Price | Product purchase or unit price |
+| TP | Trade price |
+| MRP | Maximum retail price |
+| MFG Date | Manufacturing date |
+| Expire Date | Expiry date |
+| Opening Stock | Starting stock quantity |
+| Barcode | Product barcode |
+| Non-Inventory Item | Use this if the item does not need stock tracking |
+
+---
+
+# Product Example
+
+| Field | Example |
+|---|---|
+| Product Name | `Savlon Hand Wash 250ml` |
+| Category | `Healthcare & Medicine` |
+| Status | `Active` |
+| Unit | `pcs` |
+| Brand | `Savlon` |
+| Product Type | `Finished Goods` |
+| Size | `250ml` |
+| Shelf | `A1` |
+| Unit Price | `80` |
+| MRP | `100` |
+| Opening Stock | `50` |
+| Barcode | `AUTO` or product barcode |
+
+---
+
+# Add Product Variant
+
+Use **Add Variant** when one product has different sizes, colors, prices, or barcodes.
+
+Example:
+
+| Product | Variant |
+|---|---|
+| T-Shirt | Size M, Color Black |
+| T-Shirt | Size L, Color Blue |
+| Hand Wash | 250ml |
+| Hand Wash | 500ml |
+| Medicine | Different strength or batch |
+
+<Info>
+Use variants when the same product has different size, color, stock, price, batch, or barcode.
+</Info>
+
+---
+
+# Product Save Checklist
+
+Before saving, check these:
+
+- Product name is correct
+- Category is selected
+- Status is Active
+- Unit is selected
+- Brand is selected if needed
+- Price is correct
+- Opening stock is correct
+- Barcode is correct if used
+- Expiry date is correct if used
+
+---
+
+# Barcode Generator
+
+Barcode Generator is used to create and print product barcodes.
+
+Use barcode when:
+
+- You scan products during sales
+- You want faster invoice creation
+- You want barcode labels on products
+- You manage many products
+
+---
+
+## Barcode Setup
+
+<Steps>
+  <Step title="Open Barcode Generator">
+    From the left menu, go to **Product Configuration** and click **Barcode Generator**.
+  </Step>
+
+  <Step title="Select Product">
+    Select the product for barcode generation.
+  </Step>
+
+  <Step title="Enter Quantity">
+    Enter how many barcode labels you want to print.
+  </Step>
+
+  <Step title="Generate Barcode">
+    Generate and print the barcode.
+  </Step>
+</Steps>
+
+---
+
+# Common Mistakes
+
+| Mistake | Result |
+|---|---|
+| Category not created first | Product cannot be organized properly |
+| Wrong unit selected | Stock quantity may be wrong |
+| Duplicate product name | Users may select the wrong product |
+| Wrong price | Sales and profit reports may be incorrect |
+| Wrong opening stock | Stock report may be incorrect |
+| Product inactive | Product may not appear in sales or purchase |
+| Wrong expiry date | Expired product report may be wrong |
+
+---
+
+# Best Practice
+
+- Use clear product names
+- Create categories before products
+- Use correct units
+- Avoid duplicate products
+- Use barcode for many products
+- Add opening stock carefully
+- Keep product status Active for usable products
+- Use shelf number for easier product finding
+- Check price before saving
+
+---
+
+# Next Step
+
+After Product Configuration, set up your customers and suppliers.
+
+<Card title="Next: Business Contacts" href="/user-guide/businessContacts" icon="arrow-right">
+  Learn how to add customers, suppliers, and sales persons.
+</Card>

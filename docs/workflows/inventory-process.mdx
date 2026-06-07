@@ -1,0 +1,81 @@
+---
+title: "Inventory & Warehouse Operations"
+description: "Process internal requisitions, warehouse-to-shop transfers, stock counts, adjustments, and damages"
+---
+
+# Inventory Workflow Processes
+
+This section explains internal logistics including shop requisitions, transfer confirmations, inventory auditing adjustments, and damage write-offs.
+
+---
+
+## 1. Shop Requisition & Warehouse Transfer Process
+
+When a retail shop runs low on stock, it requisitions replenishment inventory from the central warehouse:
+
+```mermaid
+graph TD
+    A[Shop Staff: Create Requisition] --> B[Enter Required Products and Quantities]
+    B --> C[Submit Requisition to Central Warehouse]
+    C --> D[Warehouse Staff: View Requisition in Requisitions Received]
+    D --> E[Pack Items & Create Shipment Products Transfer]
+    E --> F[Status Set to: In Transit - Stock deducted from Central Warehouse]
+    F --> G[Goods Transported to Retail Shop Location]
+    G --> H[Shop Manager: Acknowledge & Accept Shipment]
+    H --> I[Confirm Quantities received matches Challan]
+    I --> J[Accept Shipment & Add Stock to Retail Shop Inventory]
+```
+
+---
+
+## 2. Inventory Adjustment & Audit Correction
+
+To resolve differences between physical stock levels (audited) and system records:
+
+```mermaid
+graph TD
+    A[Conduct Physical Inventory Audit] --> B[Identify Variance: Stock Surplus or Deficit]
+    B --> C[Open Stock Adjustment Module]
+    C --> D[Select Target Warehouse / Shop Location]
+    D --> E[Add Product Row & Select Type: Addition or Subtraction]
+    E --> F[Enter Audited Correction Quantity and Notes]
+    F --> G[Submit Adjustment]
+    G --> H[System Instantly Updates Ledger & Resets Stock Balance]
+```
+
+---
+
+## 3. Damage & Expiration Write-off Process
+
+Removing items that are unsellable due to physical breakage, expiration, or defects:
+
+```mermaid
+graph TD
+    A[Identify Broken / Expired Stock] --> B[Remove Items from Sellable Shelves]
+    B --> C[Open Damage Product Entry Screen]
+    C --> D[Select Location & Add Damaged Products]
+    D --> E[Enter Defect Quantities & Select Reason code]
+    E --> F[Save Damage Entry]
+    F --> G[Stock Deducted from Active Balance]
+    G --> H[Adjusted Value Debited to Damage Loss Accounts]
+```
+
+---
+
+## 4. Summary of Stock Statuses
+
+During transfer operations, product stock shifts between distinct states:
+
+| Stock State | Description | Location Assignment |
+| :--- | :--- | :--- |
+| **Available** | Active, sellable stock on hand. | Assigned to a specific Warehouse or Shop. |
+| **In Transit** | Dispatched but not yet accepted by the destination. | Temporarily cleared from the source; not yet added to destination. |
+| **Damaged / Expired** | Written off inventory due to loss. | Cleared from active inventory list; logged to reports. |
+| **Used Product** | Allocated internally for business use. | Removed from commercial stock; logged to expense categories. |
+
+---
+
+## Business Rules
+
+* **Transfer Verification**: Warehouse-to-warehouse transfers must be accepted by the destination branch before the transfer status switches to "Completed".
+* **Minimum Safety Stock**: Products that drop below their safety stock limit trigger alerts on the Dashboard and Stock Reports to notify purchasing agents.

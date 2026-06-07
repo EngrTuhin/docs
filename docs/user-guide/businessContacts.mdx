@@ -1,0 +1,582 @@
+---
+title: Business Contacts
+description: Learn how to add customers, suppliers, branches, sales persons, and C&F agents
+---
+
+# Business Contacts
+
+Business Contacts is used to save people and company information related to your business.
+
+You can add:
+
+- Customers or retailers
+- Suppliers
+- Customer branches
+- Sales persons
+- C&F agents
+
+<Info>
+You do not need to set up everything. Add only the contacts your business needs.
+</Info>
+
+---
+
+# Business Contacts Menu
+
+You will find these options under **Business Contacts**.
+
+| Menu | Use | Required? |
+|---|---|---|
+| Customers & Retailers Directory | Add customers or retailers | Usually required for sales |
+| Suppliers Directory | Add suppliers | Usually required for purchase |
+| Customer Branches | Add customer branch locations | Optional |
+| Sales Persons Directory | Add sales team members | Optional |
+| C&F Directory | Add clearing and forwarding agents | Optional |
+
+---
+
+# What Should You Set Up First?
+
+For most businesses, start with these two:
+
+<Steps>
+  <Step title="Add Customers or Retailers">
+    Add the people, shops, or companies you sell products to.
+  </Step>
+
+  <Step title="Add Suppliers">
+    Add the people or companies you purchase products from.
+  </Step>
+</Steps>
+
+<Info>
+Customer Branches, Sales Persons, and C&F Directory are optional. You can add them later if needed.
+</Info>
+
+---
+
+# 1. Customers & Retailers Directory
+
+Use this page to add customers or retailers.
+
+Customers are used in:
+
+- Sales Invoice
+- Customer Due Collection
+- Customer Advance Payment
+- Customer Reports
+- Customer Ledger
+
+---
+
+## Add Customer or Retailer
+
+<Steps>
+  <Step title="Open Customers & Retailers Directory">
+    From the left menu, go to **Business Contacts** and click **Customers & Retailers Directory**.
+  </Step>
+
+  <Step title="Click Add">
+    Click the green **Add** button.
+  </Step>
+
+  <Step title="Enter Name">
+    Type the customer or retailer name.
+
+    Example: `Rahim Store`
+  </Step>
+
+  <Step title="Enter Contact Number">
+    Type the customer phone number.
+
+    Example: `017XXXXXXXX`
+  </Step>
+
+  <Step title="Select Status">
+    Select `Active` if this customer will be used in sales and reports.
+  </Step>
+
+  <Step title="Select User Type">
+    Select `Customer` or `Retailer`.
+  </Step>
+
+  <Step title="Add Other Details If Needed">
+    You may add proprietor, email, NID, invoice status, address, and contact person if needed.
+  </Step>
+
+  <Step title="Save">
+    Click **Save Product** to save the customer.
+  </Step>
+</Steps>
+
+<Warning>
+In your system, the save button may show **Save Product** on different forms. Click that button to save the record.
+</Warning>
+
+---
+
+## Customer Fields
+
+| Field | Use | Required? |
+|---|---|---|
+| Name | Customer or retailer name | Required |
+| Contact Number | Phone number | Required |
+| Status | Active or inactive | Required |
+| User Type | Customer or Retailer | Required |
+| Proprietor | Owner name | Optional |
+| Code | Customer code | Auto / Optional |
+| Email | Customer email | Optional |
+| NID | National ID | Optional |
+| Invoice Status | Invoice price type | Optional |
+| Address | Customer address | Optional |
+| Contact Person | Extra contact person | Optional |
+
+---
+
+## Customer Example
+
+| Field | Example |
+|---|---|
+| Name | `Rahim Store` |
+| Contact Number | `017XXXXXXXX` |
+| Status | `Active` |
+| User Type | `Customer` |
+| Address | `Mirpur, Dhaka` |
+
+---
+
+## Customer Previous Due
+
+If a customer already has due before starting this system, enter that amount as the customer opening balance if the customer form has an opening balance field.
+
+Opening balance means the previous balance before using this system.
+
+| Situation | What to Enter |
+|---|---|
+| Customer already owes you money | Enter the due amount |
+| Customer has no previous due | Enter `0` or keep empty |
+
+Example:
+
+| Field | Example |
+|---|---|
+| Customer Name | `Rahim Store` |
+| Opening Balance | `3000` |
+| Opening Date | `2026-01-01` |
+
+In this example, `3000` means **Rahim Store already owed 3,000 before you started using the system**.
+
+<Info>
+Customer opening balance helps customer due reports and customer ledger show the correct starting balance.
+</Info>
+
+<Warning>
+Enter customer opening balance carefully. Wrong opening balance will make customer due and ledger reports incorrect.
+</Warning>
+
+---
+
+# 2. Suppliers Directory
+
+Use this page to add suppliers.
+
+Suppliers are used in:
+
+- Purchase Order
+- Purchase Invoice
+- Supplier Payment
+- Purchase Return
+- Supplier Reports
+- Supplier Ledger
+
+---
+
+## Add Supplier
+
+<Steps>
+  <Step title="Open Suppliers Directory">
+    From the left menu, go to **Business Contacts** and click **Suppliers Directory**.
+  </Step>
+
+  <Step title="Click Add">
+    Click the green **Add** button.
+  </Step>
+
+  <Step title="Enter Supplier Name">
+    Type the supplier name.
+
+    Example: `ABC Pharma`
+  </Step>
+
+  <Step title="Enter Contact Number">
+    Type the supplier phone number.
+
+    Example: `017XXXXXXXX`
+  </Step>
+
+  <Step title="Enter Opening Balance">
+    Enter the previous due amount if this supplier already has a balance before using this system.
+
+    Example: If you already owe this supplier `5,000`, enter `5000`.
+
+    If there is no previous due or advance balance, enter `0`.
+  </Step>
+
+  <Step title="Enter Opening Date">
+    Select the date from when this opening balance should start.
+
+    Example: If you are starting the system from `2026-01-01`, use that date.
+  </Step>
+
+  <Step title="Select Status">
+    Select `Active`.
+  </Step>
+
+  <Step title="Add Other Details If Needed">
+    You may add proprietor, email, address, and brands if needed.
+  </Step>
+
+  <Step title="Save">
+    Click **Save Product** to save the supplier.
+  </Step>
+</Steps>
+
+---
+
+## What Is Opening Balance?
+
+Opening Balance means the previous balance before starting to use this system.
+
+Use Opening Balance when a supplier already has due or advance balance before you create new purchase records in the system.
+
+| Situation | What to Enter |
+|---|---|
+| You already owe money to the supplier | Enter the due amount |
+| Supplier already received advance from you | Enter the advance amount if your system supports advance balance |
+| No previous due or advance | Enter `0` |
+
+---
+
+## What Is Opening Date?
+
+Opening Date means the starting date of the opening balance.
+
+Example:
+
+If you start using the system on `2026-01-01`, and the supplier already has previous due of `5,000`, then enter:
+
+| Field | Example |
+|---|---|
+| Opening Balance | `5000` |
+| Opening Date | `2026-01-01` |
+
+In this example, `5000` means **your business already owed 5,000 to this supplier before starting the system**.
+
+<Info>
+Opening Balance helps the supplier due report and supplier ledger show the correct balance from the beginning.
+</Info>
+
+<Warning>
+Enter Opening Balance carefully. Wrong opening balance will make supplier due and ledger reports incorrect.
+</Warning>
+
+---
+
+## Supplier Fields
+
+| Field | Use | Required? |
+|---|---|---|
+| Name | Supplier name | Required |
+| Contact Number | Supplier phone number | Required |
+| Opening Balance | Previous due or advance balance before using the system | Important if previous balance exists |
+| Opening Date | Starting date of the opening balance | Important if opening balance is entered |
+| Status | Active or inactive | Required |
+| Proprietor | Owner name | Optional |
+| Email | Supplier email | Optional |
+| Address | Supplier address | Optional |
+| Brands | Brands supplied by this supplier | Optional |
+
+---
+
+## Supplier Example
+
+If there is no previous due:
+
+| Field | Example |
+|---|---|
+| Name | `ABC Pharma` |
+| Contact Number | `017XXXXXXXX` |
+| Opening Balance | `0` |
+| Opening Date | Empty or system start date |
+| Status | `Active` |
+
+If previous due exists:
+
+| Field | Example |
+|---|---|
+| Name | `ABC Pharma` |
+| Contact Number | `017XXXXXXXX` |
+| Opening Balance | `5000` |
+| Opening Date | `2026-01-01` |
+| Status | `Active` |
+
+In this example, `5000` means your business already owed `5,000` to this supplier before starting the system.
+
+---
+
+# 3. Customer Branches
+
+Customer Branches are optional.
+
+Use this only if one customer has multiple shops, offices, or delivery locations.
+
+Example:
+
+| Customer | Branch |
+|---|---|
+| Rahim Store | Mirpur Branch |
+| Rahim Store | Uttara Branch |
+| ABC Company | Dhaka Office |
+
+---
+
+## When to Use Customer Branches
+
+Use Customer Branches when:
+
+- A customer has more than one shop
+- A customer has multiple office locations
+- You need branch-wise delivery
+- You need branch-wise sales tracking
+
+---
+
+## Add Customer Branch
+
+<Steps>
+  <Step title="Open Customer Branches">
+    From the left menu, go to **Business Contacts** and click **Customer Branches**.
+  </Step>
+
+  <Step title="Click Add">
+    Click the green **Add** button.
+  </Step>
+
+  <Step title="Select Customer">
+    Select the customer.
+  </Step>
+
+  <Step title="Enter Branch Name">
+    Type the branch name.
+
+    Example: `Mirpur Branch`
+  </Step>
+
+  <Step title="Add Contact and Address If Needed">
+    Add phone number, email, contact person, or address if needed.
+  </Step>
+
+  <Step title="Save">
+    Save the branch information.
+  </Step>
+</Steps>
+
+---
+
+## Branch Example
+
+| Field | Example |
+|---|---|
+| Customer | `Rahim Store` |
+| Branch Name | `Mirpur Branch` |
+| Contact Number | `017XXXXXXXX` |
+| Address | `Mirpur-10, Dhaka` |
+
+---
+
+# 4. Sales Persons Directory
+
+Sales Persons Directory is optional.
+
+Use this if your business wants to track sales by sales person.
+
+Sales persons can be used for:
+
+- Sales tracking
+- Customer responsibility
+- Sales person reports
+- Salary or commission reports
+
+---
+
+## Add Sales Person
+
+<Steps>
+  <Step title="Open Sales Persons Directory">
+    From the left menu, go to **Business Contacts** and click **Sales Persons Directory**.
+  </Step>
+
+  <Step title="Click Add">
+    Click the green **Add** button.
+  </Step>
+
+  <Step title="Enter Sales Person Name">
+    Type the sales person's name.
+
+    Example: `Md. Karim`
+  </Step>
+
+  <Step title="Enter Contact Number">
+    Type the phone number if needed.
+  </Step>
+
+  <Step title="Select Status">
+    Select `Active`.
+  </Step>
+
+  <Step title="Save">
+    Save the sales person.
+  </Step>
+</Steps>
+
+---
+
+## Sales Person Example
+
+| Field | Example |
+|---|---|
+| Name | `Md. Karim` |
+| Contact Number | `018XXXXXXXX` |
+| Status | `Active` |
+
+---
+
+# 5. C&F Directory
+
+C&F Directory is optional.
+
+C&F means **Clearing and Forwarding**.
+
+Use this only if your business works with import, LC, shipment, or forwarding agents.
+
+---
+
+## Add C&F Agent
+
+<Steps>
+  <Step title="Open C&F Directory">
+    From the left menu, go to **Business Contacts** and click **C&F Directory**.
+  </Step>
+
+  <Step title="Click Add">
+    Click the green **Add** button.
+  </Step>
+
+  <Step title="Enter Company Name">
+    Type the C&F company name.
+
+    Example: `ABC Clearing Agency`
+  </Step>
+
+  <Step title="Enter Contact Person Name">
+    Type the contact person's name.
+  </Step>
+
+  <Step title="Enter Contact Number">
+    Type the contact number.
+  </Step>
+
+  <Step title="Select Status">
+    Select `Active`.
+  </Step>
+
+  <Step title="Add Other Details If Needed">
+    You may add designation, email, and address if needed.
+  </Step>
+
+  <Step title="Save">
+    Click **Save** to save the C&F information.
+  </Step>
+</Steps>
+
+---
+
+## C&F Example
+
+| Field | Example |
+|---|---|
+| Company Name | `ABC Clearing Agency` |
+| Contact Person's Name | `Md. Imran` |
+| Contact Number | `018XXXXXXXX` |
+| Status | `Active` |
+| Address | `Chattogram` |
+
+---
+
+# Quick Setup Guide
+
+Use this simple guide:
+
+| Business Need | What to Add |
+|---|---|
+| You sell products | Add Customers or Retailers |
+| You purchase products | Add Suppliers |
+| Customer has many branches | Add Customer Branches |
+| You track sales by person | Add Sales Persons |
+| You handle import or shipment | Add C&F Agents |
+| Customer has previous due | Add customer opening balance if available |
+| Supplier has previous due | Add supplier opening balance and opening date |
+
+---
+
+# Opening Balance Quick Example
+
+Opening Balance is used only when there is previous due or previous balance.
+
+| Contact Type | Situation | Example Entry |
+|---|---|---|
+| Customer | Customer already owes you money | Opening Balance `3000` |
+| Supplier | You already owe supplier money | Opening Balance `5000` |
+| No previous balance | Nothing is due | Opening Balance `0` |
+
+<Info>
+If there is no previous due, enter `0` or keep the field empty if the system allows it.
+</Info>
+
+---
+
+# Best Practice
+
+- Add only the contacts you need
+- Keep phone numbers correct
+- Avoid duplicate customer or supplier names
+- Keep usable contacts `Active`
+- Enter opening balance only when previous due exists
+- Enter opening date when opening balance is used
+- Add branches only when needed
+- Add C&F only if your business uses it
+- Add supplier brands if you want supplier-brand tracking
+
+---
+
+# Common Mistakes
+
+| Mistake | Problem |
+|---|---|
+| Adding duplicate customers | Sales may go under the wrong customer |
+| Wrong phone number | Communication becomes difficult |
+| Wrong opening balance | Due report becomes incorrect |
+| Missing opening date | Ledger starting date may be unclear |
+| Wrong user type | Customer or retailer report may be wrong |
+| Supplier not added before purchase | Purchase entry becomes difficult |
+| Inactive contact | Contact may not appear in selection list |
+
+---
+
+# Next Step
+
+After adding your needed business contacts, set up warehouse or shop if you manage stock.
+
+<Card title="Next: Warehouse / Shop Setup" href="/user-guide/warehouseShopSetup" icon="arrow-right">
+  Learn how to create warehouse or shop locations for stock management.
+</Card>

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Enterprise POS & ERP System",
+  "colors": {
+    "primary": "#0F172A",
+    "light": "#38BDF8",
+    "dark": "#0F172A"
+  },
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "introduction",
+        "getting-started"
+      ]
+    },
+    {
+      "group": "User Guide",
+      "pages": [
+        "user-guide/dashboard",
+        "user-guide/sales",
+        "user-guide/purchase",
+        "user-guide/inventory",
+        "user-guide/accounts",
+        "user-guide/reports",
+        "user-guide/settings",
+        "user-guide/administration"
+      ]
+    },
+    {
+      "group": "Business Workflows",
+      "pages": [
+        "workflows/sales-process",
+        "workflows/purchase-process",
+        "workflows/inventory-process"
+      ]
+    },
+    {
+      "group": "Support & Reference",
+      "pages": [
+        "faq",
+        "troubleshooting",
+        "release-notes"
+      ]
+    }
+  ]
+}

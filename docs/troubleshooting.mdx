@@ -1,0 +1,67 @@
+---
+title: "Troubleshooting Guide"
+description: "Resolve common issues, error messages, and operational blockers independently"
+---
+
+# Troubleshooting Guide
+
+This guide details resolutions for common operational issues that users face when interacting with the system.
+
+---
+
+## 1. POS Checkout Issues
+
+### Problem: Cashier cannot add a product to the cart
+* **Symptom**: Clicking on a product in the grid does not add it to the POS cart, or typing/scanning the barcode shows an "Out of Stock" or "Blocked" alert.
+* **Resolutions**:
+  1. **Check Inventory**: Verify if the product has a quantity greater than `0` in your assigned Shop Warehouse. If physical items are on hand but not in the system, a supervisor must record a **Stock Adjustment** or approve a pending **Warehouse Transfer**.
+  2. **Verify Pricing**: Ensure the product has an active **Selling Price** defined in the Product List. Products with a selling price of `0.00` are blocked from POS checkouts to prevent errors.
+  3. **Scan Check**: Clean the scanner lens and ensure the cursor is active inside the barcode search field before scanning.
+
+### Problem: Thermal receipt is not printing
+* **Symptom**: POS sale confirms successfully, but the receipt printer remains silent.
+* **Resolutions**:
+  1. **Check Hardware**: Ensure the printer power light is green, paper roll is loaded correctly (thermal side facing up), and USB/Ethernet cabling is secure.
+  2. **Clear Print Queue**: Open your computer's print manager, cancel all stuck document queues, and restart the printer.
+  3. **Check Browser Dialog**: Verify if the browser's print dialog opened behind other windows. If so, select the correct receipt printer name and click **Print**.
+
+---
+
+## 2. System Settings & Configuration Lags
+
+### Problem: Recently added brands, categories, or options are missing in dropdowns
+* **Symptom**: You added a new category or product model in configuration, but POS or purchase forms do not show it.
+* **Resolutions**:
+  1. **Clear System Cache**: Click on your profile name at the top-right corner of the system tray and select **Clear Cache**.
+  2. **Reload Web Page**: Hold `Ctrl + F5` (Windows) or `Cmd + Shift + R` (Mac) to force the browser to clear its cache and download the latest data.
+
+---
+
+## 3. Financial & Accounting Errors
+
+### Problem: "Insufficient Funds" or "Operation Blocked" error during expense entry
+* **Symptom**: Saving an expense or making a loan payment displays a validation block.
+* **Resolutions**:
+  1. **Verify Source Balance**: Check the balance of the Bank Account or Cash Drawer selected under the **Paid From** field. The system blocks expenses that exceed the available ledger balance.
+  2. **Record Income / Transfers**: If the physical cash is in the drawer, ensure all recent customer dues collected or cash deposits have been logged to update the system ledger balance.
+
+---
+
+## 4. Workflows & Approvals
+
+### Problem: Completed warehouse transfer is not updating destination stock
+* **Symptom**: Stock has been dispatched from Warehouse A, but Shop B shows no stock increase.
+* **Resolutions**:
+  1. **Pending Acceptance**: The transfer is in 'Transit' status. The receiving branch manager must log in, navigate to Inventory Management → **Requisition Received**, select the pending shipment, verify counts, and click **Accept**.
+  2. **Approval Hold**: Check if the transfer exceeds your store limit. If so, it will appear in the **Approval Inbox** and requires administrator approval.
+
+---
+
+## Summary of Key System Alerts
+
+| Alert Message | Trigger Cause | Resolution |
+| :--- | :--- | :--- |
+| `Product has no barcode...` | Item scanned does not have a SKU barcode registered. | Go to Product Master and add a barcode number. |
+| `Negative stock not allowed` | The item is out of stock, and negative sales are disabled. | Restock items or enable negative sales in Settings. |
+| `Unapproved purchase order...` | You are trying to sell stock from a purchase order that is not approved. | Ask Checker to approve the purchase order in the Inbox. |
+| `Role does not have permission...` | User clicked a link restricted by role settings. | Ask Administrator to update your Role Permissions. |

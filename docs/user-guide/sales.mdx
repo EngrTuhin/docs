@@ -1,0 +1,126 @@
+---
+title: "Sales & Customer Operations"
+description: "Process checkouts, table structures, deliveries, returns, shop requisitions, customer branches, sales persons, and quotations"
+---
+
+# Sales & Customer Operations Guide
+
+This guide covers the complete set of customer-facing sales modules, contact directories, and order processing workflows.
+
+---
+
+## Who Can Access
+
+* **POS Invoice & Table Setup**: Cashiers, Waiters, Store Managers.
+* **All Sales Records, Deliveries & Returns**: Sales Officers, Delivery Leads, Shop Managers.
+* **Customer, Branches & Sales Persons**: Sales Administrators, Customer Relations Managers.
+* **Quotations & Customer Purchase Orders**: Sales Executives, Wholesalers, Admins.
+
+---
+
+## 1. Point of Sale (POS) Invoicing & Table Setup
+
+### Overview
+* **POS Invoice**: Fast cash register interface for checking out retail customers. Supports category searches, barcode scans, split payments, and customer registration.
+* **Table Setup**: Setup physical tables (for restaurant or service configurations) to assign sales orders to specific tables.
+
+### Navigation
+* **POS Invoice**: Sales Management → **Sales Invoice**
+* **Table Setup**: Sales Management → **Table Setup**
+
+[Insert Screenshot Here - POS Interface and Table Layout Grid]
+
+### Field Descriptions (POS Invoice)
+
+| Field | Description | Validation / Rule |
+| :--- | :--- | :--- |
+| **Select Customer** | Select customer from the directory. | Defaults to 'Walk-in Customer'. |
+| **Scan Barcode** | Scan a product variant's barcode. | Adds the exact size/color variant to the cart. |
+| **Quantity** | Number of units purchased. | Cannot exceed shop stock balance. |
+| **Discount (%)** | Percentage discount on the item. | Cannot exceed your user role's discount limit. |
+| **Table Selection** | Assign cart to a table (if hospitality mode is on). | Optional. |
+| **Amount Received** | Cash/Card amount entered by cashier. | Must match or exceed total payable. |
+
+### Step-by-Step Instructions (POS Sale):
+1. Navigate to Sales Management → **Sales Invoice**.
+2. Select or search the customer (or click **[+]** to register a new one).
+3. Scan product barcodes or search the catalog to add items. If a product has multiple colors or sizes, a variant selection modal will appear. Select the desired option.
+4. (Optional) Select a **Table** to bind the transaction.
+5. In the checkout footer, choose the payment mode (Cash, Bank Card, Mobile Bank) and enter the **Amount Received**.
+6. Click **Confirm Payment & Print**. A receipt prints, and the shop stock decreases.
+
+---
+
+## 2. Customer Directory & Branch Setup
+
+### Overview
+* **Customers Directory**: Registry of retail and wholesale accounts, contact numbers, and opening balances.
+* **Customer Branches**: For corporate clients, manage multiple delivery branches under a single billing customer account.
+* **Customer Due Collection / Advance Payment**: Log payments collected for credit accounts or advance deposits.
+
+### Navigation
+* **Customers**: Business Contacts → **Customers & Retailers Directory**
+* **Customer Branches**: Business Contacts → **Customer Branches**
+
+### Step-by-Step Instructions (Add Branch to Customer):
+1. Navigate to **Customer Branches** and click **Add Branch**.
+2. Select the parent **Customer Name**.
+3. Input the Branch Name, Branch Address, Contact Person, and Phone.
+4. Click **Save Branch**. This branch is now available on Sales Delivery and CPO screens.
+
+---
+
+## 3. Quotation & Order Processing
+
+### Overview
+* **Quotation Types**: Categorize quotes (e.g. Retail, Corporate Tender, Export).
+* **Product Quotation**: Create commercial quotation documents detailing pricing, lead times, and payment terms.
+* **Product Quotation Settings**: Default terms and conditions displayed on quotation PDFs.
+* **Customer Purchase Orders (CPO)**: Log formal client purchase orders prior to dispatch.
+* **Sales Delivery**: Issue dispatches for pending CPOs, printing delivery bills, challans, final bills, and Mushak (VAT invoice).
+
+### Navigation
+* **Product Quotation**: Quotation Management → **Product Quotation**
+* **CPO**: **Company Purchase Order**
+* **Sales Delivery**: Sales Management → **Sales Delivery**
+
+[Insert Screenshot Here - Quotation Proposal Form]
+
+### Step-by-Step Instructions (Create Quotation):
+1. Go to Quotation Management → **Product Quotation** and click **Create Quotation**.
+2. Select **Quotation Type** and select the **Customer**.
+3. Add products, select quantities, and customize the quotation rate.
+4. Select **Delivery Lead Time** and **Payment Terms** (from pre-configured lists).
+5. Click **Generate Quotation**. You can print or download the PDF to send to the client.
+
+---
+
+## 4. Sales Requisition & Product Shifting
+
+### Overview
+* **Sales Requisition**: Retail outlet staff requesting items from the central warehouse.
+* **Product Shifting**: Moving items directly from one retail outlet (shop) to another.
+
+### Navigation
+* **Sales Requisition**: Sales Management → **Sales Requisition**
+* **Product Shifting**: Inventory Management → **Product Shifting**
+
+### Step-by-Step Instructions (Product Shifting):
+1. Go to **Product Shifting** and click **New Shift**.
+2. Select the **From Shop** (Source) and **To Shop** (Destination).
+3. Add products and input shifting quantities.
+4. Click **Confirm Shifting**. Stock is adjusted at both locations instantly.
+
+---
+
+## Business Rules
+
+* **Table Setup Constraints**: Tables cannot be deleted if there is a pending, unpaid order assigned to them.
+* **Corporate Credit Limits**: Corporate customers cannot be invoiced if their outstanding due exceeds their approved credit limit, unless authorized by an administrator.
+
+---
+
+## Related Features
+
+* **Detailed Sales Report**: Analyze daily transactions.
+* **Requisition Client Report**: Track store requisition statuses.

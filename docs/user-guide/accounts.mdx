@@ -1,0 +1,113 @@
+---
+title: "Finance & Accounts"
+description: "Manage bank accounts, mobile banking, expenses, loans, investments, and repayments"
+---
+
+# Finance & Accounts Modules
+
+The Finance and Accounts module tracks all cash inflows and outflows, manages bank/mobile wallets, handles business loans, and records capital investments or partner withdrawals.
+
+---
+
+## 1. Income & Expenses
+
+### Overview
+* **Expense Categories**: Groups expenses for reporting (e.g. Rent, Electricity, Stationery).
+* **Transactions (Expense Entry)**: Logs daily business payments.
+
+### Who Can Access
+* Accountants
+* Branch Managers (petty cash limits)
+* Administrators
+
+### Navigation
+* **Sidebar**: Finance → Income & Expense → **Transactions** or **Categories**
+
+### Field Descriptions (Expense Entry)
+
+| Field | Description | Rules / Validations |
+| :--- | :--- | :--- |
+| **Category** | Expense classification. | Select from Expense Categories list. |
+| **Paid From** | Account funding the expense. | Must be Cash-in-Hand, Bank, or Mobile Wallet. |
+| **Amount** | Financial cost. | Cannot exceed the selected account's balance. |
+| **Reference No** | Receipt or voucher number. | Optional; useful for audit tracking. |
+
+### Step-by-Step Instructions:
+1. Navigate to **Transactions** (under Income & Expense) and click **Create Expense**.
+2. Select the **Expense Category**.
+3. Select the payment account under **Paid From** (e.g., Office Cash or Brac Bank).
+4. Enter the **Amount** and **Transaction Date**.
+5. Upload a scan of the payment receipt if required.
+6. Click **Save Expense**. The cash or bank account balance will decrease by this amount.
+
+---
+
+## 2. Banking & Mobile Banking Channel Configuration
+
+### Overview
+Set up and monitor financial bank accounts and mobile money accounts (e.g. bKash, Rocket, Nagad). All POS card transactions and supplier due payments route through these configured accounts.
+
+### Navigation
+* **Sidebar**: Finance → Banking → **Bank Accounts** or **Mobile Banking**
+
+### Step-by-Step Instructions:
+1. Navigate to **Bank Accounts** and click **Add Bank**.
+2. Enter the Bank Name, Account Name, Account Number, Branch, and Initial Opening Balance.
+3. Click **Save**.
+4. To track mobile wallets, go to **Mobile Banking**, click **Add Mobile Account**, enter the service provider, wallet number, and opening balance, and click **Save**.
+
+---
+
+## 3. Loans & Capital Setup
+
+### Overview
+* **Loan Providers**: Financial institutions or private lenders.
+* **Loan Types**: Categorize loans (e.g., term loans, lines of credit).
+* **Loan Taken Entry & Repayment**: Track loan disbursement and pay principal/interest installments.
+* **Investment & Withdrawal**: Track capital injected into or withdrawn from the business by shareholders.
+
+### Navigation
+* **Sidebar**: Finance → Loan Setup → **Loan Taken Entry** / **Investment** / **Withdrawal**
+
+[Insert Screenshot Here - Loan Repayment Interface]
+
+### Step-by-Step Instructions (Repaying a Loan):
+1. Navigate to **Loan Taken Entry**.
+2. Locate the active loan from the list and click **Repay**.
+3. In the repayment modal, enter:
+   * **Repayment Amount**: The installment amount.
+   * **Interest Paid**: (Optional) Interest component of the payment.
+   * **Paid From**: The bank or cash account from which funds are drawn.
+4. Click **Submit Repayment**. This updates the remaining loan balance and logs the cash outflow.
+
+---
+
+## Business Rules
+
+* **Overdraft Restrictions**: Accounts cannot have negative balances unless an overdraft limit is explicitly configured. If an account has $100, you cannot enter a $150 expense from that account.
+* **Double Entry**: Every expense or loan repayment requires selecting a valid source account. The system automatically creates credit and debit ledgers.
+
+---
+
+## Business Example
+
+The Finance Manager needs to pay the monthly shop rent. 
+1. The manager goes to **Transactions** (under Income & Expense).
+2. Selects the category "Shop Rent".
+3. Selects the payment account "Dutch Bangla Bank".
+4. Enters the amount "$1,200".
+5. Attaches the rent receipt image and saves.
+DBBL Bank balance drops by $1,200, and the monthly Expense report shows Rent at $1,200.
+
+---
+
+## FAQs
+
+<AccordionGroup>
+  <Accordion title="How do I transfer funds from Cash-in-Hand to a Bank Account?">
+    You can log a fund transfer by using the Bank Deposit flow. Go to Bank Accounts, click Deposit, select Cash-in-Hand as the source, enter the amount, select the destination bank, and save.
+  </Accordion>
+  <Accordion title="Where do I see shareholder investments?">
+    Go to Finance → Loan Setup → **Investment**. This panel lists all capital injections, the date of deposit, and the funding source.
+  </Accordion>
+</AccordionGroup>
