@@ -1,0 +1,593 @@
+---
+title: Quotation Management
+description: Learn how to manage quotation types, product quotations, and quotation settings
+---
+
+# Quotation Management
+
+Quotation Management is the core module used to create, organize, and control all types of customer quotations in the system.
+
+It ensures a structured quotation workflow and connects quotation types, quotation creation, and quotation settings.
+
+---
+
+# Purpose of Quotation Management
+
+You use this module to:
+
+- Define different quotation categories (types)
+- Create product-based quotations for customers
+- Standardize quotation workflow across the business
+- Control quotation settings and behavior
+- Improve quotation tracking and reporting
+
+---
+
+# Quotation Workflow Overview
+
+Quotation Management generally follows this flow:
+
+1. Set up Quotation Types
+2. Configure Quotation Settings
+3. Create Product Quotations
+4. Send / manage quotations
+5. Convert quotations into sales (if needed)
+
+---
+
+# Quotation Management Modules
+
+You will find the following modules under Quotation Management:
+
+## 1. Quotation Types
+
+Define different categories of quotations such as Retail, Wholesale, Institutional, or Project quotations.
+
+## 2. Product Quotation
+
+Create and manage customer quotations with product details, pricing, and quantities.
+
+## 3. Product Quotation Settings
+
+Configure quotation behavior, numbering, approval rules, and system preferences.
+
+---
+
+# Summary
+
+Quotation Management provides a complete system to handle all quotation-related operations from setup to creation and configuration, ensuring consistency and control across the quotation process.
+
+---
+
+# 1. Quotation Types
+
+Quotation Types is a setup / master data module used to define different categories of quotations in the system.
+
+It helps organize quotations based on business scenarios such as retail, wholesale, institutional, or project-based pricing.
+
+<Info>
+  Quotation Types act as a classification layer for all quotations created in
+  the system.
+</Info>
+
+---
+
+## Purpose
+
+You use this module to:
+
+- Define quotation categories (Retail, Wholesale, Project, etc.)
+- Organize quotations by business type
+- Improve filtering and reporting
+- Standardize quotation structure
+
+---
+
+## Quotation Types Overview
+
+Quotation Types is a **child module under Quotation Management**.
+
+It is required before creating product quotations.
+
+---
+
+## Listing Page Overview
+
+The listing page shows all created quotation types.
+
+### Empty State
+
+- “No quotation type found.”
+- “Click 'Add' to create your first quotation type.”
+
+---
+
+## Create Quotation Type Form
+
+This form appears after clicking **+ Add**.
+
+### Fields
+
+| Field                 | Description                             |
+| --------------------- | --------------------------------------- |
+| Quotation Type Name\* | Required name (e.g., Retail, Wholesale) |
+| Description           | Optional details                        |
+| Status\*              | Active / Inactive                       |
+
+---
+
+## Buttons & Controls
+
+### On Listing Page
+
+- **+ Add (Green Button)** → Create new quotation type
+- Search → Find quotation types
+- Filters → Filter by status
+- Analytics → View summary insights
+
+### On Form
+
+- Cancel → Close form
+- Save Product → Save quotation type
+
+---
+
+## How It Works
+
+### Step 1: Open Module
+
+Go to:
+Quotation Management → Quotation Types
+
+---
+
+### Step 2: Create Type
+
+1. Click **+ Add**
+2. Enter Quotation Type Name
+3. Add optional description
+4. Set status to Active
+
+---
+
+### Step 3: Save
+
+Click **Save Product** to store the quotation type.
+
+---
+
+## After Saving
+
+- The quotation type appears in the list
+- It becomes available in Product Quotations
+- Helps categorize and filter quotations
+
+---
+
+## Business Rules
+
+- Quotation Type Name is required
+- Duplicate names should be avoided
+- Inactive types cannot be used in quotations
+- At least one active type is recommended
+
+---
+
+## Example Quotation Types
+
+- Retail Quotation
+- Wholesale Quotation
+- Institutional Quotation
+- Project Quotation
+- Medicine Quotation
+
+---
+
+## Summary
+
+Quotation Types is the foundational setup module under Quotation Management. It defines how quotations are categorized and ensures a structured quotation system across the application.
+
+# 2. Product Quotation
+
+Product Quotation is the main operational module used to create, manage, and track customer quotations (price proposals) within the system.
+
+It allows the business to prepare structured quotations with product items, pricing, tax, and payment terms, and later convert them into sales orders if approved.
+
+<Info>
+  This is the core working page under Quotation Management used for day-to-day
+  quotation creation and management.
+</Info>
+
+---
+
+# Purpose
+
+You use this module to:
+
+- Create detailed quotations for customers
+- Add product-wise pricing and quantities
+- Apply taxes, discounts, and payment terms
+- Track quotation status (pending, approved, converted, etc.)
+- Convert quotations into sales orders or invoices
+- Maintain quotation history for reporting
+
+---
+
+# Product Quotation Overview
+
+Product Quotation is a **child module under Quotation Management → Quotation Types**.
+
+It is used after setting up quotation types.
+
+---
+
+## Listing Page Overview
+
+The listing page displays all created quotations.
+
+### Empty State
+
+If no data exists, it shows:
+
+- “No quotation found.”
+- “Click 'Add' to create your first quotation.”
+
+---
+
+## Create Quotation Form
+
+This form opens after clicking **+ Add**.
+
+It contains header details, configuration options, and product entry sections.
+
+---
+
+## Header Fields
+
+| Field                 | Description                           |
+| --------------------- | ------------------------------------- |
+| Date\*                | Quotation creation date (auto-filled) |
+| Quotation Info\*      | Dropdown for quotation type/info      |
+| Customer\*            | Search and select customer            |
+| Contact Person        | Optional contact selection            |
+| Delivery Lead Time    | Expected delivery duration            |
+| Quotation Validity    | Expiry period of quotation            |
+| Tax (Include/Exclude) | Tax calculation mode                  |
+| Payment Term          | Payment conditions                    |
+
+---
+
+## Tabs
+
+### 1. Product Entry (Active Tab)
+
+Used to add products to the quotation.
+
+- Search products by name, barcode, or SKU
+- Add multiple products
+- Enter quantity, rate, and price details
+
+---
+
+### 2. Letter Header & Footer
+
+Used to customize quotation document layout.
+
+- Header content (company message/logo text)
+- Footer content (terms, notes, signature lines)
+
+---
+
+### 3. Currency
+
+Used to define quotation currency settings.
+
+- Select currency type
+- Adjust currency formatting rules (if applicable)
+
+---
+
+## Quotation Items Section
+
+- Product search field
+- Add multiple items
+- Empty state: “No Items added yet”
+
+Each item typically includes:
+
+- Product name
+- Quantity
+- Unit price
+- Total price
+
+---
+
+## Buttons & Controls
+
+### On Listing Page
+
+- **+ Add (Green Button)** → Create new quotation
+- Search → Find quotations
+- Filters → Filter by status/date/customer
+- Analytics → View quotation insights
+
+### On Create Form
+
+- Save → Save quotation (not shown in screenshot but available in form)
+- Cancel → Exit form without saving
+
+---
+
+## How It Works
+
+### Step 1: Open Module
+
+Go to:
+Quotation Management → Product Quotation
+
+---
+
+### Step 2: Create Quotation
+
+1. Click **+ Add**
+2. Select quotation type/info
+3. Choose customer
+4. Fill in delivery and payment details
+
+---
+
+### Step 3: Add Products
+
+1. Go to Product Entry tab
+2. Search products by name/barcode/SKU
+3. Add items to quotation
+4. Set quantity and price
+
+---
+
+### Step 4: Save
+
+Click Save to store the quotation.
+
+---
+
+## After Saving
+
+- Quotation appears in the list
+- Can be viewed, edited, printed, or exported
+- Can be converted into Sales Order or Invoice later
+
+---
+
+## Business Rules
+
+- Customer selection is required
+- At least one product must be added
+- Pricing must be valid before saving
+- Quotation validity affects conversion eligibility
+- Tax settings apply to total calculation
+
+---
+
+## Example Use Case
+
+A sales team prepares a quotation:
+
+- Customer: ABC Trading
+- Products: 10 items (electronics)
+- Validity: 7 days
+- Payment Term: 50% advance
+
+They save it and send it to the customer for approval.
+
+---
+
+## Summary
+
+Product Quotation is the core operational module of Quotation Management. It is used to generate customer price proposals and serves as the bridge between quotation creation and sales conversion.
+
+# 3. Product Quotation Settings
+
+Product Quotation Settings is a configuration module used to define global templates and formatting rules for all product quotations in the system.
+
+It allows the business to standardize quotation documents by using reusable layouts, dynamic placeholders, and predefined header/footer content.
+
+<Info>
+  This is a setup / master configuration module under Quotation Management used
+  to control how quotations are generated and displayed.
+</Info>
+
+---
+
+# Purpose
+
+You use this module to:
+
+- Define default quotation templates
+- Configure reusable header and footer content
+- Standardize quotation document format across the system
+- Use dynamic placeholders (auto-filled fields)
+- Ensure consistent branding and structure in all quotations
+
+---
+
+# Product Quotation Settings Overview
+
+Product Quotation Settings is a **child module under Quotation Management → Quotation Types**.
+
+It is used before generating or printing product quotations.
+
+---
+
+## Listing Page Overview
+
+The listing page shows all created quotation settings.
+
+### Empty State
+
+If no data exists, it shows:
+
+- “No quotation setting found.”
+- “Click 'Add' to create your first quotation setting.”
+
+---
+
+## Create Quotation Setting Form
+
+This form opens after clicking **+ Add**.
+
+It is used to define quotation templates and document structure.
+
+---
+
+## Fields
+
+### Basic Fields
+
+| Field          | Description                    |
+| -------------- | ------------------------------ |
+| Quotation Type | Select quotation category/type |
+| Title\*        | Name of the quotation template |
+
+---
+
+### String Templates
+
+This section provides dynamic placeholders that automatically fill when generating a quotation.
+
+Examples include:
+
+- Date
+- Quotation Number
+- Customer Name
+- Customer Code
+- Customer Number
+- Customer Email
+- Customer Address
+- Customer Phone
+- Contact Person Name
+
+These can be inserted into header or footer content.
+
+---
+
+## Header / Footer Section
+
+The form contains two tabs:
+
+### 1. Header Content (Active)
+
+Used to define the top section of the quotation document.
+
+Includes a rich text editor with options:
+
+- Bold / Italic / Underline
+- Alignment controls
+- Lists
+- Links
+- Images
+- Formatting tools
+
+---
+
+### 2. Footer Content
+
+Used to define the bottom section of the quotation document.
+
+Common uses:
+
+- Terms & Conditions
+- Payment instructions
+- Company notes
+- Signature area
+
+---
+
+## Buttons & Controls
+
+### On Listing Page
+
+- **+ Add (Green Button)** → Create new quotation setting
+- Search → Find templates
+- Filters → Filter by quotation type or status
+- Analytics → View template usage insights
+
+---
+
+### On Create Form
+
+- Save → Save quotation setting (used after configuring template)
+- Cancel → Close form without saving
+
+---
+
+## How It Works
+
+### Step 1: Open Module
+
+Go to:
+Quotation Management → Product Quotation Settings
+
+---
+
+### Step 2: Create Template
+
+1. Click **+ Add**
+2. Select Quotation Type
+3. Enter Title
+4. Configure header/footer content
+
+---
+
+### Step 3: Add Dynamic Fields
+
+- Click string template buttons
+- Insert placeholders into content
+- System will auto-fill real values later
+
+---
+
+### Step 4: Save
+
+Click Save to store the quotation setting.
+
+---
+
+## After Saving
+
+- Template appears in listing page
+- Can be applied to Product Quotations
+- Ensures consistent document formatting
+- Reduces manual formatting work
+
+---
+
+## Business Rules
+
+- Quotation Type selection is required
+- Title must be unique and meaningful
+- At least one of Header/Footer should be configured
+- Dynamic fields must match system-supported placeholders
+- Templates can be reused across multiple quotations
+
+---
+
+## Example Use Case
+
+A business creates a template:
+
+- Title: Standard Retail Quotation
+- Header: Company logo + address + dynamic customer info
+- Footer: Terms & conditions + payment notes
+
+When generating a quotation:
+
+- Customer details auto-fill
+- Date and quotation number auto-generate
+- Document format remains consistent
+
+---
+
+## Summary
+
+Product Quotation Settings is a template configuration module that ensures all quotations are generated with consistent formatting, dynamic data insertion, and professional structure across the system.

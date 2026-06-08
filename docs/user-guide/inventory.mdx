@@ -1,112 +1,931 @@
 ---
-title: "Inventory & Catalog Configuration"
-description: "Manage product catalogs, attributes, barcodes, warehouses, stock transfers, adjustments, and internal stock logs"
+title: Inventory Management
+description: Learn how to manage warehouses, stock, transfers, adjustments, and inventory operations
 ---
 
-# Inventory & Catalog Configuration
+# Inventory Management
 
-This guide details product definitions, variations, location management, stock transfers, physical audits, and internal usage.
+Inventory Management is the core module used to control and monitor stock across warehouses, shops, and internal stock movements.
 
----
-
-## Who Can Access
-
-* **Product Catalog & Attributes**: Procurement Staff, Product Managers, Admins.
-* **Barcode Generator**: Warehouse staff, cashiers.
-* **Warehouse setup, Stock transfers, adjustments**: Warehouse supervisors, Shop managers.
+It ensures accurate stock tracking, prevents mismatches, and connects all purchase, sales, and return operations.
 
 ---
 
-## 1. Product Catalog & Attribute Configurations
+# Purpose of Inventory Management
 
-### Overview
-Define the core items sold or purchased. The catalog supports rich attribute details:
-* **Product List**: CRUD operations for products and their variations.
-* **Product Exchange**: Configure product exchange rules.
-* **Attributes**: Setup categories, units, sizes, brands, product types, colors, shelves, models, and origins.
+You use this module to:
 
-### Navigation
-* **Product List**: Product Configuration → **Product List**
-* **Attributes**: Product Configuration → [Select Attribute, e.g. Product Categories, Sizes, Brands]
-
-[Insert Screenshot Here - Product Create Form with Attribute Selectors]
-
-### Field Descriptions (Product Setup)
-
-| Field | Description | Rules / Validations |
-| :--- | :--- | :--- |
-| **Product Name** | Clear name of the item. | Mandatory |
-| **Category** | Primary department. | Select from pre-setup Categories. |
-| **SKU Code** | Unique stock keeping unit. | System generates automatically if left blank. |
-| **Measurement Unit**| Unit of sale (Pcs, Box, Ream). | Select from Units setup. |
-| **Attributes** | Variation combinations (Color, Size). | Creates unique stock nodes. |
-| **Alert Qty** | Safety stock threshold. | Triggers low stock alert on Dashboard. |
-
-### Step-by-Step Instructions (Add Product):
-1. Navigate to Product Configuration → **Product List** and click **Add Product**.
-2. Enter the Product Name, select its Category, Brand, Origin, Model, and Unit.
-3. If the product has attributes (e.g. Size: Medium, Color: Blue), toggle **Has Attributes** and check the relevant combinations.
-4. Input the Purchase Cost and Selling Price.
-5. Set the safety stock **Alert Quantity**.
-6. Click **Save Product**.
+- Manage warehouse and shop stock locations
+- Track real-time stock movement
+- Transfer stock between different locations
+- Record damaged, used, shipped, and adjusted products
+- Maintain accurate inventory records across the system
 
 ---
 
-## 2. Barcode Generator
+# Inventory Workflow Overview
 
-### Overview
-Generate and print barcode labels for products or specific incoming purchase shipments.
+Inventory in the system generally follows this flow:
 
-### Navigation
-* **Sidebar**: Product Configuration → **Barcode Generator**
-
-### Step-by-Step Instructions:
-1. Navigate to **Barcode Generator**.
-2. Search and select products.
-3. Choose the print format (e.g. 24-sticker sheet or continuous roll).
-4. Select the print elements (Show Price, Show Name, Show Brand).
-5. Click **Generate Barcode** to download a print-ready PDF.
+1. Create Warehouse / Shop
+2. Add Opening Stock
+3. Stock increases from Purchase
+4. Stock decreases from Sales
+5. Handle Returns and Adjustments
+6. Transfer stock between warehouses
+7. Monitor reports and history
 
 ---
 
-## 3. Warehouse Setup & Stock Transfers
+# Inventory Management Modules
 
-### Overview
-* **Warehouse/Shop Setup**: Establish storage depots and retail shops.
-* **Transfer Stock**: Dispatch inventory from one warehouse/shop to another.
-* **Requisition Received**: View and ship items requested by retail shops.
-* **Shipment Products**: Track dispatches currently in transit.
+You will find the following modules under Inventory Management:
 
-### Navigation
-* **Transfer Stock**: Inventory Management → **Transfer Stock**
-* **Requisition Received**: Inventory Management → **Requisition Received**
+## 1. Warehouse / Shop Setup
 
-[Insert Screenshot Here - Stock Transfer Dispatch Screen]
+Create and manage warehouse or shop locations where stock is stored.
 
-### Step-by-Step Instructions (Warehouse Stock Transfer):
-1. Go to **Transfer Stock** and click **New Transfer**.
-2. Choose the source warehouse and destination location.
-3. Add products, select quantities, and click **Submit Dispatch**.
-4. The destination location goes to **Requisition Received**, selects the incoming transfer shipment, verifies the quantities, and clicks **Accept** to increase their local stock.
+## 2. Manage Warehouse Stock
+
+View real-time stock levels of all products across warehouses.
+
+## 3. Add Opening Stock
+
+Set initial stock quantities when starting the system or adding a new warehouse.
+
+## 4. Transfer Stock
+
+Move products between warehouses or shop locations.
+
+## 5. Damage Product Entry
+
+Record damaged, expired, or unusable products and reduce stock.
+
+## 6. Stock Adjustment
+
+Manually correct stock differences between system and physical stock.
+
+## 7. Shipment Products
+
+Manage outgoing product shipments to shops, branches, or customers.
+
+## 8. Used Product
+
+Record products that are consumed internally and not sold.
 
 ---
 
-## 4. Stock Adjustments & Damage Entries
+# Summary
 
-### Overview
-* **Stock Adjustment**: Manually correct inventory count mismatches following audits.
-* **Damage Product Entry**: Write off broken, expired, or spoiled merchandise.
-* **Used Product**: Log inventory items pulled for internal office or showroom usage.
+Inventory Management gives you full control over all stock movement in the system, including storage, transfers, usage, damage, and adjustments across all warehouses and shops.
 
-### Step-by-Step Instructions (Log Damage Entry):
-1. Go to Inventory Management → **Damage Product Entry** and click **Create Damage Log**.
-2. Select the **Warehouse** where the damaged items are stored.
-3. Add the product row, quantity, and choose the damage reason (e.g. Broken, Expired).
-4. Click **Save**. The stock balance is adjusted, and the loss is logged.
+---
+
+# 1.Warehouse / Shop Setup
+
+Warehouse / Shop Setup is used to create and manage physical or logical stock locations in the system.
+
+Each warehouse represents a separate storage area where inventory is tracked independently.
+
+---
+
+# Purpose
+
+You use this module to:
+
+- Create multiple stock locations
+- Separate inventory per branch or shop
+- Track stock individually per warehouse
+- Support multi-location business operations
+
+---
+
+# How It Works
+
+Each warehouse acts as a stock container.
+
+All inventory movements are linked to warehouses:
+
+- Purchase → Stock IN
+- Sales → Stock OUT
+- Return → Stock IN
+- Transfer → Moves stock between warehouses
+
+---
+
+# Warehouse Examples
+
+- Main Warehouse
+- Branch Shop 1
+- Branch Shop 2
+- Godown
+- Storage Room
+
+---
+
+# Warehouse Structure
+
+Each warehouse contains:
+
+- Name
+- Address (optional)
+- Status (Active system-wide)
+
+---
+
+# Add Warehouse / Shop
+
+## Step 1: Open Module
+
+Go to:
+
+Inventory Management → Warehouse / Shop Setup
+
+---
+
+## Step 2: Add New Warehouse
+
+Click **+ Add** button.
+
+---
+
+## Step 3: Enter Details
+
+### Name (Required)
+
+Example:
+
+- Main Warehouse
+- Branch-1
+
+### Address (Optional)
+
+Example:
+
+- Dhaka, Bangladesh
+
+---
+
+## Step 4: Save
+
+Click **Save** to create the warehouse.
+
+---
+
+# Edit Warehouse
+
+1. Click the edit (pencil) icon
+2. Update name or address
+3. Click Save
+
+---
+
+# Business Rules
+
+- At least one warehouse must exist
+- Warehouse selection is required in transactions
+- Stock is always warehouse-based
+- Warehouse affects all inventory reports
+
+---
+
+# System Usage
+
+Warehouses are used in:
+
+- Purchase Invoice → Stock IN
+- Sales Invoice → Stock OUT
+- Sales Return → Stock IN
+- Purchase Return → Stock OUT
+- Stock Transfer → Movement between warehouses
+
+---
+
+# Example Use Case
+
+A business has:
+
+- Main Warehouse
+- Branch Shop
+
+They:
+
+1. Create both warehouses
+2. Use Main Warehouse for purchases
+3. Use Branch Shop for sales
+4. Track stock separately
+
+---
+
+# Common Mistakes
+
+| Mistake                            | Problem              |
+| ---------------------------------- | -------------------- |
+| Not selecting warehouse            | Wrong stock tracking |
+| Using one warehouse for everything | No stock separation  |
+| Wrong warehouse in transactions    | Inventory mismatch   |
+
+---
+
+# Best Practices
+
+- Create warehouses before starting operations
+- Use clear and meaningful names
+- Always select correct warehouse in transactions
+- Keep structure simple and organized
+
+---
+
+# Summary
+
+Warehouse / Shop Setup is the foundation of Inventory Management. It ensures accurate stock tracking across all locations in the system.
+
+---
+
+# 2. Manage Warehouse Stock
+
+Manage Warehouse Stock is the main inventory overview page used to monitor real-time stock levels of all products across warehouses.
+
+It provides a complete snapshot of available stock, pricing, and product details in a single unified view.
+
+---
+
+## Purpose
+
+You use this module to:
+
+- View real-time stock of all products
+- Monitor product availability per warehouse
+- Track inventory value (Cost, TP, MRP)
+- Identify low-stock and overstock items
+- Export stock data for reporting
+- Support inventory decision-making
+
+---
+
+## Stock Overview Summary
+
+At the top of the page, you can see summary cards that help you quickly understand inventory status, such as:
+
+- Total products in stock
+- Total quantity across warehouses
+- Total stock value (Cost / TP / MRP)
+- Stock movement overview (if enabled)
+
+---
+
+## Stock Table
+
+The main table shows detailed stock information for each product.
+
+| Column             | Description                                |
+| ------------------ | ------------------------------------------ |
+| Product            | Product name                               |
+| Category           | Product category (e.g., Medicine, Grocery) |
+| SKU                | Stock Keeping Unit (unique product code)   |
+| Brand / Attributes | Brand, color, model, or size               |
+| Batch              | Product batch number                       |
+| QTY                | Available stock quantity                   |
+| Unit Price         | Purchase cost per unit                     |
+| TP Price           | Trade price (wholesale price)              |
+| MRP Price          | Maximum retail price                       |
+| Unit Total         | Total value based on unit price            |
+| TP Total           | Total value based on trade price           |
+| MRP Total          | Total value based on retail price          |
+
+---
+
+## How It Works
+
+This page is mainly used for **stock monitoring**, not editing.
+
+### View Stock
+
+You can search or filter products to check:
+
+- Available quantity
+- Batch-wise stock
+- Product value
+
+---
+
+### Export Stock
+
+You can export full inventory data by clicking:
+
+- **Download Excel**
+
+---
+
+### Stock Updates
+
+Stock is updated automatically from other modules:
+
+- Add Opening Stock
+- Purchase Invoice
+- Sales Invoice
+- Stock Adjustment
+- Transfer Stock
+- Damage Product Entry
 
 ---
 
 ## Business Rules
 
-* **Attribute Merging**: For products with multiple sizes or colors, the POS screen groups them under a single card. Cashiers select the specific combination in a popup modal.
-* **Safety Threshold Alerts**: Low stock warnings appear on the dashboard only if the available quantity is less than or equal to the defined **Alert Qty**.
+- Stock is automatically updated from transactions
+- Manual stock editing is not done here
+- Each product may have multiple batches
+- Stock is warehouse-based
+- Negative stock is usually restricted
+
+---
+
+## Summary
+
+Manage Warehouse Stock is your central inventory dashboard. It provides a real-time view of all product quantities, values, and stock distribution across warehouses.
+
+---
+
+# 3. Add Opening Stock
+
+Add Opening Stock is used to define the initial stock quantity and value of products in the system.
+
+It sets the starting inventory balance before normal purchase and sales transactions begin.
+
+---
+
+## Purpose
+
+You use this module to:
+
+- Set initial stock when starting the system
+- Enter opening balance for a new warehouse
+- Migrate stock from a previous system
+- Define starting inventory for accounting
+- Ensure accurate stock reporting from day one
+
+---
+
+## When to Use It
+
+You should use Add Opening Stock when:
+
+- Setting up the system for the first time
+- Starting a new financial year
+- Adding a new warehouse or shop
+- Importing existing inventory data
+
+---
+
+## Opening Stock Records
+
+This page shows all previously created opening stock entries.
+
+| Column    | Description                    |
+| --------- | ------------------------------ |
+| Date      | Opening stock entry date       |
+| Warehouse | Warehouse where stock is added |
+| Action    | Edit or delete entry           |
+
+---
+
+## How It Works
+
+### Create Opening Stock
+
+You add opening stock by following these steps:
+
+1. Open **Inventory Management → Add Opening Stock**
+2. Click **+ Add**
+3. Select opening stock date
+4. Select warehouse or shop
+5. Search and add products
+6. Enter quantity and unit price
+7. Save the entry
+
+---
+
+## Product Entry
+
+For each product, you can:
+
+- Search by name, barcode, or SKU
+- Enter quantity
+- Enter unit price
+- Add multiple products in one entry
+
+---
+
+## Auto Calculations
+
+The system automatically calculates:
+
+- Total quantity
+- Total unit cost
+- Overall stock value
+
+---
+
+## Business Rules
+
+- Opening stock is usually entered once per product per warehouse
+- It directly affects current stock levels
+- It is the base of all inventory calculations
+- Editing affects stock history and reports
+- Must be entered carefully to avoid mismatch
+
+---
+
+## System Impact
+
+Once saved, opening stock will:
+
+- Increase stock in Manage Warehouse Stock
+- Reflect in inventory reports
+- Affect costing and valuation
+- Serve as the system baseline
+
+---
+
+## Example
+
+If you start with:
+
+- Paracetamol → 500 pcs @ 5 BDT
+- Shampoo → 200 pcs @ 80 BDT
+
+The system treats this as initial inventory for that warehouse.
+
+---
+
+## Common Mistakes
+
+| Mistake          | Problem                         |
+| ---------------- | ------------------------------- |
+| Wrong quantity   | Incorrect stock report          |
+| Wrong warehouse  | Stock appears in wrong location |
+| Duplicate entry  | Inflated stock                  |
+| Wrong unit price | Incorrect valuation             |
+
+---
+
+## Best Practices
+
+- Enter opening stock only once
+- Double-check all quantities
+- Always select correct warehouse
+- Verify unit prices before saving
+- Match with physical stock records
+
+---
+
+## Summary
+
+Add Opening Stock is the foundation of inventory tracking. It defines the starting inventory of the system and ensures accurate stock management from day one.
+
+---
+
+# 4. Transfer Stock
+
+Transfer Stock is used to move products from one warehouse or shop to another within the system.
+
+It helps you manage inventory distribution across multiple locations without affecting sales or purchase records.
+
+---
+
+## Purpose
+
+You use this module to:
+
+- Move stock between warehouses or branches
+- Balance inventory across multiple locations
+- Send goods from main warehouse to shops
+- Improve product availability in different outlets
+- Perform internal stock redistribution
+
+---
+
+## When to Use It
+
+You use Transfer Stock when:
+
+- A branch runs out of stock
+- You want to distribute goods from the main warehouse
+- You need to balance stock between locations
+- You are reorganizing warehouse inventory
+
+---
+
+## How It Works
+
+### Step 1: Open Module
+
+Go to:
+
+Inventory Management → Transfer Stock
+
+---
+
+### Step 2: Create Transfer
+
+Click the **+ Add** button to start a new transfer.
+
+---
+
+### Step 3: Select Warehouses
+
+- Choose **Sender Warehouse** (stock will be deducted from here)
+- Choose **Receiver Warehouse** (stock will be added here)
+
+---
+
+### Step 4: Add Products
+
+You can search and add products using:
+
+- Product Name
+- Barcode
+- SKU
+
+For each product, you will enter:
+
+- Quantity to transfer
+- Batch number (if applicable)
+
+---
+
+### Step 5: Save Transfer
+
+Click **Save** to complete the transfer process.
+
+---
+
+## System Behavior
+
+After saving:
+
+- Stock is deducted from the sender warehouse
+- Stock is added to the receiver warehouse
+- Transfer record is stored in history
+- Inventory reports are updated automatically
+
+---
+
+## Business Rules
+
+- Sender warehouse stock decreases
+- Receiver warehouse stock increases
+- Transfer does not affect sales or purchase records
+- Both warehouses must exist before transfer
+- Negative stock is restricted
+
+---
+
+## Example Use Case
+
+You have:
+
+- Main Warehouse
+- Branch Shop
+
+You want to send:
+
+- 100 units of Paracetamol to Branch Shop
+
+Steps:
+
+1. Select Main Warehouse as sender
+2. Select Branch Shop as receiver
+3. Add product and quantity
+4. Save transfer
+
+The system automatically updates stock in both locations.
+
+---
+
+## Common Mistakes
+
+| Mistake                             | Problem              |
+| ----------------------------------- | -------------------- |
+| Wrong warehouse selection           | Stock mismatch       |
+| Incorrect quantity                  | Inventory error      |
+| Missing receiver warehouse          | Stock not updated    |
+| Transferring without checking stock | Negative stock issue |
+
+---
+
+## Best Practices
+
+- Always verify sender and receiver warehouses
+- Double-check product quantity before saving
+- Use transfers only for internal movement
+- Keep transfer records organized for audit
+
+---
+
+## Summary
+
+Transfer Stock ensures smooth internal movement of products between warehouses while maintaining accurate real-time inventory tracking across all locations.
+
+---
+
+# 5. Damage Product Entry
+
+Damage Product Entry is used to record products that are damaged, expired, lost, or destroyed.
+
+It helps you reduce stock and maintain accurate inventory valuation and loss tracking.
+
+---
+
+## Purpose
+
+You use this module to:
+
+- Remove damaged or unusable stock from inventory
+- Track value of damaged goods for accounting
+- Reduce warehouse stock accurately
+- Maintain proper wastage and loss records
+
+---
+
+## How It Works
+
+### Step 1: Open Module
+
+Go to:
+
+Inventory Management → Damage Product Entry
+
+---
+
+### Step 2: Create Damage Record
+
+Click the **+ Add** button to create a new entry.
+
+---
+
+### Step 3: Enter Basic Details
+
+- Reference No (auto-generated)
+- Entry Date
+- Select Warehouse / Shop
+
+---
+
+### Step 4: Add Products
+
+Search and select products using:
+
+- Product Name
+- Barcode
+- SKU
+
+For each product, you enter:
+
+- Quantity damaged
+- Unit price or total value
+
+Optional:
+
+- Mark “Apply to Opening return” if needed
+
+---
+
+### Step 5: Save Entry
+
+Click **Save** to complete the damage record.
+
+---
+
+## System Behavior
+
+After saving:
+
+- Stock is reduced in the selected warehouse
+- Damage record is stored in system history
+- Loss value is reflected in reports and accounting
+
+---
+
+## Business Rules
+
+- Stock is reduced immediately after saving
+- Damage entries affect inventory valuation
+- Each entry is tracked for audit purposes
+- Must be recorded carefully to avoid mismatch
+
+---
+
+## Common Mistakes
+
+| Mistake                                      | Problem                         |
+| -------------------------------------------- | ------------------------------- |
+| Wrong quantity entry                         | Incorrect stock reduction       |
+| Wrong warehouse                              | Stock updated in wrong location |
+| Not recording damage properly                | Inventory mismatch              |
+| Overusing adjustment instead of damage entry | Wrong reporting                 |
+
+---
+
+## Best Practices
+
+- Always verify damaged items before entry
+- Select correct warehouse
+- Enter accurate quantity and value
+- Use notes when needed for audit clarity
+
+---
+
+## Summary
+
+Damage Product Entry helps you maintain accurate inventory by recording and tracking unusable stock, ensuring proper stock valuation and loss management.
+
+# 6. Stock Adjustment
+
+Stock Adjustment is used to manually correct product stock when there is a mismatch between system stock and physical stock.
+
+It directly updates inventory without any purchase, sale, or transfer transaction.
+
+---
+
+## Purpose
+
+You use Stock Adjustment when:
+
+- Physical stock does not match system stock
+- Stock is lost, damaged, or miscounted
+- You need to correct inventory errors
+- You want to increase or decrease stock manually
+
+---
+
+## How It Works
+
+Stock Adjustment directly updates product quantity in the selected warehouse.
+
+You can:
+
+- Increase stock
+- Decrease stock
+- Set corrected stock value
+
+---
+
+## Create Stock Adjustment
+
+<Steps>
+
+<Step title="Open Module">
+  Go to **Inventory Management → Stock Adjustment**
+</Step>
+
+<Step title="Click Add">Click **+ Add**</Step>
+
+<Step title="Select Date">Choose entry date</Step>
+
+<Step title="Select Warehouse">Select warehouse or shop</Step>
+
+<Step title="Select Product">Search product by name, barcode, or SKU</Step>
+
+<Step title="Enter Adjustment">
+  Enter new stock quantity or difference value
+</Step>
+
+<Step title="Add Reason">Add reason for adjustment (recommended)</Step>
+
+<Step title="Save">Click **Save**</Step>
+
+</Steps>
+
+---
+
+## Business Rules
+
+- Stock updates immediately after saving
+- No purchase or sales record is linked
+- Affects stock and valuation reports
+- Use only for corrections
+
+---
+
+# 7. Shipment Products
+
+Shipment Products is used to manage outgoing stock from warehouse to shops, branches, or customers.
+
+It tracks delivery-based stock movement using requisitions or shipment requests.
+
+---
+
+## Purpose
+
+You use Shipment Products to:
+
+- Send stock to shops or branches
+- Fulfill delivery or requisition requests
+- Track outbound warehouse movement
+- Maintain shipment history
+
+---
+
+## How It Works
+
+Stock is reduced from source warehouse and assigned to destination location.
+
+Shipment has statuses like Pending, Shipped, and Delivered.
+
+---
+
+## Create Shipment
+
+<Steps>
+
+<Step title="Open Module">
+  Go to **Inventory Management → Shipment Products**
+</Step>
+
+<Step title="Click Add">Click **+ Add**</Step>
+
+<Step title="Select Requisition">Select or create requisition number</Step>
+
+<Step title="Select Warehouse">Choose source warehouse</Step>
+
+<Step title="Select Destination">Choose shop or branch</Step>
+
+<Step title="Add Products">Search and select products</Step>
+
+<Step title="Enter Quantity">Enter shipment quantity</Step>
+
+<Step title="Save">Click **Save**</Step>
+
+</Steps>
+
+---
+
+## Business Rules
+
+- Stock decreases from source warehouse only
+- Shipment status can be updated
+- Records are stored for tracking
+- Must select valid warehouse and destination
+
+---
+
+# 8. Used Product
+
+Used Product is used to record products consumed internally by the business.
+
+It tracks non-sale usage such as office use, samples, or internal consumption.
+
+---
+
+## Purpose
+
+You use Used Product when:
+
+- Products are used internally
+- Items are used for samples or testing
+- Goods are consumed without sale
+- Stock must be reduced for internal usage
+
+---
+
+## How It Works
+
+When you save a used product entry:
+
+- Stock decreases automatically
+- Usage record is created
+- Value is tracked in reports
+
+---
+
+## Create Used Product
+
+<Steps>
+
+<Step title="Open Module">Go to **Inventory Management → Used Product**</Step>
+
+<Step title="Click Add">Click **+ Add**</Step>
+
+<Step title="Select Date">Choose entry date</Step>
+
+<Step title="Select Product">Search product by name, barcode, or SKU</Step>
+
+<Step title="Enter Quantity">Enter quantity used</Step>
+
+<Step title="Enter Value">Enter unit price or total value (optional)</Step>
+
+<Step title="Add Reason">Add reason for usage (optional)</Step>
+
+<Step title="Save">Click **Save**</Step>
+
+</Steps>
+
+---
+
+## Business Rules
+
+- Stock reduces immediately after saving
+- No sales or purchase entry is created
+- Usage is recorded for reporting
+- Helps track internal consumption

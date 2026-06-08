@@ -5,7 +5,7 @@ description: "Your business analytics and operations hub at a glance"
 
 # Dashboard Overview
 
-The **Dashboard** is the command center of your system. It aggregates real-time data from all modules—Sales, Purchases, Inventory, and Finance—and presents them in intuitive visual charts and key metrics.
+The **Dashboard** is the central control panel of the system. It provides a real-time summary of business performance across Sales, Purchases, Inventory, and Finance modules in a single view.
 
 [Insert Screenshot Here - Main Dashboard Screen]
 
@@ -13,89 +13,113 @@ The **Dashboard** is the command center of your system. It aggregates real-time 
 
 ## Who Can Access
 
-* **Administrators**: Full access to all business metrics and locations.
-* **Store Managers**: Metrics scoped to their specific assigned shop or warehouse.
-* **Sales Managers**: Sales-specific metrics, targets, and history.
-* **Accountants / Finance Officers**: Financial balances, expense widgets, and loan details.
+Access to dashboard data depends on user role and permissions:
+
+- **Administrators**: Full access to all branches, reports, and system-wide metrics.
+- **Store Managers**: Access limited to assigned shop or warehouse data.
+- **Sales Managers**: Sales performance, targets, and invoice history.
+- **Accountants / Finance Officers**: Financial summaries, expenses, and payable/receivable tracking.
 
 ---
 
 ## Navigation
 
-* **Menu Path**: Dashboard (Topmost item on the Sidebar)
-* **Default landing page**: Displays immediately after logging in.
+- **Menu Path**: Dashboard
+- **Default Page**: Automatically loads after successful login
 
 ---
 
-## Screen Overview
+## Dashboard Sections
 
-The Dashboard is broken down into four main sections:
+The dashboard is divided into four main functional sections:
 
-### 1. Key Performance Indicator (KPI) Cards
-Located at the top of the page, these summaries show daily, weekly, or monthly figures:
-* **Today's Sales**: Total invoice amounts settled today.
-* **Today's Purchases**: Total stock purchase bills logged today.
-* **Today's Expenses**: Operational costs entered.
-* **Total Stock Value**: Estimated financial value of items currently held in warehouses and shops.
-* **Active Receivables/Payables**: Dues outstanding from customers and dues owed to suppliers.
+---
+
+### 1. Key Performance Indicators (KPIs)
+
+At the top of the dashboard, KPI cards provide quick business insights:
+
+- **Today's Sales**: Total confirmed sales revenue for the current day.
+- **Today's Purchases**: Total purchase cost recorded today.
+- **Today's Expenses**: Operational and administrative expenses.
+- **Total Stock Value**: Estimated value of current inventory (based on cost price).
+- **Active Receivables / Payables**: Outstanding customer dues and supplier liabilities.
+
+---
 
 ### 2. Analytical Charts
-Interactive charts showing trends over time:
-* **Monthly Sales & Purchases Comparison**: Line/bar chart representing seasonal trends.
-* **Expense Breakdown**: Donut chart showing expense distribution by category.
 
-### 3. Recent Transactions & Activity Logs
-* **Recent Sales List**: The latest 5 or 10 invoices generated.
-* **Pending Approvals**: Quick links to documents requiring your verification (e.g. Purchase Orders or Stock Transfers).
-* **Low Stock Warning Alert List**: Real-time listing of products whose quantities have fallen below their safety threshold.
+Visual analytics to understand business trends:
+
+- **Monthly Sales vs Purchases**: Compares revenue and procurement over time.
+- **Expense Distribution Chart**: Breakdown of expenses by category.
 
 ---
 
-## Section Descriptions
+### 3. Recent Activity & Alerts
 
-| Section | Key Metric / Detail | Business Purpose |
-| :--- | :--- | :--- |
-| **Sales Card** | Invoice total minus discounts. | Tracks revenue targets. |
-| **Purchase Card** | Total incoming stock bills. | Tracks procurement costs. |
-| **Stock Value Card** | Inventory qty × average cost. | Measures capital tied up in stock. |
-| **Expense Card** | Petty cash & bank expenses. | Tracks operational overheads. |
-| **Low Stock Panel** | Lists product SKU, warehouse, and quantity. | Triggers reorder processes immediately. |
+Real-time operational updates:
+
+- **Recent Sales**: Latest generated invoices (last 5–10 records).
+- **Pending Approvals**: Documents awaiting authorization (e.g., Purchase Orders).
+- **Low Stock Alerts**: Products below minimum stock threshold.
 
 ---
 
-## Step-by-Step Instructions
+## KPI Reference Table
 
-### Checking Shop-Specific Metrics:
-1. Locate the shop filter dropdown on the top toolbar (available for multi-shop administrators).
-2. Select your target **Shop** or **Warehouse**.
-3. The dashboard will instantly reload and display metrics for the selected location only.
-
-### Approving an Item directly from the Dashboard:
-1. Scroll down to the **Pending Approvals** list.
-2. Click on the document ID (e.g. PO-1029).
-3. The system will open the details view where you can verify the entries and click **Approve** or **Reject**.
+| KPI           | Calculation                   | Purpose                         |
+| ------------- | ----------------------------- | ------------------------------- |
+| Sales Card    | Invoice total after discounts | Measures revenue performance    |
+| Purchase Card | Total incoming stock cost     | Tracks procurement spending     |
+| Stock Value   | Quantity × average cost       | Represents inventory investment |
+| Expense Card  | All operational expenses      | Monitors business cost control  |
+| Low Stock     | Stock ≤ minimum level         | Triggers replenishment action   |
 
 ---
 
-## Business Rules & Logic
+## Step-by-Step Guide
 
-* **Data Scope**: Standard staff members can only view metrics related to their assigned shop branch. Central managers and administrators can view consolidated multi-branch data.
-* **Real-time Sync**: POS sales update dashboard cards instantly upon transaction completion. Warehouse physical counts adjust the stock value cards in real time.
-* **Low Stock Alerts**: Triggered only when a product's stock count is less than or equal to the "Min Stock Level" defined in the Product Catalog.
+### View Shop-Specific Dashboard Data
+
+1. Locate the **Shop Filter** in the top toolbar.
+2. Select the desired **Shop / Warehouse**.
+3. Dashboard updates automatically with filtered data.
+
+---
+
+### Approve Pending Documents
+
+1. Scroll to **Pending Approvals** section.
+2. Click on a document ID (e.g., `PO-1029`).
+3. Review details in the popup or details page.
+4. Click **Approve** or **Reject**.
+
+---
+
+## Business Rules
+
+- **Data Access Control**: Users only see data based on assigned roles and branch permissions.
+- **Real-Time Updates**: Sales and stock changes reflect instantly across dashboard widgets.
+- **Low Stock Logic**: Alerts trigger when stock reaches or falls below minimum stock level defined in product configuration.
 
 ---
 
 ## Business Example
 
-A Store Manager logs in at 10:00 AM. They look at the **Key Performance Indicators** and see:
-* **Today's Sales**: $1,250 (indicates steady morning traffic).
-* **Low Stock Alert**: "Copy Paper A4 - 5 Reams remaining" (reaches threshold).
-The manager immediately clicks on the **Low Stock Alert**, sees that the central warehouse has 50 reams, and creates a **Sales Requisition** to restock.
+A Store Manager logs in at 10:00 AM and sees:
+
+- **Today's Sales**: $1,250 → indicates healthy morning activity.
+- **Low Stock Alert**: "A4 Copy Paper – 5 reams remaining"
+
+They check inventory, confirm 50 reams are available in the warehouse, and immediately initiate a **Stock Requisition** to replenish the shop.
 
 ---
 
-## Related Features
+## Related Modules
 
-* **Detailed Sales Report**: For drill-down transactional reports.
-* **Purchase Orders**: To restock items identified in the Low Stock warning list.
-* **Approval Inbox**: For managing all workflow verifications.
+- Sales Invoice
+- Purchase Orders
+- Inventory Management
+- Approval Inbox
+- Reports & Analytics

@@ -1,0 +1,367 @@
+---
+title: Work Order Information
+description: Learn how to create, manage, and process work orders within the system
+---
+
+# Work Order Information
+
+Work Order Information is used to create, track, and manage work orders for products, manufacturing tasks, processing jobs, and service-related operations.
+
+It helps businesses organize work requirements, assign suppliers or service providers, and maintain complete records of work order activities.
+
+---
+
+# Purpose of Work Order Information
+
+You use this module to:
+
+- Create work orders for products or services
+- Assign suppliers or processing partners
+- Track work order quantities and costs
+- Manage manufacturing or processing requirements
+- Maintain work order history and records
+
+---
+
+# Work Order Workflow Overview
+
+Work orders generally follow this flow:
+
+1. Create Work Order
+2. Assign Products or Services
+3. Select Supplier / Shipper
+4. Define Payment Terms
+5. Process Work Order
+6. Merge Multiple Work Orders (if required)
+7. Complete and track work order history
+
+---
+
+# Work Order Information Modules
+
+You will find the following modules under Work Order Information:
+
+## 1. Work Order List
+
+Create and manage work orders, assign products, and track work order details.
+
+## 2. Work Order Merger
+
+Combine multiple work orders into a single consolidated work order for easier processing and management.
+
+---
+
+# Summary
+
+Work Order Information provides a centralized system for managing work-related operations, supplier assignments, product processing, and work order tracking throughout the business workflow.
+
+---
+
+# 1. Work Order List
+
+Work Order List is the primary module used to create, manage, and track work orders in the system.
+
+It allows businesses to generate work orders for manufacturing, processing, servicing, or supplier-related activities while maintaining complete records of quantities, costs, and payment terms.
+
+<Info>
+  This is the main operational page under Work Order Information used for
+  creating and managing work orders.
+</Info>
+
+---
+
+## Purpose
+
+You use this module to:
+
+- Create work orders for products or services
+- Assign suppliers or processing partners
+- Track quantities and costs
+- Manage internal and external work requirements
+- Maintain work order history
+
+---
+
+## Work Order List Overview
+
+The Work Order List page displays all created work orders.
+
+### Empty State
+
+If no work orders exist, the page shows:
+
+- "No work order found."
+- "Click 'Add' to create your first work order."
+
+---
+
+## Create Work Order Form
+
+This form appears after clicking **+ Add**.
+
+It contains work order information and item details.
+
+---
+
+## Header Fields
+
+| Field        | Description                           |
+| ------------ | ------------------------------------- |
+| Date\*       | Work order creation date              |
+| Shipper      | Supplier or processing partner        |
+| Note         | Optional notes or instructions        |
+| Payment Term | Payment conditions for the work order |
+
+---
+
+## Work Order Items Section
+
+Products can be added using:
+
+- Product Name
+- Barcode
+- SKU
+
+After selecting products, users can enter:
+
+- Quantity
+- Rate
+- Amount
+- Additional item details (if applicable)
+
+---
+
+## Totals Section
+
+The system automatically calculates:
+
+| Field        | Description                 |
+| ------------ | --------------------------- |
+| Total QTY    | Total quantity of all items |
+| Total Amount | Total work order value      |
+
+---
+
+## Buttons & Controls
+
+### On Listing Page
+
+- **+ Add (Green Button)** → Create new work order
+- Search → Find work orders
+- Filters → Filter work order records
+- Analytics → View work order insights
+
+### On Create Form
+
+- Save → Save the work order
+- Cancel → Close without saving
+
+---
+
+## How It Works
+
+### Step 1: Open Module
+
+Go to:
+
+**Work Order Information → Work Order List**
+
+---
+
+### Step 2: Create Work Order
+
+1. Click **+ Add**
+2. Enter Date
+3. Select Shipper / Supplier
+4. Enter Note (optional)
+5. Define Payment Term
+
+---
+
+### Step 3: Add Items
+
+1. Search products by Product Name, Barcode, or SKU
+2. Select products
+3. Enter quantities and rates
+4. Review calculated totals
+
+---
+
+### Step 4: Save
+
+Click **Save** to create the work order.
+
+---
+
+## After Saving
+
+- The work order appears in the listing page
+- It can be viewed, edited, or processed later
+- Totals and quantities are stored automatically
+- The work order becomes part of the work order history
+
+---
+
+## Business Rules
+
+- Date is required
+- At least one item should be added
+- Supplier selection is recommended when outsourcing work
+- Quantities affect work order totals
+- Saved work orders become part of operational records
+
+---
+
+## Example Use Case
+
+A company sends products to a supplier for packaging:
+
+- Supplier: ABC Packaging Ltd.
+- Product: Medicine Bottle
+- Quantity: 1,000 pcs
+- Payment Term: Net 30 Days
+
+The work order is created and tracked until the work is completed.
+
+---
+
+## Summary
+
+Work Order List is the core operational module of Work Order Information. It is used to create, manage, and monitor all work orders related to manufacturing, processing, servicing, and supplier-based operations.
+
+# 2. Work Order Merger
+
+Work Order Merger is used to combine multiple existing work orders into a single consolidated work order.
+
+It helps businesses simplify supplier management by grouping related work orders together and reducing duplicate processing.
+
+[Insert Screenshot Here - Work Order Merger]
+
+---
+
+## Purpose
+
+This module is used to:
+
+- Merge multiple work orders into one
+- Consolidate supplier-related requests
+- Simplify purchasing and processing workflows
+- Reduce duplicate work order handling
+- Improve supplier coordination and tracking
+
+---
+
+## What the Page Shows
+
+### Work Order Merger Listing
+
+The main page displays previously merged work orders.
+
+Typical columns include:
+
+| Column             | Description                                |
+| ------------------ | ------------------------------------------ |
+| Merge WO No        | Generated merged work order number         |
+| Date               | Merge date                                 |
+| Source Work Orders | Original work orders included in the merge |
+| Supplier           | Supplier associated with the merged order  |
+| Total Amount       | Combined amount of merged work orders      |
+| Created            | Record creation information                |
+| Action             | View and manage merged work orders         |
+
+If no merged work orders exist, the system displays:
+
+> No merges yet.
+
+---
+
+## Available Actions
+
+### Listing Page
+
+- **+ Merge** → Create a merged work order
+- **Search** → Find merged work orders
+- **Pagination** → Browse available records
+
+---
+
+### Merge Form
+
+The merge form includes the following fields:
+
+| Field       | Description                                          |
+| ----------- | ---------------------------------------------------- |
+| Supplier    | Select the supplier whose work orders will be merged |
+| Work Orders | Select one or more work orders                       |
+| Date        | Merge date                                           |
+| Note        | Optional remarks                                     |
+
+---
+
+## Create a Merged Work Order
+
+<Steps>
+  <Step title="Open Work Order Merger">
+    Go to <b>Work Order Information → Work Order Merger</b>.
+  </Step>
+
+<Step title="Click Merge">
+  Click the green <b>+ Merge</b> button.
+</Step>
+
+<Step title="Select Supplier">
+  Choose the supplier whose work orders will be consolidated.
+</Step>
+
+<Step title="Select Work Orders">
+  Select one or more work orders associated with the selected supplier.
+</Step>
+
+<Step title="Add Note">Enter an optional note if required.</Step>
+
+  <Step title="Save">
+    Click <b>Save</b> to create the merged work order.
+  </Step>
+</Steps>
+
+---
+
+## How It Works
+
+When a merged work order is created:
+
+- A new merged work order record is generated
+- Selected work orders become linked to the merged record
+- Supplier information remains consolidated
+- The merged order appears in the Work Order Merger list
+- Source work orders remain traceable for audit and reporting
+
+---
+
+## Business Rules
+
+- Work orders should typically belong to the same supplier
+- Multiple work orders can be merged into a single record
+- Original work orders remain linked to the merged order
+- Merging helps reduce operational complexity and duplicate processing
+
+---
+
+## Example Use Case
+
+A supplier receives three separate work orders during the same week.
+
+Instead of processing them individually:
+
+1. Open Work Order Merger
+2. Select the supplier
+3. Choose all three work orders
+4. Save the merged work order
+
+The supplier can now process one consolidated work order instead of multiple separate requests.
+
+---
+
+## Summary
+
+Work Order Merger helps combine multiple work orders into a single consolidated record, making supplier management, processing, and tracking more efficient.

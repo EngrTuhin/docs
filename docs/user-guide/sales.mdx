@@ -1,126 +1,774 @@
 ---
-title: "Sales & Customer Operations"
-description: "Process checkouts, table structures, deliveries, returns, shop requisitions, customer branches, sales persons, and quotations"
+title: Sales Management
+description: Learn how to manage sales, invoices, returns, deliveries, payments, and customer transactions
 ---
 
-# Sales & Customer Operations Guide
+# Sales Management
 
-This guide covers the complete set of customer-facing sales modules, contact directories, and order processing workflows.
+Sales Management is the **core operational module** of the Koorri POS & Inventory System.
 
----
-
-## Who Can Access
-
-* **POS Invoice & Table Setup**: Cashiers, Waiters, Store Managers.
-* **All Sales Records, Deliveries & Returns**: Sales Officers, Delivery Leads, Shop Managers.
-* **Customer, Branches & Sales Persons**: Sales Administrators, Customer Relations Managers.
-* **Quotations & Customer Purchase Orders**: Sales Executives, Wholesalers, Admins.
+It handles the complete sales lifecycle — from creating an invoice to delivery, returns, and payment collection.
 
 ---
 
-## 1. Point of Sale (POS) Invoicing & Table Setup
+# What You Can Do in Sales Management
 
-### Overview
-* **POS Invoice**: Fast cash register interface for checking out retail customers. Supports category searches, barcode scans, split payments, and customer registration.
-* **Table Setup**: Setup physical tables (for restaurant or service configurations) to assign sales orders to specific tables.
+This module allows you to:
 
-### Navigation
-* **POS Invoice**: Sales Management → **Sales Invoice**
-* **Table Setup**: Sales Management → **Table Setup**
-
-[Insert Screenshot Here - POS Interface and Table Layout Grid]
-
-### Field Descriptions (POS Invoice)
-
-| Field | Description | Validation / Rule |
-| :--- | :--- | :--- |
-| **Select Customer** | Select customer from the directory. | Defaults to 'Walk-in Customer'. |
-| **Scan Barcode** | Scan a product variant's barcode. | Adds the exact size/color variant to the cart. |
-| **Quantity** | Number of units purchased. | Cannot exceed shop stock balance. |
-| **Discount (%)** | Percentage discount on the item. | Cannot exceed your user role's discount limit. |
-| **Table Selection** | Assign cart to a table (if hospitality mode is on). | Optional. |
-| **Amount Received** | Cash/Card amount entered by cashier. | Must match or exceed total payable. |
-
-### Step-by-Step Instructions (POS Sale):
-1. Navigate to Sales Management → **Sales Invoice**.
-2. Select or search the customer (or click **[+]** to register a new one).
-3. Scan product barcodes or search the catalog to add items. If a product has multiple colors or sizes, a variant selection modal will appear. Select the desired option.
-4. (Optional) Select a **Table** to bind the transaction.
-5. In the checkout footer, choose the payment mode (Cash, Bank Card, Mobile Bank) and enter the **Amount Received**.
-6. Click **Confirm Payment & Print**. A receipt prints, and the shop stock decreases.
+- Create and manage sales invoices
+- Handle dine-in / table-based orders
+- Track all sales history and reports
+- Deliver products against customer orders
+- Process returns and refunds
+- Collect customer due payments
+- Record advance payments
 
 ---
 
-## 2. Customer Directory & Branch Setup
+# Sales Workflow (Important)
 
-### Overview
-* **Customers Directory**: Registry of retail and wholesale accounts, contact numbers, and opening balances.
-* **Customer Branches**: For corporate clients, manage multiple delivery branches under a single billing customer account.
-* **Customer Due Collection / Advance Payment**: Log payments collected for credit accounts or advance deposits.
+A typical sales process in the system works like this:
 
-### Navigation
-* **Customers**: Business Contacts → **Customers & Retailers Directory**
-* **Customer Branches**: Business Contacts → **Customer Branches**
-
-### Step-by-Step Instructions (Add Branch to Customer):
-1. Navigate to **Customer Branches** and click **Add Branch**.
-2. Select the parent **Customer Name**.
-3. Input the Branch Name, Branch Address, Contact Person, and Phone.
-4. Click **Save Branch**. This branch is now available on Sales Delivery and CPO screens.
+1. Create Sales Invoice
+2. Add Products & Customer
+3. Complete or Hold Order
+4. Deliver Products (if required)
+5. Handle Returns (if needed)
+6. Collect Due Payments
+7. Track everything in Sales Records
 
 ---
 
-## 3. Quotation & Order Processing
+# Sales Management Modules
 
-### Overview
-* **Quotation Types**: Categorize quotes (e.g. Retail, Corporate Tender, Export).
-* **Product Quotation**: Create commercial quotation documents detailing pricing, lead times, and payment terms.
-* **Product Quotation Settings**: Default terms and conditions displayed on quotation PDFs.
-* **Customer Purchase Orders (CPO)**: Log formal client purchase orders prior to dispatch.
-* **Sales Delivery**: Issue dispatches for pending CPOs, printing delivery bills, challans, final bills, and Mushak (VAT invoice).
-
-### Navigation
-* **Product Quotation**: Quotation Management → **Product Quotation**
-* **CPO**: **Company Purchase Order**
-* **Sales Delivery**: Sales Management → **Sales Delivery**
-
-[Insert Screenshot Here - Quotation Proposal Form]
-
-### Step-by-Step Instructions (Create Quotation):
-1. Go to Quotation Management → **Product Quotation** and click **Create Quotation**.
-2. Select **Quotation Type** and select the **Customer**.
-3. Add products, select quantities, and customize the quotation rate.
-4. Select **Delivery Lead Time** and **Payment Terms** (from pre-configured lists).
-5. Click **Generate Quotation**. You can print or download the PDF to send to the client.
+Sales Management is divided into multiple submodules. Each module handles a specific part of the sales system.
 
 ---
 
-## 4. Sales Requisition & Product Shifting
+## 🧾 1. Sales Invoice
 
-### Overview
-* **Sales Requisition**: Retail outlet staff requesting items from the central warehouse.
-* **Product Shifting**: Moving items directly from one retail outlet (shop) to another.
+Sales Invoice is the **main billing screen** where all sales transactions begin.
 
-### Navigation
-* **Sales Requisition**: Sales Management → **Sales Requisition**
-* **Product Shifting**: Inventory Management → **Product Shifting**
-
-### Step-by-Step Instructions (Product Shifting):
-1. Go to **Product Shifting** and click **New Shift**.
-2. Select the **From Shop** (Source) and **To Shop** (Destination).
-3. Add products and input shifting quantities.
-4. Click **Confirm Shifting**. Stock is adjusted at both locations instantly.
+It is used for creating real-time invoices for customers.
 
 ---
 
-## Business Rules
+### What It Does
 
-* **Table Setup Constraints**: Tables cannot be deleted if there is a pending, unpaid order assigned to them.
-* **Corporate Credit Limits**: Corporate customers cannot be invoiced if their outstanding due exceeds their approved credit limit, unless authorized by an administrator.
+- Adds products to cart
+- Selects customer
+- Applies discount & VAT
+- Calculates totals automatically
+- Completes or saves sales
 
 ---
 
-## Related Features
+### Key Features
 
-* **Detailed Sales Report**: Analyze daily transactions.
-* **Requisition Client Report**: Track store requisition statuses.
+#### Product Selection
+
+Products can be selected via:
+
+- Search bar
+- Category filtering
+- Quick selection
+
+#### Cart System
+
+Each selected product is added to a cart where you can:
+
+- Increase / decrease quantity
+- Remove items
+- View subtotal
+
+#### Customer Selection
+
+You can:
+
+- Search existing customers
+- Add new customers quickly
+- Assign invoice to a customer
+
+---
+
+### Payment System
+
+The system automatically calculates:
+
+- Subtotal
+- Discount
+- VAT
+- Grand Total
+- Due Amount
+
+---
+
+### Payment Options
+
+- Cash Payment
+- Bank Transfer
+- Mobile Payment
+- Partial Payment (creates due)
+
+---
+
+### Order Actions
+
+- **Pay** → Finalize the sale
+- **Hold** → Save for later processing
+- **Draft** → Save incomplete invoice
+
+---
+
+### Business Rules
+
+- Stock is reduced after payment confirmation
+- Due is created if full payment is not made
+- All invoices are saved in Sales Records
+
+---
+
+## 🍽 2. Table Setup
+
+Table Setup is used for **restaurant or table-based POS systems**.
+
+---
+
+### Purpose
+
+This module allows you to:
+
+- Create tables for ordering
+- Assign orders to tables
+- Track dine-in billing
+- Manage table-wise operations
+
+---
+
+### How It Works
+
+Each table represents a physical location such as:
+
+- Table 1
+- VIP Table
+- Outdoor Table
+- Counter Seat
+
+---
+
+### Table Data Structure
+
+Each table contains:
+
+- Table Name
+- Description
+- Status (Active / Inactive)
+
+---
+
+### Add Table Process
+
+1. Open Table Setup
+2. Click Add Table
+3. Enter Table Name
+4. Add Description (optional)
+5. Set Status
+6. Save
+
+---
+
+### Business Rules
+
+- Only active tables appear in POS
+- Each table represents a unique order space
+- Orders can be tracked per table
+
+---
+
+## 📊 3. All Sales Records
+
+All Sales Records is the **complete history log of all sales transactions**.
+
+---
+
+### Purpose
+
+Used for:
+
+- Viewing all invoices
+- Tracking sales performance
+- Monitoring revenue
+- Searching past transactions
+- Analyzing business reports
+
+---
+
+### What You Can See
+
+Each record includes:
+
+- Invoice Number
+- Date & Time
+- Customer Name
+- Total Amount
+- Discount
+- Due Amount
+- Payment Status
+
+---
+
+### Key Features
+
+#### Sales Summary Dashboard
+
+Shows:
+
+- Today’s Sales
+- Monthly Sales
+- Total Revenue
+- Due Amount
+- Average Ticket Value
+
+---
+
+### Actions Available
+
+Each invoice supports:
+
+- View full invoice
+- Edit sale
+- Print invoice
+- Process return
+- Delete invoice (if allowed)
+
+---
+
+### Business Rules
+
+- All completed sales are permanently stored
+- Any changes affect stock & reports
+- Data is used for analytics and reporting
+
+---
+
+## 🚚 4. Sales Delivery
+
+Sales Delivery handles product delivery against **Company Purchase Order (CPO)**.
+
+---
+
+### Purpose
+
+Used for:
+
+- Delivering ordered goods
+- Partial or full delivery tracking
+- Payment collection during delivery
+- Inventory adjustment
+
+---
+
+### Delivery Workflow
+
+1. Select Company Purchase Order (CPO)
+2. System loads ordered products
+3. Enter delivery quantity
+4. Add payment (optional)
+5. Save delivery
+
+---
+
+### Key Features
+
+- Tracks ordered vs delivered quantity
+- Supports partial delivery
+- Calculates remaining items
+- Allows payment collection during delivery
+
+---
+
+### Business Rules
+
+- Only approved orders can be delivered
+- Inventory reduces after delivery
+- Multiple deliveries allowed per order
+
+---
+
+## 🔄 5. Sales Return List
+
+Sales Return List manages returns that are linked to customer invoices.
+
+It ensures proper tracking of returned goods, automatic stock adjustment, and accurate financial records.
+
+---
+
+### Purpose
+
+Used for:
+
+- Managing customer returns against invoices
+- Adjusting warehouse stock after return
+- Processing refunds or replacements
+- Tracking return history and performance
+- Maintaining accurate sales and accounting records
+
+---
+
+### Return Process
+
+1. Open Sales Return List
+2. Click **+ Add New Return**
+3. Select Customer
+4. Select Warehouse / Shop
+5. Select original **Sales Invoice No**
+6. Select product(s) from that invoice
+7. Enter return quantity and reason
+8. Apply discount on return (if needed)
+9. Review total return amount
+10. Click **Save Return**
+
+---
+
+### Return Form Structure
+
+#### A. Header Information
+
+- Return Reference No (Auto-generated)
+- Return Date
+- Warehouse / Shop
+- Sales Person
+- Customer
+
+---
+
+#### B. Invoice & Product Selection
+
+- Sales Invoice No (required)
+- Sales Product (from invoice)
+- Invoice Discount Type
+- Invoice Discount Amount
+- Discount on Return
+
+---
+
+#### C. Return Line Items
+
+After selecting invoice and product, system loads:
+
+- Product name
+- Sold quantity
+- Already returned quantity
+- Remaining quantity
+- Return quantity input field
+- Unit price
+- Subtotal calculation
+
+Users can:
+
+- Enter return quantity
+- Add return reason (damaged, wrong item, etc.)
+- Adjust multiple products if needed
+
+---
+
+#### D. Summary
+
+- Total Quantity Returned
+- Subtotal Amount
+- Discount Amount
+- Grand Total Return Value
+
+---
+
+### After Saving
+
+Once a return is saved, the system will:
+
+- Increase stock in the selected warehouse
+- Reduce customer invoice due amount
+- Update customer ledger
+- Store return in Sales Return List
+- Reflect changes in reports and analytics
+
+---
+
+### Business Rules
+
+- Every return must be linked to a valid invoice
+- Return quantity cannot exceed sold quantity
+- Stock is automatically restored after saving
+- Financial reports are updated instantly
+- Each return has a unique reference number
+- Refunds are optional (cash, bank, or adjustment)
+
+---
+
+### Common Use Cases
+
+- Customer returns damaged goods
+- Wrong product delivered
+- Expired or defective items
+- Partial invoice returns
+- Product exchange cases
+
+---
+
+### Summary
+
+Sales Return List ensures all invoice-based returns are properly tracked, stock is accurately updated, and financial records remain consistent across the system. It is an essential module for maintaining inventory and accounting accuracy.
+
+## 🔁 6. Direct Product Return
+
+Direct Product Return is used to process customer returns without linking them to a specific sales invoice.
+
+It is designed for quick return handling, especially when invoice details are not available or not required.
+
+---
+
+### Purpose
+
+This module is used for:
+
+- Cash sales returns without invoice reference
+- Walk-in customer returns
+- Defective or damaged product returns
+- Quick return processing
+- Emergency inventory correction
+
+After saving, returned items are added back to stock and return value is recorded in accounts.
+
+---
+
+### Return Process
+
+1. Open Direct Product Return
+2. Click **+ Add New Return**
+3. Select Warehouse / Shop
+4. Select Customer (optional)
+5. Select Sales Person (optional)
+6. Search and add products
+7. Enter return quantity
+8. Apply discount if needed
+9. Review total amount
+10. Click **Save Return**
+
+---
+
+### Return Form Structure
+
+#### A. Header Information
+
+- Reference No (Auto-generated, e.g., DR-0054-2026)
+- Entry Date (Default: today)
+- Warehouse / Shop (Required)
+- Sales Person (Optional)
+- Customer (Optional)
+- Discount Type (Fixed selected by default)
+- Discount Value
+- Discount Amount (Auto-calculated)
+
+---
+
+#### B. Return Line Items
+
+Products are added using the search bar:
+
+- Search Product by Name / Barcode / SKU
+- Select product from results
+- Enter return quantity
+- Enter unit price (if editable)
+- Add return reason (if applicable)
+- Multiple products can be added
+
+When no products are added, system shows:
+**“No items added yet”**
+
+---
+
+#### C. Summary
+
+- Total Quantity
+- Subtotal
+- Discount
+- Grand Total Return Value
+
+All values are calculated automatically based on selected items.
+
+---
+
+### How It Works (Step-by-Step Flow)
+
+1. Go to **Sales Management → Direct Product Return**
+2. Click **+ Add New Return**
+3. Select Warehouse/Shop
+4. (Optional) Select Customer and Sales Person
+5. Search and add returned products
+6. Enter quantity for each product
+7. System calculates subtotal automatically
+8. Apply discount if needed
+9. Review final total
+10. Click **Save Return**
+
+---
+
+### After Saving
+
+Once the return is saved, the system will:
+
+- Increase stock in selected warehouse
+- Create a direct return record
+- Update inventory and stock reports
+- Record return value in accounting system
+- Assign unique reference number
+
+---
+
+### Business Rules
+
+- No invoice is required for this return type
+- Stock is updated immediately after saving
+- Returns can include multiple products
+- Discount is optional
+- Each return has a unique reference number
+- Used only for non-invoice or quick returns
+
+---
+
+### Common Use Cases
+
+- Walk-in customer returns
+- Damaged goods replacement without invoice
+- Cash sale returns
+- Missing invoice situations
+- Quick warehouse stock correction
+
+---
+
+### Summary
+
+Direct Product Return provides a fast and flexible way to handle returns without requiring invoice linkage. It ensures inventory accuracy while allowing quick return processing in real-world retail situations.
+
+## 💰 7. Customer Advance Payment
+
+Customer Advance Payment is used to record money received from customers before a final sale or invoice is created.
+
+It ensures proper tracking of prepaid orders and helps adjust the amount later during billing.
+
+---
+
+### Purpose
+
+This module is used for:
+
+- Prepaid or advance orders
+- Booking payments for future purchases
+- Partial or full advance collection before delivery
+- Maintaining accurate accounting records
+- Adjusting payments during final invoice creation
+
+---
+
+### Advance Payment Process
+
+1. Open Customer Advance Payment
+2. Click **+ Add New Advance**
+3. System generates a Reference No automatically
+4. Select Advance Payment Date
+5. Select Warehouse / Shop
+6. Select Customer (required)
+7. Optionally select Product (SKU / Barcode / Name)
+8. Click **Proceed to Payment**
+9. Enter advance amount
+10. Select payment method (Cash, Bank, Mobile Banking, etc.)
+11. Add notes if needed
+12. Save the record
+
+---
+
+### Advance Entry Form Structure
+
+#### A. Basic Information
+
+- Reference No (Auto-generated, e.g., CAP-0001-2026)
+- Advance Payment Date (Default: today, editable)
+- Warehouse / Shop (Required)
+- Customer (Required, searchable dropdown)
+
+---
+
+#### B. Product Selection (Optional)
+
+- Product Name / Barcode / SKU search
+- Used to link advance with specific products or orders
+- Helps in order tracking and reporting
+
+---
+
+#### C. Payment Section (Next Step)
+
+After clicking **Proceed to Payment**, user enters:
+
+- Advance Amount
+- Payment Method (Cash, Bank, Mobile, etc.)
+- Notes / Reference
+
+---
+
+### After Saving
+
+Once saved, the system will:
+
+- Store the advance payment record
+- Show it in Customer Advance Payment list
+- Make it available for invoice adjustment
+- Link it to customer ledger and reports
+
+---
+
+### How It Is Used Later
+
+Advance payments can be:
+
+- Adjusted during Sales Invoice creation
+- Deducted from final bill amount
+- Tracked in customer ledger history
+- Used for partial or full payment settlement
+
+---
+
+### Business Rules
+
+- Advance payment is not considered revenue until adjusted in invoice
+- Must always be linked to a valid customer
+- Can optionally be linked to products for tracking
+- Can be partially or fully used in future invoices
+- Each record must have a unique reference number
+
+---
+
+### Common Use Cases
+
+- Customer booking with advance payment
+- Pre-order confirmation
+- Bulk purchase partial payment
+- Delivery-based advance collection
+- Wholesale order confirmation
+
+---
+
+### Summary
+
+Customer Advance Payment helps businesses securely record prepaid amounts and ensures smooth adjustment during final billing. It improves cash flow tracking, customer transparency, and accounting accuracy.
+
+## 💳 8. Customer Due Collection
+
+Customer Due Collection is used to record payments received from customers against outstanding credit (due) balances.
+
+It ensures accurate tracking of receivables and helps maintain healthy cash flow and customer account management.
+
+---
+
+### Purpose
+
+This module is used for:
+
+- Collecting unpaid invoice amounts from customers
+- Managing credit sales and receivables
+- Recording partial or full payments
+- Maintaining accurate customer ledger history
+- Improving cash flow and financial tracking
+
+---
+
+### Collection Process
+
+1. Open Customer Due Collection
+2. Click **+ Add New Collection**
+3. Select Warehouse / Shop (required)
+4. Select Customer / Retailer (required)
+5. Select Sales Person (optional)
+6. System auto-loads unpaid invoices for the customer
+7. Enter Receipt No
+8. Select Payment Type (Cash, Bank, Mobile Banking, etc.)
+9. Select one or more unpaid invoices
+10. Enter payment amount (partial or full)
+11. Add optional notes
+12. Click **Save / Submit**
+
+---
+
+### Collection Form Structure
+
+#### A. Header Information
+
+- Warehouse / Shop (Required dropdown)
+- Customer / Retailer (Required searchable field)
+- Sales Person (Optional dropdown)
+- Current Date (Auto-filled, editable)
+- Receipt No (Required manual entry)
+- Payment Type (Required)
+- Note (Optional)
+
+---
+
+#### B. Due Payment Section
+
+After selecting a customer, the system loads:
+
+- All unpaid invoices
+- Outstanding balances
+- Invoice-wise due amounts
+
+User can:
+
+- Select one or more invoices
+- Enter amount being collected
+- Make partial or full payments
+- Adjust multiple invoices in one collection
+
+---
+
+### After Saving
+
+Once the collection is saved, the system will:
+
+- Reduce the customer’s due balance
+- Update invoice payment status
+- Create a collection record
+- Update customer ledger automatically
+- Reflect changes in accounting reports
+
+---
+
+### Payment Methods
+
+- Cash
+- Bank Transfer
+- Mobile Banking
+
+---
+
+### Business Rules
+
+- Each collection must be linked to a customer
+- Supports partial and full payments
+- Due balance decreases automatically after collection
+- All entries are recorded in customer ledger
+- Receipt number must be unique
+
+---
+
+### Common Use Cases
+
+- Collecting overdue payments from customers
+- Settling partial invoice payments
+- Closing credit sales
+- Monthly or periodic collections
+- Business-to-business credit recovery
+
+---
+
+### Summary
+
+Customer Due Collection ensures proper tracking and recovery of outstanding customer payments. It improves financial control, maintains accurate receivable records, and supports efficient cash flow management.

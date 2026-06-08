@@ -1,0 +1,160 @@
+---
+title: "Company Purchase Order"
+description: "Manage customer orders before sales and delivery, and link quotations, invoices, and shipments"
+---
+
+# Company Purchase Order
+
+The **Company Purchase Order** module is used to manage orders placed by customers before they are processed into sales, delivery, or invoices.
+
+It acts as a central record of confirmed customer demand and connects quotations with the final sales workflow.
+
+---
+
+## Who Can Use
+
+Access depends on user roles and permissions:
+
+- **Administrators**: Full access to all company purchase orders
+- **Sales Managers**: Create and manage orders
+- **Sales Officers**: Create orders from customer requests
+- **Warehouse Team**: View linked orders for delivery processing
+
+---
+
+## Navigation
+
+- **Menu Path**: Sales / Order Management → Company Purchase Order
+- **Default Page**: Listing page of all company purchase orders
+
+---
+
+## Create Company Purchase Order
+
+### Step-by-Step Process
+
+<Steps>
+
+<Step title="Open Module">
+  Go to **Company Purchase Order** from the menu
+</Step>
+
+<Step title="Click Add">
+  Click **+ Add** to create a new company purchase order
+</Step>
+
+<Step title="Select Order Date">Choose the order date (default is today)</Step>
+
+<Step title="Select Customer / Client">
+  Search and select the customer (required)
+</Step>
+
+<Step title="Link Quotation (Optional)">
+  Attach an existing quotation if the order is created from one
+</Step>
+
+<Step title="Select Contact Person (Optional)">
+  Choose a contact person for the customer
+</Step>
+
+<Step title="Add Remark (Optional)">
+  Add notes, instructions, or internal comments
+</Step>
+
+<Step title="Add Products">
+  Search products by name, barcode, or SKU and add them to the order
+</Step>
+
+<Step title="Enter Quantity & Price">
+  Set quantity and unit price for each product
+</Step>
+
+<Step title="Save Order">
+  Click **Save** to create the company purchase order
+</Step>
+
+</Steps>
+
+---
+
+## Order Items
+
+When adding products, you can:
+
+- Search products by name, barcode, or SKU
+- Add multiple products in one order
+- Enter quantity for each item
+- Set unit price per product
+- System automatically calculates totals
+
+---
+
+## Business Rules
+
+- Customer selection is required
+- At least one product must be added
+- Total amount is calculated automatically
+- Quotation linking is optional
+- Orders can be used for delivery and invoicing
+- Each order gets a unique CPO number
+
+---
+
+## Workflow
+
+1. Customer places an order
+2. You create a Company Purchase Order
+3. System stores order details
+4. Order is used for delivery processing
+5. Stock is reduced during delivery or invoice creation
+6. Order status is updated through fulfillment stages
+
+---
+
+## Order Lifecycle
+
+| Stage      | Description                   |
+| ---------- | ----------------------------- |
+| Draft      | Order is being created        |
+| Confirmed  | Order is saved and approved   |
+| Processing | Items are being prepared      |
+| Delivered  | Order is fully delivered      |
+| Closed     | Order completed and finalized |
+
+---
+
+## Business Example
+
+A wholesale customer places an order for:
+
+- 50 units of Product A
+- 30 units of Product B
+
+You:
+
+1. Create a Company Purchase Order
+2. Add products and quantities
+3. Save the order
+4. Use it later for delivery
+5. System updates stock after shipment
+
+
+---
+
+## Best Practices
+
+- Always verify customer details before saving
+- Link quotations when available
+- Avoid duplicate orders for the same request
+- Use proper pricing per customer agreement
+- Track order status regularly
+
+---
+
+## Related Modules
+
+- Quotation Management
+- Sales Delivery
+- Sales Invoice
+- Inventory Management
+- Warehouse Stock

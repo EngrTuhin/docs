@@ -1,0 +1,289 @@
+---
+title: Loan Setup
+description: Learn how to manage loan providers, loan types, and loan taken entries in the system.
+---
+
+# Loan Setup
+
+Loan Setup module is used to manage all aspects of loans taken by the business — from defining loan providers and loan types to recording actual loan entries with repayment details.
+
+It helps businesses track borrowed funds, interest rates, repayment schedules, and overall loan liabilities effectively.
+
+---
+
+# Purpose of Loan Setup
+
+You use this module to:
+
+- Register loan providers (banks or individuals)
+- Define different types of loans with interest rates and duration
+- Record loans taken with full details (principal, interest, repayment terms)
+- Track loan status, payments, and remaining balances
+
+---
+
+# Loan Setup Modules
+
+You will find the following modules under **Finance → Loan Setup**:
+
+## 1. Loan Providers
+
+Manage banks or individuals who provide loans.
+
+## 2. Loan Types
+
+Define loan categories with interest rates and duration.
+
+## 3. Loan Taken Entry
+
+Record actual loans taken with repayment schedules.
+
+---
+
+# Summary
+
+Loan Setup provides a complete framework to manage company borrowings. It ensures proper tracking of loan providers, terms, and financial obligations for accurate accounting and cash flow management.
+
+---
+
+# 1. Loan Providers
+
+Loan Providers module is used to create and manage all entities (banks or individuals) from whom the business takes loans.
+
+<Info>
+  This is the setup page under Loan Setup for managing loan providers.
+</Info>
+
+---
+
+## Purpose
+
+You use this module to:
+
+- Add new loan providers
+- Store provider details (name, mobile, address, notes)
+- Maintain a list of trusted lenders
+- Use providers when recording loan entries
+
+---
+
+## Loan Providers Overview
+
+The page displays a list of all loan providers.
+
+**Table Columns:**
+
+- Provider Type (e.g., Bank)
+- Name
+- Mobile
+- Address
+- Notes
+- Action (Edit & Delete)
+
+---
+
+## Create Loan Provider Form
+
+This form appears after clicking **+ Add**.
+
+---
+
+## Form Fields
+
+| Field           | Description                       |
+| --------------- | --------------------------------- |
+| Provider Type\* | Dropdown (Bank, Individual, etc.) |
+| Name\*          | Name of the provider              |
+| Mobile          | Contact number                    |
+| Address         | Full address                      |
+| Notes           | Additional remarks                |
+
+---
+
+## Buttons & Controls
+
+### On Listing Page
+
+- **+ Add** (Green Button) → Add new provider
+- Search → Find providers
+
+### On Create Form
+
+- Cancel
+- Save
+
+---
+
+## Summary
+
+Loan Providers is a master setup module that stores information about all loan-giving entities.
+
+---
+
+# 2. Loan Types
+
+Loan Types module is used to define different categories of loans with their specific terms like duration and interest rate.
+
+<Info>This is the setup page under Loan Setup for managing loan types.</Info>
+
+---
+
+## Purpose
+
+This module is used to:
+
+- Create standardized loan types
+- Define interest rates and repayment duration
+- Maintain consistency across all loan entries
+
+---
+
+## Loan Types Overview
+
+The page shows a list of all defined loan types.
+
+**Table Columns:**
+
+- Loan Type
+- Duration Type
+- Interest Rate
+- Duration
+- Action
+
+---
+
+## Create Loan Type Form
+
+This form appears after clicking **+ Add**.
+
+---
+
+## Form Fields
+
+| Field               | Description                 |
+| ------------------- | --------------------------- |
+| Loan Type\*         | Name of loan type           |
+| Duration Type\*     | Monthly / Yearly / One Time |
+| Interest Rate (%)\* | Interest percentage         |
+| Duration Value\*    | Number of months/years      |
+
+---
+
+## Buttons & Controls
+
+### On Listing Page
+
+- **+ Add** (Green Button)
+- Search
+
+### On Create Form
+
+- Cancel
+- Save
+
+---
+
+## Summary
+
+Loan Types standardizes loan structures so that the same terms can be reused when recording actual loans.
+
+---
+
+# 3. Loan Taken Entry
+
+Loan Taken Entry is the main operational module used to record actual loans taken by the business.
+
+<Info>
+  This is the core page under Loan Setup for recording and tracking loans.
+</Info>
+
+---
+
+## Purpose
+
+You use this module to:
+
+- Record new loans taken
+- Track principal, interest, and total payable
+- Monitor repayment status and remaining balance
+- Maintain complete loan history
+
+---
+
+## Loan Taken Entry Overview
+
+The page displays all recorded loans.
+
+**Table Columns:**
+
+- Provider
+- Loan Type
+- Principal
+- Interest %
+- Total Payable
+- Monthly Payable
+- Start Date
+- End Date
+- Status
+- Paid
+- Remaining
+- Action
+
+---
+
+## Create Loan Entry Form
+
+This detailed form appears after clicking **+ Add**.
+
+---
+
+## Form Fields
+
+| Field               | Description                  |
+| ------------------- | ---------------------------- |
+| Loan Provider\*     | Select from saved providers  |
+| Loan Type\*         | Select from saved loan types |
+| Principal Amount\*  | Loan amount borrowed         |
+| Interest Rate (%)\* | Interest percentage          |
+| Duration Type\*     | Monthly / Yearly             |
+| Duration\*          | Duration value               |
+| Monthly Payable     | Auto-calculated or manual    |
+| Total Payable       | Total amount to be repaid    |
+| Status              | Running / Completed          |
+| Start Date\*        | Loan start date              |
+| End Date            | Loan end date                |
+| Apply on Cash       | Checkbox                     |
+| Notes               | Additional information       |
+
+---
+
+## Buttons & Controls
+
+### On Listing Page
+
+- **+ Add** (Green Button)
+- Search & Pagination
+
+### On Create Form
+
+- Cancel
+- Save
+
+---
+
+## How It Works (Main Flow)
+
+1. Go to **Finance → Loan Setup → Loan Taken Entry**
+2. Click **+ Add**
+3. Select Loan Provider and Loan Type
+4. Enter Principal Amount and Interest Rate
+5. Define Duration
+6. System calculates Total Payable and Monthly Payable
+7. Set Start Date and Status
+8. Click **Save**
+
+---
+
+## Summary
+
+Loan Taken Entry is the most important module in Loan Setup. It allows complete recording and monitoring of all loans taken by the business with full financial details.

@@ -1,111 +1,905 @@
 ---
-title: "Purchase & Procurement"
-description: "Manage local purchases, work orders, work order merging, LC import costing, suppliers, and C&F agents"
+title: Purchase Management
+description: Learn how to manage purchase orders, supplier invoices, returns, and stock procurement
 ---
 
-# Purchase & Procurement Operations
+# Purchase Management
 
-This guide explains how to manage your supply chain operations—from local suppliers and work orders to global import shipments (LC) and custom clearances.
+Purchase Management is the core module used to handle all product purchasing activities in the system.
 
----
-
-## Who Can Access
-
-* **Create Purchase Order (Maker)**: Purchase Officers, Inventory Staff.
-* **Verify Purchase (Checker)**: Purchase Managers, Store Supervisors, Admins.
-* **Work Orders & LC Module**: Procurement Directors, Operations Managers.
-* **Suppliers & C&F Agent Directories**: Accounts, Procurement Admins.
+It helps businesses control stock inflow, manage suppliers, and track purchase-related transactions from order to delivery.
 
 ---
 
-## 1. Local Purchases & Maker-Checker Approvals
+# Purpose of Purchase Management
 
-### Overview
-Local purchases follow a two-tier control structure:
-* **Purchase Entry (Maker)**: Logs purchase items, supplier details, warehouse, cost pricing, and deposits.
-* **Purchase Record Verification (Checker)**: Approved by a supervisor to update inventory count.
+This module allows you to:
 
-### Navigation
-* **Maker Entry**: Purchase Management → **Create Purchase Order**
-* **Verification**: **Approval Inbox**
-
-[Insert Screenshot Here - Purchase Order Maker List]
-
----
-
-## 2. Supplier & C&F Agent Directories
-
-### Overview
-* **Suppliers Directory**: Registry of suppliers, opening balances, payment terms, and ledger history.
-* **C&F Agent Directory**: Registry of clearing and forwarding agents who handle customs clearance for import LCs.
-
-### Navigation
-* **Suppliers**: Business Contacts → **Suppliers Directory**
-* **C&F Directory**: Business Contacts → **C&F Directory**
-
-### Step-by-Step Instructions (Create Supplier):
-1. Navigate to Business Contacts → **Suppliers Directory** and click **Add Supplier**.
-2. Enter the Supplier Name, Company Name, Email, Phone, and Address.
-3. Enter their **Opening Balance** (outstanding due, if any, at system setup).
-4. Click **Save Supplier**.
+- Create purchase orders for suppliers
+- Track incoming stock
+- Manage supplier-wise purchasing history
+- Handle purchase invoices
+- Process purchase returns
+- Maintain accurate inventory levels
+- Control procurement workflow
 
 ---
 
-## 3. Work Orders & Work Order Merging
+# Purchase Workflow Overview
 
-### Overview
-* **Work Order List**: Track client specifications and requirements for custom production or bulk procurement.
-* **Work Order Merger**: Combine multiple separate work orders into a single consolidated purchase order. This is helpful when importing bulk materials from a single vendor to reduce shipping overhead.
+A typical purchase flow is:
 
-### Navigation
-* **Work Orders**: Work Order Info → **Work Order List**
-* **Work Order Merger**: Work Order Info → **Work Order Merger**
-
-[Insert Screenshot Here - Work Order Merger Tool Interface]
-
-### Step-by-Step Instructions (Merge Work Orders):
-1. Go to Work Order Info → **Work Order Merger**.
-2. Select the **Supplier** from whom you will purchase the merged items.
-3. Select the active **Work Orders** you want to combine.
-4. Click **Preview Merge** to review the consolidated items list.
-5. Click **Confirm Merge & Create Purchase Order**. This compiles them into a single Purchase Order in the Maker queue.
+1. Create Purchase Order
+2. Send Order to Supplier
+3. Receive Products (Purchase Invoice)
+4. Update Stock Automatically
+5. Handle Purchase Returns (if needed)
+6. Track All Purchases in Reports
 
 ---
 
-## 4. LC Module (Import Costing)
+# Purchase Management Modules
 
-### Overview
-Manage international shipments. The Letter of Credit (LC) module tracks freight, customs duties, port charges, and C&F agent commissions, distributing them to compute the loaded **Landed Cost** of each item.
+| Module                | Purpose                               |
+| --------------------- | ------------------------------------- |
+| Create Purchase Order | Create and manage supplier orders     |
+| Purchase Invoice      | Record received goods and stock entry |
+| Purchase Return       | Return goods to supplier              |
+| All Purchase Records  | View purchase history                 |
+| Supplier Payments     | Manage supplier due payments          |
 
-### Navigation
-* **LC Module**: Purchase Management → **LC Module (Import Costing)**
+---
 
-### Field Descriptions (LC Details)
+# 1. Create Purchase Order
 
-| Field | Description | Rules / Validations |
-| :--- | :--- | :--- |
-| **LC Number** | Letter of credit ID from the bank. | Unique. |
-| **Opening Bank** | Bank issuing the credit line. | Selected from Bank registry. |
-| **Work Orders** | Linked work orders. | Must choose at least one work order. |
-| **Import Expenses** | Port, custom, C&F agent fees. | Logged in the Expenses tab. |
+Create Purchase Order is used to generate and manage purchase requests sent to suppliers.
 
-### Step-by-Step Instructions (Configure LC Costing):
-1. Go to Purchase Management → **LC Module** and click **Add LC**.
-2. Fill in the LC Number, bank, open date, and choose the linked Work Orders.
-3. In the **Expenses** tab, enter costs for customs clearance, insurance, transport, and select the C&F Agent.
-4. The system calculates the Landed Cost Factor. Click **Save LC**.
-5. Once the shipment arrives, click **Close LC & Receive Stock** to load the items into your warehouse at their loaded cost.
+---
+
+## Purpose
+
+This module is used for:
+
+- Ordering products from suppliers
+- Managing low stock items
+- Planning inventory replenishment
+- Tracking pending supplier orders
+
+---
+
+## How It Works
+
+Purchase Orders are the first step in the procurement process. They do not affect stock immediately but prepare the system for incoming goods.
+
+---
+
+## Purchase Order Process
+
+### Step 1: Select Supplier
+
+Choose the supplier you want to order products from.
+
+---
+
+### Step 2: Create Purchase Order
+
+System generates a PO number automatically (e.g., POA-0001-2026).
+
+---
+
+### Step 3: Add Products
+
+You can add products in two ways:
+
+- Search product manually (by name, SKU, barcode)
+- Use quick selection tools:
+  - Low Stock Products
+  - Out of Stock Products
+
+---
+
+### Step 4: Enter Quantity
+
+Specify how many units you want to order for each product.
+
+---
+
+### Step 5: Save Purchase Order
+
+Once saved, the order is stored with **Pending status**.
+
+---
+
+## Key Features
+
+### Low Stock Shortcut
+
+Quickly add products that are below stock alert level.
+
+### Out of Stock Shortcut
+
+Instantly add products that are completely out of stock.
+
+### Product Search
+
+Search products using:
+
+- Product Name
+- SKU
+- Barcode
 
 ---
 
 ## Business Rules
 
-* **Checker Restrictions**: A user who created a purchase order as a "Maker" is blocked from approving it as a "Checker" to prevent self-approval.
-* **CPO to Work Order**: Customer Purchase Orders must be verified before they can be linked to a Work Order.
+- Purchase Order does NOT increase stock
+- Only supplier confirmation is recorded at this stage
+- Stock is updated only after Purchase Invoice
+- Each PO is linked to a supplier
+- PO can remain in Pending, Approved, or Completed state
 
 ---
 
-## Related Features
+## Purchase Order Lifecycle
 
-* **Supplier Ledger Report**: Audit historical payments and purchases.
-* **Warehouse Stock**: Stores the received import goods.
+| Status             | Meaning                         |
+| ------------------ | ------------------------------- |
+| Pending            | Order created but not processed |
+| Approved           | Supplier accepted the order     |
+| Partially Received | Some items delivered            |
+| Completed          | Full order received             |
+| Cancelled          | Order canceled                  |
+
+---
+
+## Example Use Case
+
+A shop notices low stock of:
+
+- Paracetamol
+- Shampoo
+- Rice packets
+
+They:
+
+1. Open Purchase Order
+2. Click “Low Stock”
+3. Select products
+4. Add quantities
+5. Choose supplier
+6. Save PO
+
+System generates a PO ready to send to supplier.
+
+---
+
+## Common Mistakes
+
+| Mistake                   | Problem               |
+| ------------------------- | --------------------- |
+| Adding wrong supplier     | Delivery confusion    |
+| Not checking low stock    | Overstock or stockout |
+| Wrong quantity entry      | Inventory mismatch    |
+| Confusing PO with Invoice | Stock not updated     |
+
+---
+
+## Best Practice
+
+- Always use Low Stock feature for efficiency
+- Double-check supplier before saving
+- Keep PO records organized
+- Convert PO to invoice properly
+
+# 2. Purchase Invoice
+
+Purchase Invoice is used to record goods received from suppliers and update stock in the system.
+
+It is the second step in the purchase workflow and is created when physical goods are received from suppliers against a Purchase Order or direct purchase.
+
+---
+
+## Purpose
+
+This module is used for:
+
+- Recording received goods from suppliers
+- Increasing warehouse stock automatically
+- Tracking supplier payable amounts
+- Completing purchase orders
+- Maintaining purchase history and cost records
+
+---
+
+## How It Works
+
+Purchase Invoice confirms that goods ordered from suppliers have been delivered and received by the business.
+
+Unlike Purchase Order, this module directly affects stock and accounting.
+
+---
+
+## Purchase Invoice Process
+
+### Step 1: Select Supplier
+
+Choose the supplier from whom goods are received.
+
+---
+
+### Step 2: Fill Basic Information
+
+Enter:
+
+- Purchase Date
+- Warehouse / Shop (Required)
+- Purchase Order Reference (Optional)
+
+If a Purchase Order is selected, system can auto-load products.
+
+---
+
+### Step 3: Add Products
+
+Products can be added using:
+
+- Product search (Name / Barcode / SKU)
+- Selecting from linked Purchase Order
+
+Each product includes:
+
+- Quantity
+- Unit Price
+- Total Price
+
+---
+
+### Step 4: Apply Discount & VAT (Optional)
+
+You can apply:
+
+- Global Discount (Fixed or Percentage)
+- VAT / Tax Calculation
+
+System automatically updates totals.
+
+---
+
+### Step 5: Save Purchase Invoice
+
+After saving:
+
+- Stock is increased in selected warehouse
+- Supplier payable amount is recorded
+- Invoice is stored in Purchase records
+
+---
+
+## Key Features
+
+### Purchase Order Integration
+
+If linked with PO:
+
+- Products are auto-filled
+- Reduces manual work
+- Ensures order accuracy
+
+---
+
+### Warehouse Control
+
+Stock is added to selected warehouse only.
+
+Each warehouse maintains separate stock records.
+
+---
+
+### Product Search
+
+Supports search by:
+
+- Product Name
+- Barcode
+- SKU
+
+---
+
+## Business Rules
+
+- Purchase Invoice increases stock immediately after saving
+- Supplier due is created or updated
+- Warehouse selection is mandatory
+- Purchase Order linkage is optional but recommended
+- Invoice cannot exist without supplier
+
+---
+
+## Invoice Status
+
+| Status    | Meaning                           |
+| --------- | --------------------------------- |
+| Pending   | Invoice created but not finalized |
+| Complete  | Stock updated successfully        |
+| Partial   | Partially received items          |
+| Cancelled | Invoice is voided                 |
+
+---
+
+## Example Use Case
+
+A supplier delivers:
+
+- 20 Paracetamol
+- 10 Shampoo bottles
+- 5 Boxes of rice
+
+Steps:
+
+1. Open Purchase Invoice
+2. Select Supplier
+3. Choose Warehouse
+4. Add products with quantity
+5. Apply discount if needed
+6. Save invoice
+
+Result:
+
+- Stock increases automatically
+- Supplier balance is updated
+- Invoice is marked Complete
+
+---
+
+## Common Mistakes
+
+| Mistake                   | Problem                      |
+| ------------------------- | ---------------------------- |
+| Wrong warehouse selection | Stock goes to wrong location |
+| Incorrect quantity        | Stock mismatch               |
+| Missing supplier          | Invoice cannot be tracked    |
+| Not linking PO            | Manual errors increase       |
+
+---
+
+## Best Practice
+
+- Always verify supplier before saving
+- Use Purchase Order when available
+- Double-check quantities before saving
+- Use barcode scanning for speed and accuracy
+- Keep warehouse selection consistent
+
+# 3. Purchase Return
+
+Purchase Return is used to manage goods returned from the business back to suppliers.
+
+It is used when purchased products are damaged, expired, incorrect, or not needed in stock.
+
+---
+
+## Purpose
+
+This module is used for:
+
+- Returning defective or expired products to suppliers
+- Adjusting inventory after return
+- Claiming refunds or credit from suppliers
+- Tracking purchase return history
+- Maintaining accurate stock records
+
+---
+
+## How It Works
+
+Purchase Return is always linked to a Purchase Invoice to ensure correct tracking of returned items.
+
+It reduces stock and updates supplier payable/credit balance.
+
+---
+
+## Purchase Return Process
+
+### Step 1: Select Supplier
+
+Choose the supplier to whom the product is being returned.
+
+---
+
+### Step 2: Select Purchase Invoice
+
+Select the original Purchase Invoice.
+
+This ensures:
+
+- Correct product tracking
+- Accurate stock adjustment
+- Proper financial record linkage
+
+---
+
+### Step 3: Select Product
+
+Choose the specific product from the invoice that is being returned.
+
+---
+
+### Step 4: Add Return Details
+
+Enter:
+
+- Return Quantity
+- Return Reason (optional but recommended)
+- Any applicable adjustment or discount
+
+---
+
+### Step 5: Save Purchase Return
+
+After saving:
+
+- Stock is reduced from warehouse
+- Return record is stored
+- Supplier balance may be adjusted
+
+---
+
+## Purchase Return List
+
+The listing page shows all purchase returns in the system.
+
+---
+
+## Key Information Displayed
+
+Each record contains:
+
+- Return Reference Number
+- Return Date
+- Supplier Name
+- Purchase Invoice Reference
+- Warehouse
+- Total Return Amount
+- Status (if applicable)
+- Action Buttons (View, Edit, Print, Delete)
+
+---
+
+## Summary Section
+
+At the top, the system may show:
+
+- Total Returns
+- Total Return Amount
+- Today’s Returns
+- Monthly Return Summary
+
+---
+
+## Business Rules
+
+- Purchase Return must be linked to a Purchase Invoice
+- Stock is reduced after return is saved
+- Supplier credit or refund is recorded
+- Cannot return more than purchased quantity
+- Each return is permanently stored in system
+
+---
+
+## Example Use Case
+
+A supplier sends:
+
+- Expired medicine
+- Damaged packaging products
+
+Steps:
+
+1. Open Purchase Return List
+2. Click Add
+3. Select Supplier
+4. Select Purchase Invoice
+5. Choose product
+6. Enter quantity to return
+7. Save return
+
+Result:
+
+- Stock decreases automatically
+- Return record is created
+- Supplier balance is adjusted
+
+---
+
+## Common Mistakes
+
+| Mistake                      | Problem                    |
+| ---------------------------- | -------------------------- |
+| Wrong invoice selection      | Incorrect stock adjustment |
+| Returning more than received | System validation error    |
+| Missing supplier selection   | Return cannot be processed |
+| Not specifying product       | Incomplete record          |
+
+---
+
+## Best Practice
+
+- Always verify invoice before return
+- Return only linked purchased items
+- Add clear return reason
+- Keep return records consistent with stock logs
+
+# 4. Direct Purchase Return
+
+Direct Purchase Return is used to return products to suppliers without linking them to a specific Purchase Invoice.
+
+It is a flexible return system used for quick or informal return processing.
+
+---
+
+## Purpose
+
+This module is used for:
+
+- Returning goods without invoice reference
+- Handling cash or informal purchases
+- Returning damaged or defective products quickly
+- Adjusting inventory without invoice dependency
+- Recording supplier credit or refund cases
+
+---
+
+## How It Works
+
+Unlike standard Purchase Return, this module does not require a Purchase Invoice.
+
+It directly reduces stock and records a supplier return transaction.
+
+---
+
+## Direct Purchase Return Process
+
+### Step 1: Select Supplier
+
+Choose the supplier to whom the products are being returned.
+
+---
+
+### Step 2: Add Products
+
+Use the product search bar to add items:
+
+- Search by Product Name
+- Barcode
+- SKU
+
+---
+
+### Step 3: Enter Return Details
+
+For each product, enter:
+
+- Return Quantity
+- Unit Price
+- Return Reason (if available)
+- Any adjustments or remarks
+
+---
+
+### Step 4: Apply Discount (Optional)
+
+You can apply:
+
+- Flat discount
+- Percentage discount
+
+System recalculates totals automatically.
+
+---
+
+### Step 5: Save Return
+
+After saving:
+
+- Stock is reduced from warehouse
+- Return record is created
+- Supplier credit/refund is recorded
+
+---
+
+## Direct Purchase Return List
+
+The listing page shows all direct returns.
+
+---
+
+## Key Information Displayed
+
+Each record includes:
+
+- Reference Number
+- Return Date
+- Supplier Name
+- Warehouse (if applicable)
+- Total Quantity Returned
+- Total Amount
+- Action Buttons (View, Edit, Print, Delete)
+
+---
+
+## Summary Section
+
+The top section may show:
+
+- Total Direct Returns
+- Total Return Amount
+- Today’s Returns
+- Monthly Return Summary
+
+---
+
+## Business Rules
+
+- No Purchase Invoice is required
+- Stock is updated immediately after saving
+- Supplier balance may be adjusted
+- Each return is recorded permanently
+- Cannot exceed available stock quantity
+
+---
+
+## Example Use Case
+
+A shop purchases goods informally and later finds:
+
+- Damaged products
+- Expired items
+- Wrong delivered items
+
+Steps:
+
+1. Open Direct Purchase Return
+2. Select Supplier
+3. Search and add products
+4. Enter quantity and price
+5. Save return
+
+Result:
+
+- Stock decreases immediately
+- Return record is created
+- Supplier credit is recorded
+
+---
+
+## Key Difference from Purchase Return
+
+| Feature          | Purchase Return | Direct Purchase Return   |
+| ---------------- | --------------- | ------------------------ |
+| Invoice Required | Yes             | No                       |
+| Flexibility      | Limited         | High                     |
+| Stock Update     | Yes             | Yes                      |
+| Use Case         | Formal returns  | Quick / informal returns |
+
+---
+
+## Common Mistakes
+
+| Mistake                       | Problem              |
+| ----------------------------- | -------------------- |
+| Wrong supplier selection      | Incorrect accounting |
+| Returning more than stock     | Validation error     |
+| Not checking price            | Financial mismatch   |
+| Confusing with invoice return | Tracking errors      |
+
+---
+
+## Best Practice
+
+- Use Direct Return only when invoice is not available
+- Always verify supplier before saving
+- Keep reason notes for tracking
+- Avoid mixing with formal purchase returns
+
+# 5. Supplier Payment Records
+
+Supplier Payment Records is used to manage all payments made to suppliers against purchase invoices or outstanding dues.
+
+It ensures proper tracking of accounts payable and supplier transaction history.
+
+---
+
+## Purpose
+
+This module is used for:
+
+- Recording payments made to suppliers
+- Tracking supplier-wise payment history
+- Clearing purchase invoice dues
+- Managing cash, bank, or mobile payments
+- Maintaining accurate accounting records
+
+---
+
+## How It Works
+
+Supplier payments are created when the business pays money to suppliers for purchased goods.
+
+These payments reduce supplier outstanding balances and update financial records.
+
+---
+
+## Supplier Payment List
+
+The listing page shows all supplier payment transactions.
+
+---
+
+## Key Information Displayed
+
+Each record contains:
+
+- Serial Number (SL)
+- Payment Date
+- Receipt Number
+- Supplier Name (Company)
+- Transaction Account
+- Payment Mode (Cash / Bank / Mobile Banking)
+- Total Amount Paid
+- Action Buttons (Edit, Print, Delete)
+
+---
+
+## Summary Section
+
+The top section provides an overview such as:
+
+- Total Supplier Payments
+- Today’s Payments
+- Monthly Payment Summary
+- Total Outstanding Supplier Due
+
+---
+
+## Create Supplier Payment
+
+This form is used to record a new supplier payment.
+
+---
+
+## Purpose
+
+This form helps to:
+
+- Pay supplier outstanding balances
+- Record payment transactions
+- Link payments with purchase invoices
+- Maintain financial accuracy
+
+---
+
+## Supplier Payment Process
+
+### Step 1: Select Supplier
+
+Search and select the supplier (Company).
+
+---
+
+### Step 2: Enter Basic Information
+
+Fill in:
+
+- Current Date (auto or manual)
+- Receipt No (Required)
+- Payment Mode (Current Due Payment or similar)
+- Payment Type (Cash, Bank, Mobile Banking)
+
+---
+
+### Step 3: Load Payment Lines
+
+After selecting supplier, system loads:
+
+- All outstanding purchase invoices
+- Supplier due amount
+- Invoice-wise breakdown
+
+---
+
+### Step 4: Enter Payment Amount
+
+You can:
+
+- Pay full invoice amount
+- Pay partial amount
+- Distribute payment across multiple invoices
+
+---
+
+### Step 5: Add Notes (Optional)
+
+You may add:
+
+- Payment reference
+- Transaction notes
+- Bank or mobile transaction ID
+
+---
+
+### Step 6: Save Payment
+
+After saving:
+
+- Supplier due is reduced
+- Payment record is stored
+- Invoice status is updated automatically
+
+---
+
+## Payment Methods
+
+| Method         | Description             |
+| -------------- | ----------------------- |
+| Cash           | Physical cash payment   |
+| Bank Transfer  | Direct bank transaction |
+| Mobile Banking | bKash, Nagad, Rocket    |
+| Cheque         | Cheque-based payment    |
+
+---
+
+## Business Rules
+
+- Payments reduce supplier outstanding balance
+- Partial payments are allowed
+- Each payment must be linked to a supplier
+- Payment history is permanent
+- Invoice status updates automatically
+
+---
+
+## Payment Status Types
+
+| Status  | Meaning                |
+| ------- | ---------------------- |
+| Paid    | Invoice fully cleared  |
+| Partial | Partially paid         |
+| Due     | Payment pending        |
+| Advance | Extra payment recorded |
+
+---
+
+## Example Use Case
+
+A supplier has a due balance of ৳20,000.
+
+You make a payment:
+
+- ৳10,000 via cash
+
+System will:
+
+- Reduce supplier due to ৳10,000
+- Record payment history
+- Update invoice status as partially paid
+
+---
+
+## Common Mistakes
+
+| Mistake                  | Problem                           |
+| ------------------------ | --------------------------------- |
+| Wrong supplier selection | Payment applied to wrong account  |
+| Not linking invoices     | Due balance not updated correctly |
+| Incorrect amount entry   | Accounting mismatch               |
+| Wrong payment mode       | Reporting errors                  |
+
+---
+
+## Best Practice
+
+- Always verify supplier before payment
+- Match payments with invoices when possible
+- Keep receipt numbers consistent
+- Avoid mixing payments between suppliers
+- Use clear notes for tracking

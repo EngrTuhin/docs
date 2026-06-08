@@ -32,11 +32,11 @@ graph TD
 
 ## 2. Wholesale Delivery Process (CPO Workflow)
 
-When corporate clients issue Customer Purchase Orders (CPOs), items are processed, packaged, and shipped through warehouses:
+When corporate clients issue Company Purchase Orders (CPOs), items are processed, packaged, and shipped through warehouses:
 
 ```mermaid
 graph TD
-    A[Receive Customer Purchase Order CPO] --> B[Log Order in Customer Purchase Orders]
+    A[Receive Company Purchase Order CPO] --> B[Log Order in Company Purchase Orders]
     B --> C[Validate Stock in Central Warehouse]
     C --> D{Stock Available?}
     D -- No --> E[Create Purchase Order / Warehouse Transfer]
