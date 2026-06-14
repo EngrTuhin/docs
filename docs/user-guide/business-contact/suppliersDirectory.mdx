@@ -1,0 +1,358 @@
+---
+title: Suppliers Directory
+description: Learn how to add and manage suppliers for purchase and payment records
+---
+
+
+# Open Suppliers Directory
+
+<Steps>
+  <Step title="Open Business Contacts">
+    From the left sidebar, go to **Business Contacts**.
+  </Step>
+
+  <Step title="Click Suppliers Directory">
+    Click **Suppliers Directory**.
+  </Step>
+
+  <Step title="View Supplier List">
+    The system will show all saved suppliers.
+  </Step>
+</Steps>
+
+---
+
+# Supplier List
+
+The supplier list shows all saved supplier records.
+
+| Column | Meaning |
+|---|---|
+| SL | Serial number |
+| Name | Supplier name |
+| Email | Supplier email address |
+| Number | Supplier contact number |
+| Opening Balance | Previous supplier balance before using the system |
+| Address | Supplier address |
+| Action | View, edit, delete, or manage supplier |
+
+---
+
+# Search Supplier
+
+Use the search box to find suppliers quickly.
+
+You can search by:
+
+- Supplier name
+- Phone number
+- Email
+- Address
+- Brand name, if supported
+
+<Info>
+Search is useful when you have many suppliers in the system.
+</Info>
+
+---
+
+# Add Supplier
+
+<Steps>
+  <Step title="Click Add">
+    Click the green **Add** button.
+  </Step>
+
+  <Step title="Enter Supplier Name">
+    Type the supplier name.
+
+    Example: `ABC Pharma`
+  </Step>
+
+  <Step title="Enter Proprietor">
+    Type the owner or contact person name if needed.
+
+    Example: `Md. Hasan`
+  </Step>
+
+  <Step title="Enter Email">
+    Type the supplier email address if available.
+  </Step>
+
+  <Step title="Enter Contact Number">
+    Type the supplier phone number.
+
+    Example: `017XXXXXXXX`
+  </Step>
+
+  <Step title="Enter Opening Balance">
+    Enter the previous balance if this supplier had due before using the system.
+
+    If there is no previous balance, enter `0`.
+  </Step>
+
+  <Step title="Enter Opening Date">
+    Select the date from when this opening balance should start.
+  </Step>
+
+  <Step title="Select Status">
+    Select `Active` if this supplier will be used for purchase and reports.
+  </Step>
+
+  <Step title="Enter Address">
+    Type supplier address if needed.
+  </Step>
+
+  <Step title="Select Brands">
+    Select the brands supplied by this supplier if needed.
+  </Step>
+
+  <Step title="Save Supplier">
+    Click **Save Product** to save the supplier.
+  </Step>
+</Steps>
+
+<Warning>
+The button may show **Save Product**, but it will save the supplier information.
+</Warning>
+
+---
+
+# Supplier Form Fields
+
+| Field | Use | Required? |
+|---|---|---|
+| Name | Supplier name | Required |
+| Proprietor | Owner or contact person name | Optional |
+| Email | Supplier email address | Optional |
+| Contact Number | Supplier phone number | Required |
+| Opening Balance | Previous due or balance before using the system | Important if previous balance exists |
+| Opening Date | Starting date of opening balance | Important if opening balance is entered |
+| Status | Active or inactive | Required |
+| Address | Supplier address | Optional |
+| Brands | Brands supplied by this supplier | Optional |
+
+---
+
+# Supplier Example
+
+If there is no previous due:
+
+| Field | Example |
+|---|---|
+| Name | `ABC Pharma` |
+| Proprietor | `Md. Hasan` |
+| Email | `abcpharma@example.com` |
+| Contact Number | `017XXXXXXXX` |
+| Opening Balance | `0` |
+| Opening Date | Empty or system start date |
+| Status | `Active` |
+| Address | `Dhaka` |
+| Brands | `Savlon, Fresh` |
+
+If previous due exists:
+
+| Field | Example |
+|---|---|
+| Name | `ABC Pharma` |
+| Contact Number | `017XXXXXXXX` |
+| Opening Balance | `5000` |
+| Opening Date | `2026-01-01` |
+| Status | `Active` |
+
+In this example, `5000` means your business already owed `5,000` to this supplier before starting the system.
+
+---
+
+# What Is Opening Balance?
+
+Opening Balance means the previous balance before starting to use this system.
+
+Use Opening Balance only when the supplier already has previous due or advance balance before you start creating new purchase records in the system.
+
+| Situation | What to Enter |
+|---|---|
+| You already owe money to the supplier | Enter the due amount |
+| Supplier has no previous balance | Enter `0` or keep empty if allowed |
+| Supplier already has advance balance | Enter the advance amount if your system supports it |
+
+---
+
+# What Is Opening Date?
+
+Opening Date means the date from when the opening balance should start.
+
+Example:
+
+If you start using the system on `2026-01-01`, and you already owe this supplier `5,000`, then enter:
+
+| Field | Example |
+|---|---|
+| Opening Balance | `5000` |
+| Opening Date | `2026-01-01` |
+
+<Info>
+Opening Balance and Opening Date help supplier due reports and supplier ledger show the correct starting balance.
+</Info>
+
+<Warning>
+Enter Opening Balance carefully. Wrong opening balance will make supplier due and supplier ledger incorrect.
+</Warning>
+
+---
+
+# Status
+
+Status controls whether the supplier can be used in the system.
+
+| Status | Meaning |
+|---|---|
+| Active | Supplier can be used in purchase and reports |
+| Inactive | Supplier may not appear in selection lists |
+
+<Info>
+Keep regular suppliers as `Active`.
+</Info>
+
+---
+
+# Brands
+
+Use Brands if you want to connect a supplier with specific product brands.
+
+Example:
+
+| Supplier | Brands |
+|---|---|
+| ABC Pharma | Savlon, Fresh |
+| Global Supplier | Samsung, Walton |
+| Medicine Supplier | Raneta, Square |
+
+<Info>
+Brand selection is optional. Use it only if your business tracks supplier-wise brands.
+</Info>
+
+---
+
+# Action Menu
+
+Each supplier row has an **Action** menu.
+
+Common actions may include:
+
+| Action | Use |
+|---|---|
+| View | See supplier details |
+| Edit | Update supplier information |
+| Delete | Delete supplier if permission allows |
+| Ledger | View supplier ledger if available |
+| Payment | View or manage supplier payment if available |
+
+<Warning>
+Edit or delete supplier records carefully. Supplier information is connected with purchases, supplier payments, purchase returns, and reports.
+</Warning>
+
+---
+
+# Filter and Analytics
+
+Use **Filters** to find specific suppliers.
+
+You may filter by:
+
+- Status
+- Brand
+- Opening balance
+- Date
+- Supplier type, if available
+
+Use **Analytics** to view supplier analysis if available.
+
+Analytics may show:
+
+- Total suppliers
+- Active suppliers
+- Supplier due summary
+- Supplier payment summary
+- Supplier-wise purchase activity
+
+---
+
+# Supplier Due
+
+Supplier due means the amount your business needs to pay to the supplier.
+
+Supplier due can come from:
+
+- Opening balance
+- Purchase invoice due
+- Supplier payment adjustment
+- Purchase return adjustment
+
+Example:
+
+| Situation | Amount |
+|---|---|
+| Opening Balance | `5000` |
+| New Purchase Due | `3000` |
+| Supplier Payment | `2000` |
+| Current Supplier Due | `6000` |
+
+<Info>
+Supplier due report and supplier ledger help you track how much you need to pay suppliers.
+</Info>
+
+---
+
+# Common Use Cases
+
+| Need | What to Do |
+|---|---|
+| Add new supplier | Click Add and create supplier |
+| Supplier has previous due | Enter opening balance and opening date |
+| Supplier has no due | Enter opening balance `0` |
+| Supplier supplies selected brands | Select brands |
+| Find old supplier | Use Search |
+| Update phone number | Use Action menu and edit |
+| Supplier not showing in purchase | Check Status is Active |
+
+---
+
+# Common Mistakes
+
+| Mistake | Problem |
+|---|---|
+| Duplicate supplier added | Purchases may be recorded under the wrong supplier |
+| Wrong phone number | Communication becomes difficult |
+| Wrong opening balance | Supplier due report becomes incorrect |
+| Missing opening date | Ledger starting date may be unclear |
+| Supplier set as inactive | Supplier may not appear in purchase |
+| Wrong brand selected | Supplier-brand tracking may be incorrect |
+
+---
+
+# Best Practice
+
+- Use clear supplier names
+- Avoid duplicate supplier records
+- Add correct phone number
+- Keep regular suppliers as `Active`
+- Enter opening balance only if previous due exists
+- Enter opening date when opening balance is used
+- Add address if delivery or office tracking is needed
+- Select brands only if your business needs brand-wise supplier tracking
+- Review supplier list regularly
+
+---
+
+# Related Business Contact Pages
+
+<CardGroup cols={2}>
+  <Card title="Customers & Retailers Directory" href="/user-guide/customersRetailers" icon="users">
+    Add and manage customers and retailers for sales.
+  </Card>
+
+  <Card title="Customer Due Collection" href="/user-guide/customerDueCollection" icon="circle-dollar-sign">
+    Collect previous due payments from customers.
+  </Card>
+</CardGroup>

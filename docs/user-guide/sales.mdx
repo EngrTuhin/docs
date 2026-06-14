@@ -1,774 +1,766 @@
 ---
-title: Sales Management
-description: Learn how to manage sales, invoices, returns, deliveries, payments, and customer transactions
+title: Sales Invoice
+description: Learn how to create sales invoices, receive payments, print bills, manage returns, and collect customer dues
 ---
+Koorri POS & Inventory System supports two types of POS sales:
 
-# Sales Management
+<CardGroup cols={2}>
+  <Card title="Regular POS" icon="shopping-cart">
+    Use this for retail, wholesale, pharmacy, grocery, medicine shop, or normal product sales.
+  </Card>
 
-Sales Management is the **core operational module** of the Koorri POS & Inventory System.
+  <Card title="Restaurant POS" icon="utensils">
+    Use this for restaurant table orders, kitchen print, customer print, and final bill.
+  </Card>
+</CardGroup>
 
-It handles the complete sales lifecycle — from creating an invoice to delivery, returns, and payment collection.
+<Info>
+Use the POS type based on your business. Regular POS and Restaurant POS may show different options.
+</Info>
 
 ---
 
-# What You Can Do in Sales Management
+# Choose POS Type
 
-This module allows you to:
+<Tabs>
+  <Tab title="Regular POS">
+    # Regular POS
 
-- Create and manage sales invoices
-- Handle dine-in / table-based orders
-- Track all sales history and reports
-- Deliver products against customer orders
-- Process returns and refunds
-- Collect customer due payments
-- Record advance payments
+    Regular POS is used for normal product sales.
 
----
-
-# Sales Workflow (Important)
-
-A typical sales process in the system works like this:
-
-1. Create Sales Invoice
-2. Add Products & Customer
-3. Complete or Hold Order
-4. Deliver Products (if required)
-5. Handle Returns (if needed)
-6. Collect Due Payments
-7. Track everything in Sales Records
-
----
-
-# Sales Management Modules
-
-Sales Management is divided into multiple submodules. Each module handles a specific part of the sales system.
-
----
+    Use this for:
 
-## 🧾 1. Sales Invoice
+    - Retail shop
+    - Wholesale shop
+    - Pharmacy
+    - Grocery shop
+    - Medicine shop
+    - General product sales
 
-Sales Invoice is the **main billing screen** where all sales transactions begin.
+    ---
 
-It is used for creating real-time invoices for customers.
+    ## Regular POS Workflow
 
----
-
-### What It Does
-
-- Adds products to cart
-- Selects customer
-- Applies discount & VAT
-- Calculates totals automatically
-- Completes or saves sales
-
----
+    <Steps>
+      <Step title="Open Sales Invoice">
+        From the left menu, go to **Sales Management** and click **Sales Invoice**.
+      </Step>
 
-### Key Features
+      <Step title="Search Product">
+        Use the search box on the left side to find products.
+      </Step>
 
-#### Product Selection
+      <Step title="Select Product">
+        Click the product card to add it to the current order.
+      </Step>
 
-Products can be selected via:
+      <Step title="Select Customer">
+        Select a customer from the right side customer section if needed.
 
-- Search bar
-- Category filtering
-- Quick selection
+        For cash sales, you may use a walk-in/default customer if your system supports it.
+      </Step>
 
-#### Cart System
+      <Step title="Check Quantity and Price">
+        Make sure product quantity, price, and stock are correct.
+      </Step>
 
-Each selected product is added to a cart where you can:
+      <Step title="Add Discount or VAT">
+        Add discount or VAT only if needed.
+      </Step>
 
-- Increase / decrease quantity
-- Remove items
-- View subtotal
+      <Step title="Click Pay">
+        Click **Pay** to open the payment page.
+      </Step>
 
-#### Customer Selection
+      <Step title="Process Payment">
+        Enter payment details and click **Process**.
+      </Step>
 
-You can:
+      <Step title="Print Invoice">
+        Print the invoice for the customer if needed.
+      </Step>
+    </Steps>
 
-- Search existing customers
-- Add new customers quickly
-- Assign invoice to a customer
+    ---
 
----
-
-### Payment System
+    ## Regular POS Screen Options
 
-The system automatically calculates:
+    | Option | Use |
+    |---|---|
+    | Product Search | Search product by name |
+    | Category Filter | Filter products by category |
+    | Product Card | Click to add product to order |
+    | Current Order | Shows selected products |
+    | Customer | Select or add customer |
+    | Discount | Add invoice discount |
+    | VAT | Add VAT/tax |
+    | Grand Total | Final payable amount |
+    | Pay | Complete payment |
+    | Hold | Keep order for later |
+    | Draft | Save unfinished invoice |
+    | Return | Process return from POS |
+    | Clear | Clear current order |
 
-- Subtotal
-- Discount
-- VAT
-- Grand Total
-- Due Amount
+    ---
 
----
+    ## Regular POS Example
 
-### Payment Options
+    | Field | Example |
+    |---|---|
+    | Customer | `Walk-in Customer` |
+    | Product | `Savlon Hand Wash 250ml` |
+    | Quantity | `2` |
+    | Unit Price | `100` |
+    | Discount | `0` |
+    | VAT | `0` |
+    | Grand Total | `200` |
+    | Payment Status | `Paid` |
 
-- Cash Payment
-- Bank Transfer
-- Mobile Payment
-- Partial Payment (creates due)
-
----
+    ---
 
-### Order Actions
+    ## Regular POS Notes
 
-- **Pay** → Finalize the sale
-- **Hold** → Save for later processing
-- **Draft** → Save incomplete invoice
+    <Warning>
+    Before clicking Pay, always check product name, quantity, price, discount, VAT, customer, and grand total.
+    </Warning>
 
----
+    <Info>
+    After completing the sale, stock and sales reports may update automatically.
+    </Info>
+  </Tab>
 
-### Business Rules
+  <Tab title="Restaurant POS">
+    # Restaurant POS
 
-- Stock is reduced after payment confirmation
-- Due is created if full payment is not made
-- All invoices are saved in Sales Records
+    Restaurant POS is used for table-based food orders.
 
----
+    Use this for:
 
-## 🍽 2. Table Setup
+    - Restaurant
+    - Cafe
+    - Fast food shop
+    - Table service business
+    - Food court counter
 
-Table Setup is used for **restaurant or table-based POS systems**.
+    ---
 
----
+    ## Restaurant POS Features
 
-### Purpose
+    | Feature | Use |
+    |---|---|
+    | Table Setup | Create restaurant tables |
+    | Table Order | Take order for selected table |
+    | Kitchen Print | Send order to kitchen |
+    | Customer Print | Print customer copy before final payment |
+    | Final Bill | Complete order and receive payment |
+    | Hold Order | Keep running table order |
+    | Draft | Save order without final payment |
 
-This module allows you to:
+    ---
 
-- Create tables for ordering
-- Assign orders to tables
-- Track dine-in billing
-- Manage table-wise operations
+    ## Step 1: Set Up Tables
 
----
+    Before using Restaurant POS, create your tables.
 
-### How It Works
+    <Steps>
+      <Step title="Open Table Setup">
+        From the left menu, go to **Sales Management** and click **Table Setup**.
+      </Step>
 
-Each table represents a physical location such as:
+      <Step title="Click Add">
+        Click the **Add** button.
+      </Step>
 
-- Table 1
-- VIP Table
-- Outdoor Table
-- Counter Seat
+      <Step title="Enter Table Name">
+        Type the table name.
 
----
+        Example: `Table 1`, `Table 2`, `VIP 1`, `Family Zone 1`
+      </Step>
 
-### Table Data Structure
+      <Step title="Save Table">
+        Save the table.
+      </Step>
+    </Steps>
 
-Each table contains:
+    <Info>
+    Table Setup is needed only for restaurant or table-based sales.
+    </Info>
 
-- Table Name
-- Description
-- Status (Active / Inactive)
+    ---
 
----
+    ## Step 2: Create Restaurant Order
 
-### Add Table Process
+    <Steps>
+      <Step title="Open Sales Invoice">
+        Go to **Sales Management → Sales Invoice**.
+      </Step>
 
-1. Open Table Setup
-2. Click Add Table
-3. Enter Table Name
-4. Add Description (optional)
-5. Set Status
-6. Save
+      <Step title="Select Table">
+        Select the table for the customer order.
+      </Step>
 
----
+      <Step title="Select Customer">
+        Select customer if needed.
 
-### Business Rules
+        For normal restaurant orders, you may use walk-in customer if your system supports it.
+      </Step>
 
-- Only active tables appear in POS
-- Each table represents a unique order space
-- Orders can be tracked per table
+      <Step title="Select Items">
+        Search and click food items from the left product panel.
+      </Step>
 
----
+      <Step title="Check Current Order">
+        Check item name, quantity, and price.
+      </Step>
 
-## 📊 3. All Sales Records
+      <Step title="Kitchen Print">
+        Print kitchen copy so the kitchen team can prepare the order.
+      </Step>
 
-All Sales Records is the **complete history log of all sales transactions**.
+      <Step title="Customer Print">
+        Print customer copy if the customer wants to check the bill.
+      </Step>
 
----
+      <Step title="Final Bill">
+        When the order is complete, click Pay and process payment.
+      </Step>
+    </Steps>
 
-### Purpose
+    ---
 
-Used for:
+    ## Kitchen Print
 
-- Viewing all invoices
-- Tracking sales performance
-- Monitoring revenue
-- Searching past transactions
-- Analyzing business reports
+    Kitchen Print is used to send the order to the kitchen.
 
----
+    Kitchen copy may include:
 
-### What You Can See
+    - Table name
+    - Order number
+    - Item name
+    - Quantity
+    - Order time
+    - Waiter name if available
+    - Special note if available
 
-Each record includes:
+    <Info>
+    Kitchen Print is not the final bill. It is only for food preparation.
+    </Info>
 
-- Invoice Number
-- Date & Time
-- Customer Name
-- Total Amount
-- Discount
-- Due Amount
-- Payment Status
+    ---
 
----
+    ## Customer Print
 
-### Key Features
+    Customer Print is used to give the customer a copy of the order or bill.
 
-#### Sales Summary Dashboard
+    Customer copy may include:
 
-Shows:
+    - Item list
+    - Quantity
+    - Price
+    - Discount
+    - VAT
+    - Grand total
 
-- Today’s Sales
-- Monthly Sales
-- Total Revenue
-- Due Amount
-- Average Ticket Value
+    <Info>
+    Customer Print can be used before final payment so the customer can check the bill.
+    </Info>
 
----
+    ---
 
-### Actions Available
+    ## Final Bill
 
-Each invoice supports:
+    Final Bill is created when the order is complete and payment is received.
 
-- View full invoice
-- Edit sale
-- Print invoice
-- Process return
-- Delete invoice (if allowed)
+    Final bill updates:
 
----
+    - Sales report
+    - Payment record
+    - Customer due if any
+    - Stock quantity if stock is enabled
 
-### Business Rules
+    <Warning>
+    Create the final bill only after checking all items, quantity, price, discount, VAT, and payment.
+    </Warning>
 
-- All completed sales are permanently stored
-- Any changes affect stock & reports
-- Data is used for analytics and reporting
+    ---
 
----
+    ## Restaurant POS Example
 
-## 🚚 4. Sales Delivery
+    | Field | Example |
+    |---|---|
+    | Table | `Table 3` |
+    | Customer | `Walk-in Customer` |
+    | Items | `Burger, Fried Rice, Soft Drink` |
+    | Kitchen Print | `Yes` |
+    | Customer Print | `Yes` |
+    | Final Bill | `After payment` |
+    | Payment Status | `Paid` |
 
-Sales Delivery handles product delivery against **Company Purchase Order (CPO)**.
+    ---
 
----
+    ## Restaurant POS Buttons
 
-### Purpose
+    | Button | Use |
+    |---|---|
+    | Kitchen Print | Send order to kitchen |
+    | Customer Print | Print customer copy |
+    | Pay | Complete final bill |
+    | Hold | Keep table order running |
+    | Draft | Save order without final payment |
+    | Clear | Remove current order |
+    | Return | Return product or item |
 
-Used for:
+    ---
 
-- Delivering ordered goods
-- Partial or full delivery tracking
-- Payment collection during delivery
-- Inventory adjustment
+    ## When to Use Hold in Restaurant
 
----
+    Use **Hold** when:
 
-### Delivery Workflow
+    - Customer is still sitting at the table
+    - More items may be added later
+    - Order is not ready for final bill
+    - Payment is not received yet
 
-1. Select Company Purchase Order (CPO)
-2. System loads ordered products
-3. Enter delivery quantity
-4. Add payment (optional)
-5. Save delivery
+    <Warning>
+    Do not use Kitchen Print as the customer final bill.
+    </Warning>
+  </Tab>
+</Tabs>
 
 ---
 
-### Key Features
+# Payment Page
 
-- Tracks ordered vs delivered quantity
-- Supports partial delivery
-- Calculates remaining items
-- Allows payment collection during delivery
+After clicking **Pay**, the payment page will open.
 
----
+Use this page to receive payment from the customer and complete the invoice.
 
-### Business Rules
+The payment page has two main parts:
 
-- Only approved orders can be delivered
-- Inventory reduces after delivery
-- Multiple deliveries allowed per order
+| Area | Use |
+|---|---|
+| Payments | Enter payment method, amount, account, reference, date, and notes |
+| Summary | Check grand total, paid amount, and due amount |
 
 ---
 
-## 🔄 5. Sales Return List
+# Payment Methods
 
-Sales Return List manages returns that are linked to customer invoices.
+You can select how the customer is paying.
 
-It ensures proper tracking of returned goods, automatic stock adjustment, and accurate financial records.
+| Method | Use |
+|---|---|
+| Cash | Payment received by cash |
+| Bank | Payment received through bank |
+| Mobile Bank | Payment received through mobile banking |
 
 ---
-
-### Purpose
 
-Used for:
-
-- Managing customer returns against invoices
-- Adjusting warehouse stock after return
-- Processing refunds or replacements
-- Tracking return history and performance
-- Maintaining accurate sales and accounting records
-
----
+# Payment Fields
 
-### Return Process
-
-1. Open Sales Return List
-2. Click **+ Add New Return**
-3. Select Customer
-4. Select Warehouse / Shop
-5. Select original **Sales Invoice No**
-6. Select product(s) from that invoice
-7. Enter return quantity and reason
-8. Apply discount on return (if needed)
-9. Review total return amount
-10. Click **Save Return**
+| Field | Use |
+|---|---|
+| Method | Select Cash, Bank, or Mobile Bank |
+| Amount | Enter customer payment amount |
+| Account / Wallet | Select bank account or mobile wallet if needed |
+| Reference | Enter transaction ID, cheque number, slip number, or note |
+| Date | Select payment date |
+| Notes | Add payment note if needed |
 
 ---
 
-### Return Form Structure
+# Payment Summary
 
-#### A. Header Information
+The right side shows the invoice payment summary.
 
-- Return Reference No (Auto-generated)
-- Return Date
-- Warehouse / Shop
-- Sales Person
-- Customer
+| Field | Meaning |
+|---|---|
+| Grand Total | Total invoice amount |
+| Amount Given | Amount paid by customer |
+| Paid | Amount received for this invoice |
+| Due | Remaining unpaid amount |
 
 ---
 
-#### B. Invoice & Product Selection
+# Receive Full Payment
 
-- Sales Invoice No (required)
-- Sales Product (from invoice)
-- Invoice Discount Type
-- Invoice Discount Amount
-- Discount on Return
+Use this when the customer pays the full invoice amount.
 
----
-
-#### C. Return Line Items
-
-After selecting invoice and product, system loads:
-
-- Product name
-- Sold quantity
-- Already returned quantity
-- Remaining quantity
-- Return quantity input field
-- Unit price
-- Subtotal calculation
-
-Users can:
-
-- Enter return quantity
-- Add return reason (damaged, wrong item, etc.)
-- Adjust multiple products if needed
-
----
-
-#### D. Summary
-
-- Total Quantity Returned
-- Subtotal Amount
-- Discount Amount
-- Grand Total Return Value
+<Steps>
+  <Step title="Click Pay">
+    After adding products to the invoice, click **Pay**.
+  </Step>
 
----
+  <Step title="Select Payment Method">
+    Select `Cash`, `Bank`, or `Mobile Bank`.
+  </Step>
 
-### After Saving
+  <Step title="Enter Full Amount">
+    Enter the full invoice amount in the Amount field.
+  </Step>
 
-Once a return is saved, the system will:
+  <Step title="Check Summary">
+    Make sure Due amount becomes `0`.
+  </Step>
 
-- Increase stock in the selected warehouse
-- Reduce customer invoice due amount
-- Update customer ledger
-- Store return in Sales Return List
-- Reflect changes in reports and analytics
+  <Step title="Click Process">
+    Click **Process** to complete the payment and invoice.
+  </Step>
+</Steps>
 
 ---
 
-### Business Rules
+## Full Payment Example
 
-- Every return must be linked to a valid invoice
-- Return quantity cannot exceed sold quantity
-- Stock is automatically restored after saving
-- Financial reports are updated instantly
-- Each return has a unique reference number
-- Refunds are optional (cash, bank, or adjustment)
+| Field | Example |
+|---|---|
+| Grand Total | `1000` |
+| Amount | `1000` |
+| Paid | `1000` |
+| Due | `0` |
+| Payment Status | `Paid` |
 
 ---
-
-### Common Use Cases
 
-- Customer returns damaged goods
-- Wrong product delivered
-- Expired or defective items
-- Partial invoice returns
-- Product exchange cases
+# Receive Partial Payment
 
----
+Use this when the customer pays only part of the invoice amount.
 
-### Summary
+<Steps>
+  <Step title="Click Pay">
+    Open the payment page.
+  </Step>
 
-Sales Return List ensures all invoice-based returns are properly tracked, stock is accurately updated, and financial records remain consistent across the system. It is an essential module for maintaining inventory and accounting accuracy.
+  <Step title="Select Payment Method">
+    Select payment method.
+  </Step>
 
-## 🔁 6. Direct Product Return
+  <Step title="Enter Paid Amount">
+    Enter the amount received from customer.
+  </Step>
 
-Direct Product Return is used to process customer returns without linking them to a specific sales invoice.
+  <Step title="Check Due">
+    The system will show the remaining amount as Due.
+  </Step>
 
-It is designed for quick return handling, especially when invoice details are not available or not required.
+  <Step title="Click Process">
+    Click **Process** to save payment and invoice.
+  </Step>
+</Steps>
 
 ---
 
-### Purpose
+## Partial Payment Example
 
-This module is used for:
+| Field | Example |
+|---|---|
+| Grand Total | `1000` |
+| Amount | `600` |
+| Paid | `600` |
+| Due | `400` |
+| Payment Status | `Due` or `Partial` |
 
-- Cash sales returns without invoice reference
-- Walk-in customer returns
-- Defective or damaged product returns
-- Quick return processing
-- Emergency inventory correction
+<Info>
+If the customer does not pay the full amount, the remaining balance will be customer due.
+</Info>
 
-After saving, returned items are added back to stock and return value is recorded in accounts.
-
 ---
 
-### Return Process
-
-1. Open Direct Product Return
-2. Click **+ Add New Return**
-3. Select Warehouse / Shop
-4. Select Customer (optional)
-5. Select Sales Person (optional)
-6. Search and add products
-7. Enter return quantity
-8. Apply discount if needed
-9. Review total amount
-10. Click **Save Return**
+# Add Multiple Payments
 
----
+Use **Add another payment** when the customer pays using more than one method.
 
-### Return Form Structure
+Example:
 
-#### A. Header Information
+| Payment Method | Amount |
+|---|---|
+| Cash | `500` |
+| Mobile Bank | `500` |
 
-- Reference No (Auto-generated, e.g., DR-0054-2026)
-- Entry Date (Default: today)
-- Warehouse / Shop (Required)
-- Sales Person (Optional)
-- Customer (Optional)
-- Discount Type (Fixed selected by default)
-- Discount Value
-- Discount Amount (Auto-calculated)
+Total paid = `1000`
 
----
+<Steps>
+  <Step title="Enter First Payment">
+    Select method and enter the first payment amount.
+  </Step>
 
-#### B. Return Line Items
+  <Step title="Click Add Another Payment">
+    Click **Add another payment**.
+  </Step>
 
-Products are added using the search bar:
+  <Step title="Enter Second Payment">
+    Select another method and enter the second payment amount.
+  </Step>
 
-- Search Product by Name / Barcode / SKU
-- Select product from results
-- Enter return quantity
-- Enter unit price (if editable)
-- Add return reason (if applicable)
-- Multiple products can be added
+  <Step title="Check Summary">
+    Make sure total paid and due amount are correct.
+  </Step>
 
-When no products are added, system shows:
-**“No items added yet”**
+  <Step title="Click Process">
+    Click **Process** to complete the payment.
+  </Step>
+</Steps>
 
 ---
-
-#### C. Summary
-
-- Total Quantity
-- Subtotal
-- Discount
-- Grand Total Return Value
 
-All values are calculated automatically based on selected items.
+# Full Pay Button
 
----
+The **Full Pay** button is used to quickly fill the full invoice amount.
 
-### How It Works (Step-by-Step Flow)
-
-1. Go to **Sales Management → Direct Product Return**
-2. Click **+ Add New Return**
-3. Select Warehouse/Shop
-4. (Optional) Select Customer and Sales Person
-5. Search and add returned products
-6. Enter quantity for each product
-7. System calculates subtotal automatically
-8. Apply discount if needed
-9. Review final total
-10. Click **Save Return**
-
----
+Use this when the customer pays the complete amount.
 
-### After Saving
+<Steps>
+  <Step title="Click Full Pay">
+    Click **Full Pay** on the payment page.
+  </Step>
 
-Once the return is saved, the system will:
+  <Step title="Check Amount">
+    The system will fill the full payable amount.
+  </Step>
 
-- Increase stock in selected warehouse
-- Create a direct return record
-- Update inventory and stock reports
-- Record return value in accounting system
-- Assign unique reference number
+  <Step title="Click Process">
+    Click **Process** to complete the sale.
+  </Step>
+</Steps>
 
 ---
 
-### Business Rules
+# Payment Notes
 
-- No invoice is required for this return type
-- Stock is updated immediately after saving
-- Returns can include multiple products
-- Discount is optional
-- Each return has a unique reference number
-- Used only for non-invoice or quick returns
+Use the Notes field to save payment information.
 
----
-
-### Common Use Cases
+Example notes:
 
-- Walk-in customer returns
-- Damaged goods replacement without invoice
-- Cash sale returns
-- Missing invoice situations
-- Quick warehouse stock correction
+- `Cash received`
+- `Bkash transaction ID 12345`
+- `Cheque received`
+- `Partial payment`
+- `Customer will pay remaining later`
 
 ---
-
-### Summary
-
-Direct Product Return provides a fast and flexible way to handle returns without requiring invoice linkage. It ensures inventory accuracy while allowing quick return processing in real-world retail situations.
-
-## 💰 7. Customer Advance Payment
 
-Customer Advance Payment is used to record money received from customers before a final sale or invoice is created.
+# Payment Page Common Mistakes
 
-It ensures proper tracking of prepaid orders and helps adjust the amount later during billing.
+| Mistake | Problem |
+|---|---|
+| Wrong amount entered | Paid and due balance becomes wrong |
+| Wrong payment method selected | Cash/bank/mobile report becomes wrong |
+| Reference not added | Transaction tracking becomes difficult |
+| Due not checked | Customer due may be incorrect |
+| Process clicked too early | Wrong invoice may be saved |
 
 ---
 
-### Purpose
+# Common POS Options
 
-This module is used for:
+Both Regular POS and Restaurant POS may use these options.
 
-- Prepaid or advance orders
-- Booking payments for future purchases
-- Partial or full advance collection before delivery
-- Maintaining accurate accounting records
-- Adjusting payments during final invoice creation
+| Option | Use |
+|---|---|
+| Product Search | Find products quickly |
+| Category Filter | Show products by category |
+| Customer Selection | Select customer for invoice |
+| Add Customer | Add new customer from POS |
+| Discount | Reduce invoice amount |
+| VAT | Add tax amount |
+| Notes | Add short note for invoice |
+| Pay | Complete sale |
+| Hold | Pause order |
+| Draft | Save unfinished invoice |
+| Return | Process return |
+| Clear | Clear current order |
 
 ---
 
-### Advance Payment Process
-
-1. Open Customer Advance Payment
-2. Click **+ Add New Advance**
-3. System generates a Reference No automatically
-4. Select Advance Payment Date
-5. Select Warehouse / Shop
-6. Select Customer (required)
-7. Optionally select Product (SKU / Barcode / Name)
-8. Click **Proceed to Payment**
-9. Enter advance amount
-10. Select payment method (Cash, Bank, Mobile Banking, etc.)
-11. Add notes if needed
-12. Save the record
+# Add Customer from POS
 
----
-
-### Advance Entry Form Structure
+You can add a new customer directly from the POS screen.
 
-#### A. Basic Information
+<Steps>
+  <Step title="Click Add Beside Customer">
+    On the right side customer section, click **Add**.
+  </Step>
 
-- Reference No (Auto-generated, e.g., CAP-0001-2026)
-- Advance Payment Date (Default: today, editable)
-- Warehouse / Shop (Required)
-- Customer (Required, searchable dropdown)
+  <Step title="Enter Customer Details">
+    Enter customer name, phone number, and other details if needed.
+  </Step>
 
----
+  <Step title="Save Customer">
+    Save the customer.
+  </Step>
 
-#### B. Product Selection (Optional)
+  <Step title="Select Customer">
+    Select the customer for the invoice.
+  </Step>
+</Steps>
 
-- Product Name / Barcode / SKU search
-- Used to link advance with specific products or orders
-- Helps in order tracking and reporting
-
 ---
 
-#### C. Payment Section (Next Step)
+# Discount and VAT
 
-After clicking **Proceed to Payment**, user enters:
+You can add discount and VAT from the right side payment panel.
 
-- Advance Amount
-- Payment Method (Cash, Bank, Mobile, etc.)
-- Notes / Reference
+| Item | Meaning |
+|---|---|
+| Subtotal | Total before discount and VAT |
+| Discount | Amount reduced from invoice |
+| VAT | Tax added to invoice |
+| Grand Total | Final payable amount |
 
 ---
-
-### After Saving
 
-Once saved, the system will:
+## Discount Example
 
-- Store the advance payment record
-- Show it in Customer Advance Payment list
-- Make it available for invoice adjustment
-- Link it to customer ledger and reports
+| Field | Example |
+|---|---|
+| Subtotal | `1000` |
+| Discount | `100` |
+| Grand Total | `900` |
 
 ---
 
-### How It Is Used Later
+## VAT Example
 
-Advance payments can be:
+| Field | Example |
+|---|---|
+| Subtotal | `1000` |
+| VAT | `50` |
+| Grand Total | `1050` |
 
-- Adjusted during Sales Invoice creation
-- Deducted from final bill amount
-- Tracked in customer ledger history
-- Used for partial or full payment settlement
-
 ---
 
-### Business Rules
+# Payment Status
 
-- Advance payment is not considered revenue until adjusted in invoice
-- Must always be linked to a valid customer
-- Can optionally be linked to products for tracking
-- Can be partially or fully used in future invoices
-- Each record must have a unique reference number
+| Status | Meaning |
+|---|---|
+| No Order | No product selected |
+| Paid | Full payment received |
+| Partial | Partial payment received |
+| Due | Payment is still due |
+| Hold | Order saved for later |
+| Draft | Invoice saved but not completed |
 
 ---
-
-### Common Use Cases
 
-- Customer booking with advance payment
-- Pre-order confirmation
-- Bulk purchase partial payment
-- Delivery-based advance collection
-- Wholesale order confirmation
+# Hold Order
 
----
+Hold Order is used when the order is not complete yet.
 
-### Summary
+Use Hold when:
 
-Customer Advance Payment helps businesses securely record prepaid amounts and ensures smooth adjustment during final billing. It improves cash flow tracking, customer transparency, and accounting accuracy.
+- Customer wants to add more products later
+- Payment is not ready
+- Restaurant table order is still running
+- You want to pause the invoice
 
-## 💳 8. Customer Due Collection
+<Steps>
+  <Step title="Add Products">
+    Select products for the order.
+  </Step>
 
-Customer Due Collection is used to record payments received from customers against outstanding credit (due) balances.
+  <Step title="Click Hold">
+    Click **Hold**.
+  </Step>
 
-It ensures accurate tracking of receivables and helps maintain healthy cash flow and customer account management.
+  <Step title="Resume Later">
+    Open the held order later and complete payment.
+  </Step>
+</Steps>
 
 ---
 
-### Purpose
+# Draft Order
 
-This module is used for:
+Draft is used to save an invoice without final payment.
 
-- Collecting unpaid invoice amounts from customers
-- Managing credit sales and receivables
-- Recording partial or full payments
-- Maintaining accurate customer ledger history
-- Improving cash flow and financial tracking
-
----
+Use Draft when:
 
-### Collection Process
-
-1. Open Customer Due Collection
-2. Click **+ Add New Collection**
-3. Select Warehouse / Shop (required)
-4. Select Customer / Retailer (required)
-5. Select Sales Person (optional)
-6. System auto-loads unpaid invoices for the customer
-7. Enter Receipt No
-8. Select Payment Type (Cash, Bank, Mobile Banking, etc.)
-9. Select one or more unpaid invoices
-10. Enter payment amount (partial or full)
-11. Add optional notes
-12. Click **Save / Submit**
+- Invoice is not final
+- Customer has not confirmed the order
+- You need to review the invoice later
+- Sales entry is incomplete
 
 ---
 
-### Collection Form Structure
+# Clear Order
 
-#### A. Header Information
+Clear removes all selected products from the current order.
 
-- Warehouse / Shop (Required dropdown)
-- Customer / Retailer (Required searchable field)
-- Sales Person (Optional dropdown)
-- Current Date (Auto-filled, editable)
-- Receipt No (Required manual entry)
-- Payment Type (Required)
-- Note (Optional)
+<Warning>
+Use Clear carefully. It removes the current cart items from the screen.
+</Warning>
 
 ---
 
-#### B. Due Payment Section
+# Quick Decision Guide
 
-After selecting a customer, the system loads:
+| Business Need | Use |
+|---|---|
+| Normal shop sale | Regular POS |
+| Pharmacy sale | Regular POS |
+| Wholesale sale | Regular POS |
+| Restaurant table order | Restaurant POS |
+| Kitchen order print | Kitchen Print |
+| Customer bill before payment | Customer Print |
+| Final paid invoice | Final Bill / Pay |
+| Customer pays full amount | Full Payment |
+| Customer pays part amount | Partial Payment |
+| Multiple payment methods | Add Another Payment |
+| Running order | Hold |
+| Unfinished invoice | Draft |
+| Product return | Sales Return List or Direct Product Return |
+| Customer paid before invoice | Customer Advance Payment |
+| Customer pays old due | Customer Due Collection |
 
-- All unpaid invoices
-- Outstanding balances
-- Invoice-wise due amounts
-
-User can:
-
-- Select one or more invoices
-- Enter amount being collected
-- Make partial or full payments
-- Adjust multiple invoices in one collection
-
 ---
 
-### After Saving
+# Important Notes
 
-Once the collection is saved, the system will:
+<Warning>
+Always check product, quantity, price, discount, VAT, customer, and payment amount before final payment.
+</Warning>
 
-- Reduce the customer’s due balance
-- Update invoice payment status
-- Create a collection record
-- Update customer ledger automatically
-- Reflect changes in accounting reports
+<Info>
+Your visible buttons and options may depend on your role, permission, and business type.
+</Info>
 
 ---
 
-### Payment Methods
+# Common Mistakes
 
-- Cash
-- Bank Transfer
-- Mobile Banking
+| Mistake | Problem |
+|---|---|
+| Wrong product selected | Invoice and stock become wrong |
+| Wrong quantity entered | Stock and bill become wrong |
+| Customer not selected | Customer due may not track properly |
+| Wrong discount | Sales amount becomes incorrect |
+| Wrong VAT | Tax amount becomes incorrect |
+| Wrong payment method | Payment report becomes incorrect |
+| Wrong paid amount | Customer due becomes incorrect |
+| Kitchen print used as final bill | Customer may receive wrong copy |
+| Final bill before checking | Correction becomes difficult |
 
 ---
 
-### Business Rules
+# Best Practice
 
-- Each collection must be linked to a customer
-- Supports partial and full payments
-- Due balance decreases automatically after collection
-- All entries are recorded in customer ledger
-- Receipt number must be unique
+- Search product carefully
+- Check stock before selling
+- Select customer for due or credit sales
+- Use walk-in/default customer only for cash sales if allowed
+- Use kitchen print only for restaurant preparation
+- Use customer print for customer review
+- Use final bill only after payment confirmation
+- Use hold order for running restaurant orders
+- Use payment reference for bank or mobile banking
+- Check daily sales report after closing sales
 
 ---
 
-### Common Use Cases
-
-- Collecting overdue payments from customers
-- Settling partial invoice payments
-- Closing credit sales
-- Monthly or periodic collections
-- Business-to-business credit recovery
-
----
+# Next Step
 
-### Summary
+After creating sales invoices, you can view previous invoices from All Sales Records.
 
-Customer Due Collection ensures proper tracking and recovery of outstanding customer payments. It improves financial control, maintains accurate receivable records, and supports efficient cash flow management.
+<Card title="Next: All Sales Records" href="/docs/user-guide/allSalesRecords" icon="arrow-right">
+  Learn how to view and manage previous sales invoices.
+</Card>

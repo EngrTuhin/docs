@@ -1,0 +1,389 @@
+---
+title: Customer Due Collection
+description: Learn how to collect previous due payments from customers
+---
+
+# When Should You Use Customer Due Collection?
+
+Use this page when:
+
+- Customer pays old due
+- Customer pays partial due
+- Customer pays full due
+- You want to record customer collection
+- You want customer ledger and due report to stay correct
+
+---
+
+# Customer Due Collection List
+
+The Customer Due Collection page shows all saved due collection records.
+
+You can see:
+
+| Column | Meaning |
+|---|---|
+| Date | Collection date |
+| Receipt No | Receipt number |
+| Customer | Customer name |
+| Warehouse | Warehouse or shop name |
+| Sales Person | Sales person name, if selected |
+| Account | Payment account, such as Cash, Bank, or Mobile Bank |
+| Amount | Collected amount |
+| Action | View, edit, print, or manage collection |
+
+---
+
+# Quick Overview
+
+At the top of the page, you may see collection summary.
+
+| Summary Box | Meaning |
+|---|---|
+| Today Collections | Total number of collections today |
+| Today Amount | Total collected amount today |
+| Today Customers | Number of customers who paid today |
+| Today Avg Ticket | Average collection amount today |
+| Cash Today | Cash collection today |
+| Bank / Mobile Today | Bank or mobile banking collection today |
+| Filtered Collections | Number of collections after filter |
+| Filtered Amount | Total amount after filter |
+| Filtered Avg Ticket | Average amount after filter |
+| Today In View | Today’s visible collection count |
+| Today In View Amt | Today’s visible collection amount |
+| Today In View Avg | Today’s visible average amount |
+
+<Info>
+This overview helps you quickly check collection performance.
+</Info>
+
+---
+
+# Add Customer Due Collection
+
+<Steps>
+  <Step title="Open Customer Due Collection">
+    From the left sidebar, go to **Sales Management** and click **Customer Due Collection**.
+  </Step>
+
+  <Step title="Click Add">
+    Click the green **Add** button.
+  </Step>
+
+  <Step title="Select Warehouse / Shop">
+    Select the warehouse or shop where the payment is received.
+  </Step>
+
+  <Step title="Search Customer or Retailer">
+    Select the customer who is paying due.
+  </Step>
+
+  <Step title="Select Sales Person">
+    Select sales person if needed.
+  </Step>
+
+  <Step title="Select Current Date">
+    Select the payment date.
+  </Step>
+
+  <Step title="Enter Receipt No">
+    Enter receipt number if you use manual receipt tracking.
+
+    If not needed, you may keep it empty if the system allows.
+  </Step>
+
+  <Step title="Add Note">
+    Add a short note if needed.
+
+    Example: `Partial due payment received`
+  </Step>
+
+  <Step title="Select Payment Type">
+    Select payment type.
+
+    Example: `Cash`
+  </Step>
+
+  <Step title="Enter Due Payment">
+    Enter the amount received from the customer.
+  </Step>
+
+  <Step title="Save Collection">
+    Save the due collection record.
+  </Step>
+</Steps>
+
+---
+
+# Customer Due Collection Form Fields
+
+| Field | Use | Required? |
+|---|---|---|
+| Warehouse / Shop | Location where payment is received | Required |
+| Search Customer & Retailer | Customer who is paying due | Required |
+| Sales Person | Sales person connected to this collection | Optional |
+| Current Date | Payment collection date | Required |
+| Receipt No | Receipt number for tracking | Optional |
+| Note | Short note about payment | Optional |
+| Payment Type | Cash, Bank, or Mobile Bank | Required |
+| Due Payment | Collected due amount | Required |
+
+---
+
+# Payment Type
+
+Select how the customer is paying.
+
+| Payment Type | Use |
+|---|---|
+| Cash | Payment received by cash |
+| Bank | Payment received through bank |
+| Mobile Bank | Payment received through mobile banking |
+
+<Info>
+Choose the correct payment type so cash, bank, and mobile banking reports stay correct.
+</Info>
+
+---
+
+# Due Payment Section
+
+After selecting a customer, the system may show due payment information.
+
+The due payment section may include:
+
+- Customer due amount
+- Payment amount
+- Selected invoice due
+- Total due
+- Collection amount
+
+<Info>
+Enter only the amount the customer is paying now.
+</Info>
+
+---
+
+# Full Due Collection Example
+
+Use this when the customer pays the full due amount.
+
+| Field | Example |
+|---|---|
+| Customer | `Rahim Store` |
+| Previous Due | `5000` |
+| Payment Type | `Cash` |
+| Amount Collected | `5000` |
+| Remaining Due | `0` |
+
+---
+
+# Partial Due Collection Example
+
+Use this when the customer pays part of the due amount.
+
+| Field | Example |
+|---|---|
+| Customer | `Rahim Store` |
+| Previous Due | `5000` |
+| Payment Type | `Cash` |
+| Amount Collected | `2000` |
+| Remaining Due | `3000` |
+
+<Info>
+If the customer pays partial due, the remaining balance will stay as customer due.
+</Info>
+
+---
+
+# Receipt No
+
+Receipt No is used to track payment records.
+
+Use Receipt No when:
+
+- You have a manual money receipt
+- Customer wants receipt tracking
+- Accounts team needs reference
+- You want to match collection with another document
+
+Example:
+
+| Field | Example |
+|---|---|
+| Receipt No | `MR-1001` |
+| Receipt No | `125021` |
+| Receipt No | `CASH-2026-001` |
+
+If you do not use receipt numbers, keep it empty if the system allows.
+
+---
+
+# Note Field
+
+Use Note to save extra information about the collection.
+
+Example notes:
+
+- `Full due received`
+- `Partial due received`
+- `Paid by cash`
+- `Paid by bKash`
+- `Bank transfer received`
+- `Customer will pay remaining later`
+
+---
+
+# Search Customer
+
+Use the customer search field to find the customer.
+
+You can search by:
+
+- Customer name
+- Customer code
+- Phone number
+- Retailer name
+
+<Warning>
+Select the correct customer before saving payment. Wrong customer selection will make due report incorrect.
+</Warning>
+
+---
+
+# Search and Filter Collections
+
+Use the search box to find collection records.
+
+You can search by:
+
+- Customer name
+- Receipt number
+- Date
+- Amount
+- Payment type, if supported
+
+Use **Filters** to find records by:
+
+- Date range
+- Customer
+- Warehouse
+- Sales person
+- Payment type
+
+---
+
+# Analytics
+
+Click **Analytics** to view collection analysis if available.
+
+Analytics may help you check:
+
+- Total collection
+- Cash collection
+- Bank collection
+- Mobile banking collection
+- Customer-wise collection
+- Date-wise collection
+
+---
+
+# Action Menu
+
+Each collection record has an **Action** menu.
+
+Common actions may include:
+
+| Action | Use |
+|---|---|
+| View | See collection details |
+| Print | Print receipt copy |
+| Edit | Edit collection if permission allows |
+| Delete | Delete collection if permission allows |
+
+<Warning>
+Edit or delete due collection carefully. It may affect customer due, ledger, cash/bank balance, and reports.
+</Warning>
+
+---
+
+# How Due Collection Affects the System
+
+Customer Due Collection may affect these areas:
+
+| Area | Effect |
+|---|---|
+| Customer Due | Customer due balance decreases |
+| Customer Ledger | Collection entry appears in ledger |
+| Cash / Bank / Mobile | Selected payment account balance increases |
+| Reports | Collection appears in collection reports |
+| Sales Due | Related customer due is reduced |
+
+---
+
+# Customer Due Collection vs Sales Payment
+
+| Option | When to Use |
+|---|---|
+| Sales Payment | When receiving payment during sales invoice |
+| Customer Due Collection | When collecting old or previous due after invoice is already saved |
+
+<Info>
+If the invoice is already saved with due, collect later payment from **Customer Due Collection**.
+</Info>
+
+---
+
+# Common Mistakes
+
+| Mistake | Problem |
+|---|---|
+| Wrong customer selected | Due reduces for the wrong customer |
+| Wrong amount entered | Customer balance becomes incorrect |
+| Wrong payment type selected | Cash/bank/mobile report becomes wrong |
+| Receipt number missing | Payment tracking becomes harder |
+| Wrong date selected | Daily collection report becomes wrong |
+| Duplicate collection entry | Customer due becomes incorrect |
+
+---
+
+# Best Practice
+
+- Select the correct customer
+- Check customer due before collection
+- Enter the exact received amount
+- Select the correct payment type
+- Add receipt number if available
+- Add note for partial payments
+- Print receipt if customer needs it
+- Check collection report at the end of the day
+- Do not edit or delete collection without permission
+
+---
+
+# Quick Guide
+
+| Need | Use |
+|---|---|
+| Customer pays old due | Customer Due Collection |
+| Customer pays full due | Enter full due amount |
+| Customer pays partial due | Enter received amount only |
+| Customer pays by cash | Select Cash |
+| Customer pays by bank | Select Bank |
+| Customer pays by mobile banking | Select Mobile Bank |
+| Need receipt tracking | Enter Receipt No |
+| Need collection history | Customer Due Collection list |
+
+---
+
+# Related Sales Pages
+
+<CardGroup cols={2}>
+  <Card title="Sales Invoice" href="/docs/user-guide/sales" icon="shopping-cart">
+    Create sales invoices and receive payment during sales.
+  </Card>
+
+  <Card title="All Sales Records" href="/docs/user-guide/allSalesRecords" icon="list">
+    View previous sales invoices and due amounts.
+  </Card>
+</CardGroup>

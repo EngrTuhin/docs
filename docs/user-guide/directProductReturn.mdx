@@ -1,0 +1,317 @@
+---
+title: Direct Product Return
+description: Learn how to return products directly without selecting a sales invoice
+---
+
+
+
+# When Should You Use Direct Product Return?
+
+Use Direct Product Return when:
+
+- Product needs to be returned directly
+- Old invoice is not available
+- Quick return is needed
+- Product correction is handled separately
+- Admin allows direct product return
+- Return does not need to be linked with a sales invoice
+
+<Warning>
+Direct Product Return can affect stock and reports. Use it carefully.
+</Warning>
+
+---
+
+# Direct Product Return List
+
+The Direct Product Return page shows all saved direct return records.
+
+You can see:
+
+| Column | Meaning |
+|---|---|
+| Reference | Direct return reference number |
+| Return Date | Date of return |
+| Customer | Customer name, if selected |
+| Sales Person | Sales person name, if selected |
+| Warehouse | Warehouse or shop where product returns |
+| Total | Total return amount |
+| Action | View, edit, print, or manage return |
+
+---
+
+# Overview
+
+At the top of the page, you may see a return summary.
+
+| Item | Meaning |
+|---|---|
+| Returns | Total direct return records |
+| Total Amount | Total direct return amount |
+| Today | Today’s direct return count and amount |
+
+---
+
+# Add Direct Product Return
+
+<Steps>
+  <Step title="Open Direct Product Return">
+    From the left sidebar, go to **Sales Management** and click **Direct Product Return**.
+  </Step>
+
+  <Step title="Click Add">
+    Click the green **Add** button.
+  </Step>
+
+  <Step title="Check Reference No">
+    The system may generate the reference number automatically.
+
+    Example: `DR-0054-2026`
+  </Step>
+
+  <Step title="Select Entry Date">
+    Select the return entry date.
+  </Step>
+
+  <Step title="Select Warehouse / Shop">
+    Select the warehouse or shop where the product will be returned.
+  </Step>
+
+  <Step title="Select Sales Person">
+    Select sales person if needed.
+  </Step>
+
+  <Step title="Select Customer">
+    Select customer if needed.
+  </Step>
+
+  <Step title="Select Discount Type">
+    Select discount type if discount is used.
+
+    Example: `Fixed`
+  </Step>
+
+  <Step title="Enter Discount">
+    Enter discount amount if needed.
+
+    If there is no discount, keep it `0`.
+  </Step>
+
+  <Step title="Search Product">
+    In **Product Name / Barcode / SKU**, search the product that will be returned.
+  </Step>
+
+  <Step title="Add Return Line Item">
+    Select the product and enter return quantity, price, and other required information.
+  </Step>
+
+  <Step title="Check Total">
+    Check total quantity, subtotal, discount, and grand total.
+  </Step>
+
+  <Step title="Save Return">
+    Save the direct product return.
+  </Step>
+</Steps>
+
+---
+
+# Direct Return Form Fields
+
+| Field | Use | Required? |
+|---|---|---|
+| Reference No | Direct return reference number | Auto / Required |
+| Entry Date | Return entry date | Required |
+| Warehouse / Shop | Stock location where product returns | Required |
+| Sales Person | Sales person connected to return | Optional |
+| Customer | Customer who returns product | Optional |
+| Discount Type | Type of discount | Optional |
+| Discount | Discount value | Optional |
+| Discount Amount | Calculated discount amount | Optional |
+| Product Name / Barcode / SKU | Search and select return product | Required |
+
+---
+
+# Return Line Items
+
+After selecting a product, it will appear in **Return line items**.
+
+Return line items may include:
+
+- Product name
+- Barcode or SKU
+- Return quantity
+- Unit price
+- Discount
+- Subtotal
+- Grand total
+
+<Info>
+Return line items show which products are being returned directly.
+</Info>
+
+---
+
+# Direct Return Example
+
+| Field | Example |
+|---|---|
+| Reference No | `DR-0054-2026` |
+| Entry Date | `13/06/2026` |
+| Warehouse / Shop | `Warehouse` |
+| Customer | `Walk-in Customer` |
+| Sales Person | `Md. Karim` |
+| Product | `Savlon Hand Wash 250ml` |
+| Quantity | `2` |
+| Discount Type | `Fixed` |
+| Discount | `0` |
+| Grand Total | `200` |
+
+---
+
+# How Direct Product Return Affects the System
+
+A direct product return may affect these areas:
+
+| Area | Effect |
+|---|---|
+| Stock | Returned product may be added back to selected warehouse/shop |
+| Inventory Report | Return movement may appear in inventory reports |
+| Sales Return Report | Return amount may appear in return records |
+| Customer Ledger | Customer balance may be affected if customer is selected |
+| Reports | Return total may affect sales or return analysis |
+
+<Warning>
+Because this return is not linked with a sales invoice, reports may show it differently from normal Sales Return.
+</Warning>
+
+---
+
+# Direct Product Return vs Sales Return List
+
+| Option | When to Use |
+|---|---|
+| Sales Return List | Use when product was returned from a specific sales invoice |
+| Direct Product Return | Use when invoice selection is not needed or invoice is not available |
+
+<Info>
+For most normal customer returns, use **Sales Return List**. Use **Direct Product Return** only when needed.
+</Info>
+
+---
+
+# Discount in Direct Return
+
+You can use discount if the return amount needs adjustment.
+
+Example:
+
+| Field | Example |
+|---|---|
+| Subtotal | `500` |
+| Discount Type | `Fixed` |
+| Discount | `50` |
+| Grand Total | `450` |
+
+If no discount is needed, keep discount as `0`.
+
+---
+
+# Search Product by Name, Barcode, or SKU
+
+Use the product search field to find the return product.
+
+You can search by:
+
+- Product name
+- Barcode
+- SKU
+
+<Info>
+Barcode or SKU search is useful when there are many products.
+</Info>
+
+---
+
+# Before Saving Direct Return
+
+Check these before saving:
+
+- Correct warehouse/shop is selected
+- Correct customer is selected if needed
+- Correct product is selected
+- Return quantity is correct
+- Price is correct
+- Discount is correct
+- Grand total is correct
+- Entry date is correct
+
+<Warning>
+Wrong direct return can make stock and reports incorrect.
+</Warning>
+
+---
+
+# Common Use Cases
+
+| Need | Use Direct Product Return? |
+|---|---|
+| Old invoice not available | Yes |
+| Quick product return needed | Yes |
+| Product sold from known invoice | Better to use Sales Return List |
+| Customer exchange handled manually | Yes, if admin allows |
+| Stock correction only | Use carefully |
+| Normal invoice-based customer return | No, use Sales Return List |
+
+---
+
+# Common Mistakes
+
+| Mistake | Problem |
+|---|---|
+| Using direct return when invoice exists | Sales return report may not match invoice |
+| Wrong warehouse selected | Stock goes to wrong location |
+| Wrong product selected | Stock becomes incorrect |
+| Wrong quantity entered | Inventory report becomes incorrect |
+| Wrong discount entered | Grand total becomes wrong |
+| Customer not selected when needed | Customer record may not update properly |
+
+---
+
+# Best Practice
+
+- Use Sales Return List for invoice-based returns
+- Use Direct Product Return only when invoice selection is not needed
+- Always select the correct warehouse/shop
+- Search product carefully
+- Check quantity before saving
+- Keep discount `0` if no discount is needed
+- Review direct return records regularly
+- Do not edit or delete return records without permission
+
+---
+
+# Quick Guide
+
+| Need | Use |
+|---|---|
+| Return from old invoice | Sales Return List |
+| Return without invoice | Direct Product Return |
+| Find direct return history | Direct Product Return list |
+| Search product quickly | Product Name / Barcode / SKU |
+| Check return amount | Grand Total |
+| Check return summary | Overview section |
+
+---
+
+# Related Sales Pages
+
+<CardGroup cols={2}>
+  <Card title="Sales Return List" href="/docs/user-guide/salesReturn" icon="undo">
+    Return products from an existing sales invoice.
+  </Card>
+
+  <Card title="All Sales Records" href="/user-guide/allSalesRecords" icon="list">
+    View previous sales invoices.
+  </Card>
+</CardGroup>

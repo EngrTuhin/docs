@@ -1,0 +1,363 @@
+---
+title: Customers & Retailers Directory
+description: Learn how to add and manage customers and retailers
+---
+# Open Customers & Retailers Directory
+
+<Steps>
+  <Step title="Open Business Contacts">
+    From the left sidebar, go to **Business Contacts**.
+  </Step>
+
+  <Step title="Click Customers & Retailers Directory">
+    Click **Customers & Retailers Directory**.
+  </Step>
+
+  <Step title="View Customer List">
+    The system will show all saved customers and retailers.
+  </Step>
+</Steps>
+
+---
+
+# Customer List
+
+The customer list shows all saved customer and retailer records.
+
+| Column | Meaning |
+|---|---|
+| SL | Serial number |
+| Name | Customer or retailer name |
+| Email | Customer email address |
+| Number | Customer contact number |
+| Type | Customer type, such as Customer or Retailer |
+| Action | View, edit, delete, or manage customer |
+
+---
+
+# Search Customer
+
+Use the search box to find customers quickly.
+
+You can search by:
+
+- Customer name
+- Customer code
+- Phone number
+- Email
+- Retailer name
+
+<Info>
+Search is helpful when you have many customers in the system.
+</Info>
+
+---
+
+# Add Customer or Retailer
+
+<Steps>
+  <Step title="Click Add">
+    Click the green **Add** button.
+  </Step>
+
+  <Step title="Enter Name">
+    Type the customer or retailer name.
+
+    Example: `Rahim Store`
+  </Step>
+
+  <Step title="Enter Proprietor">
+    Type the owner name if needed.
+
+    Example: `Md. Rahim`
+  </Step>
+
+  <Step title="Check Code">
+    The system may generate the code automatically.
+
+    Example: `00076`
+  </Step>
+
+  <Step title="Enter Email">
+    Type the email address if available.
+  </Step>
+
+  <Step title="Enter Contact Number">
+    Type the customer phone number.
+  </Step>
+
+  <Step title="Enter NID">
+    Type NID number if needed.
+  </Step>
+
+  <Step title="Select Status">
+    Select `Active` if this customer will be used in sales and reports.
+  </Step>
+
+  <Step title="Select Invoice Status">
+    Select invoice status.
+
+    Example: `MRP`
+  </Step>
+
+  <Step title="Select User Type">
+    Select `Customer` or `Retailer`.
+  </Step>
+
+  <Step title="Enter Address">
+    Type the customer address if needed.
+  </Step>
+
+  <Step title="Add Contact Person If Needed">
+    Add contact person information if this customer has another contact person.
+  </Step>
+
+  <Step title="Save Customer">
+    Click **Save Product** to save the customer or retailer.
+  </Step>
+</Steps>
+
+<Warning>
+The button may show **Save Product**, but it will save the customer information.
+</Warning>
+
+---
+
+# Customer Form Fields
+
+| Field | Use | Required? |
+|---|---|---|
+| Name | Customer or retailer name | Required |
+| Proprietor | Owner name | Optional |
+| Code | Customer code | Auto / Required |
+| Email | Customer email | Optional |
+| Contact Number | Phone number | Required |
+| NID | National ID number | Optional |
+| Status | Active or inactive | Required |
+| Invoice Status | Invoice price type | Required |
+| User Type | Customer or Retailer | Required |
+| Address | Customer address | Optional |
+| Contact Persons | Extra contact persons | Optional |
+
+---
+
+# Customer Example
+
+| Field | Example |
+|---|---|
+| Name | `Rahim Store` |
+| Proprietor | `Md. Rahim` |
+| Code | `00076` |
+| Email | `rahim@example.com` |
+| Contact Number | `017XXXXXXXX` |
+| NID | `1234567890` |
+| Status | `Active` |
+| Invoice Status | `MRP` |
+| User Type | `Customer` |
+| Address | `Mirpur, Dhaka` |
+
+---
+
+# Customer Type
+
+Select the correct user type.
+
+| User Type | Meaning |
+|---|---|
+| Customer | Normal customer |
+| Retailer | Retail customer or shop-based buyer |
+
+<Warning>
+Select the correct user type. Wrong type may affect customer reports and filtering.
+</Warning>
+
+---
+
+# Invoice Status
+
+Invoice Status is used to control which price type or invoice type will apply for the customer.
+
+Example:
+
+| Invoice Status | Use |
+|---|---|
+| MRP | Customer invoice will use MRP price |
+| TP | Customer invoice may use trade price if configured |
+
+<Info>
+Your available invoice status options may depend on your business setup.
+</Info>
+
+---
+
+# Status
+
+Status controls whether the customer can be used in the system.
+
+| Status | Meaning |
+|---|---|
+| Active | Customer can be used in sales and reports |
+| Inactive | Customer may not appear in selection lists |
+
+<Info>
+Keep regular customers as `Active`.
+</Info>
+
+---
+
+# Add Contact Person
+
+Use Contact Persons when a customer or company has more than one contact person.
+
+Example:
+
+| Customer | Contact Person |
+|---|---|
+| ABC Company | Purchase Manager |
+| ABC Company | Accounts Officer |
+| Rahim Store | Shop Manager |
+
+---
+
+## Add Contact Person Steps
+
+<Steps>
+  <Step title="Click Add Contact Person">
+    In the customer form, click **Add Contact Person**.
+  </Step>
+
+  <Step title="Enter Contact Person Details">
+    Add name, phone number, email, or designation if available.
+  </Step>
+
+  <Step title="Save Customer">
+    Save the customer after adding contact person information.
+  </Step>
+</Steps>
+
+<Info>
+Contact person information is optional. Add it only when needed.
+</Info>
+
+---
+
+# Customer Previous Due
+
+If a customer already has previous due before starting this system, enter it as opening balance if your customer form has an opening balance field.
+
+Opening balance means the previous due before using this system.
+
+| Situation | What to Enter |
+|---|---|
+| Customer already owes you money | Enter the due amount |
+| Customer has no previous due | Enter `0` or keep empty |
+
+Example:
+
+| Field | Example |
+|---|---|
+| Customer Name | `Rahim Store` |
+| Opening Balance | `3000` |
+| Opening Date | `2026-01-01` |
+
+In this example, `3000` means **Rahim Store already owed 3,000 before you started using the system**.
+
+<Warning>
+Wrong opening balance will make customer due and ledger reports incorrect.
+</Warning>
+
+---
+
+# Action Menu
+
+Each customer row has an **Action** menu.
+
+Common actions may include:
+
+| Action | Use |
+|---|---|
+| View | See customer details |
+| Edit | Update customer information |
+| Delete | Delete customer if permission allows |
+| Ledger | View customer ledger if available |
+| Due | Check customer due if available |
+
+<Warning>
+Edit or delete customer records carefully. Customer information is connected with sales, due collection, payment, and reports.
+</Warning>
+
+---
+
+# Filter and Analytics
+
+Use **Filters** to find specific customers.
+
+You may filter by:
+
+- Customer type
+- Status
+- Date
+- Area
+- Sales person, if available
+
+Use **Analytics** to view customer analysis if available.
+
+Analytics may show:
+
+- Total customers
+- Active customers
+- Retailers
+- Customer due summary
+- Customer activity
+
+---
+
+# Common Use Cases
+
+| Need | What to Do |
+|---|---|
+| Add new buyer | Click Add and create customer |
+| Add shop buyer | Select User Type as Retailer |
+| Customer has multiple contact persons | Use Add Contact Person |
+| Customer has previous due | Add opening balance if available |
+| Find old customer | Use Search |
+| Update phone number | Use Action menu and edit |
+| Customer not showing in sales | Check Status is Active |
+
+---
+
+# Common Mistakes
+
+| Mistake | Problem |
+|---|---|
+| Duplicate customer added | Sales may be recorded under the wrong customer |
+| Wrong phone number | Communication becomes difficult |
+| Wrong user type | Customer or retailer report may be wrong |
+| Customer set as inactive | Customer may not appear in sales |
+| Wrong opening balance | Customer due report becomes incorrect |
+| Missing contact person | Company communication may be difficult |
+
+---
+
+# Best Practice
+
+- Use clear customer names
+- Avoid duplicate customer records
+- Add correct phone number
+- Keep active customers as `Active`
+- Select correct user type
+- Add address if delivery is needed
+- Add contact person for company customers
+- Enter opening balance only if previous due exists
+- Review customer list regularly
+
+---
+
+# Related Business Contact Pages
+
+<CardGroup cols={2}>
+
+  <Card title="Suppliers Directory" href="/docs/user-guide/business-contact/suppliersDirectory" icon="building">
+    Add and manage suppliers for purchase operations.
+  </Card>
+</CardGroup>

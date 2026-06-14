@@ -21,42 +21,28 @@
         "pages": [
             "docs/user-guide/dashboard",
           "docs/user-guide/productConfiguration",
-          "docs/user-guide/sales",
-          "docs/user-guide/businessContacts",
-          "docs/user-guide/purchase",
-          "docs/user-guide/inventory",
-          "docs/user-guide/CompanyPurchaseOrder",
-          "docs/user-guide/quotation",
           {
-            "group": "Finance",
+            "group": "Sales Management",
             "pages": [
-              "docs/user-guide/incomExpence",
-              "docs/user-guide/banking",
-              "docs/user-guide/loanSetup"
+              "docs/user-guide/sales",
+              "docs/user-guide/allSalesRecords",
+              "docs/user-guide/salesReturn",
+              "docs/user-guide/directProductReturn",
+              "docs/user-guide/customerDueCollection"
+
             ]
           },
-          "docs/user-guide/accounts",
-          "docs/user-guide/reports",
-          "docs/user-guide/settings",
-          "docs/user-guide/administration"
-        ]
-      },
-      {
-        "group": "Business Workflows",
-        "pages": [
-          "docs/workflows/sales-process",
-          "docs/workflows/purchase-process",
-          "docs/workflows/inventory-process"
-        ]
-      },
-      {
-        "group": "Support & Reference",
-        "pages": [
-          "docs/faq",
-          "docs/troubleshooting",
-          "docs/release-notes"
+          {
+            "group": "Business Contacts",
+            "pages": [
+              "docs/user-guide/business-contact/customersRetailers",
+              "docs/user-guide/business-contact/suppliersDirectory"
+            ]
+          }
+        
         ]
       }
+  
     ]
   }
 }

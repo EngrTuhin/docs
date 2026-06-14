@@ -1,0 +1,402 @@
+---
+title: Sales Return
+description: Learn how to return sold products from sales invoices
+---
+
+
+
+# When Should You Use Sales Return?
+
+Use Sales Return when:
+
+- Customer returns a sold product
+- Wrong product was sold
+- Product needs to be exchanged
+- Customer wants refund or due adjustment
+- Returned product should be added back to stock
+
+---
+
+# Sales Return List
+
+The **Sales Return List** page shows all saved sales return records.
+
+You can see:
+
+| Column | Meaning |
+|---|---|
+| Reference | Sales return reference number |
+| Return Date | Date of return |
+| Customer | Customer name |
+| Sales Person | Sales person name |
+| Invoice No | Original sales invoice number |
+| Warehouse | Warehouse or shop name |
+| Total | Total return amount |
+| Action | View, edit, print, or manage return |
+
+---
+
+# Overview
+
+At the top of the page, you may see return summary.
+
+| Item | Meaning |
+|---|---|
+| Returns | Total number of return records |
+| Total Amount | Total return amount |
+| Today | Today’s return count and amount |
+
+<Info>
+This overview helps you quickly check return activity.
+</Info>
+
+---
+
+# Add Sales Return
+
+To create a new sales return, follow these steps.
+
+<Steps>
+  <Step title="Open Sales Return List">
+    From the left sidebar, go to **Sales Management** and click **Sales Return List**.
+  </Step>
+
+  <Step title="Click Add">
+    Click the green **Add** button.
+  </Step>
+
+  <Step title="Check Reference No">
+    The system may generate the return reference automatically.
+
+    Example: `SR-0075-2026`
+  </Step>
+
+  <Step title="Select Return Date">
+    Select the return date.
+  </Step>
+
+  <Step title="Select Warehouse / Shop">
+    Select the warehouse or shop where the product will be returned.
+  </Step>
+
+  <Step title="Select Sales Person">
+    Select sales person if needed.
+  </Step>
+
+  <Step title="Select Customer">
+    Select the customer who is returning the product.
+  </Step>
+
+  <Step title="Select Sales Invoice No">
+    Select the original sales invoice number.
+  </Step>
+
+  <Step title="Select Sales Product">
+    Select the product line from the invoice.
+  </Step>
+
+  <Step title="Enter Discount on Return">
+    Enter return discount if needed.
+
+    If there is no discount, keep it `0`.
+  </Step>
+
+  <Step title="Check Return Line Items">
+    After selecting product, check the return line items.
+  </Step>
+
+  <Step title="Save Return">
+    Save the sales return.
+  </Step>
+</Steps>
+
+---
+
+# Sales Return Form Fields
+
+| Field | Use | Required? |
+|---|---|---|
+| Reference No | Return reference number | Auto / Required |
+| Return Date | Date of product return | Required |
+| Warehouse / Shop | Stock location where product returns | Required |
+| Sales Person | Sales person connected to the sale | Optional |
+| Customer | Customer who returns product | Required if customer-based |
+| Sales Invoice No | Original sales invoice | Required |
+| Sales Product | Product line from selected invoice | Required |
+| Invoice Discount Type | Discount type from invoice | Optional |
+| Invoice Discount | Invoice discount amount | Optional |
+| Discount on Return | Discount adjustment for return | Optional |
+
+---
+
+# Return Line Items
+
+After selecting the invoice and product, the product will appear in **Return line items**.
+
+Return line items may show:
+
+- Product name
+- Sold quantity
+- Return quantity
+- Unit price
+- Discount
+- Total amount
+
+<Info>
+Return line items show which products are being returned.
+</Info>
+
+---
+
+# Sales Return Example
+
+| Field | Example |
+|---|---|
+| Reference No | `SR-0075-2026` |
+| Return Date | `13/06/2026` |
+| Warehouse / Shop | `Warehouse` |
+| Customer | `Rahim Store` |
+| Sales Invoice No | `PIVO-11512-2026` |
+| Sales Product | `Savlon Hand Wash 250ml` |
+| Return Quantity | `2` |
+| Total Return Amount | `786` |
+
+---
+
+# Important Before Saving
+
+Before saving a sales return, check:
+
+- Correct invoice is selected
+- Correct customer is selected
+- Correct warehouse/shop is selected
+- Correct product is selected
+- Return quantity is correct
+- Return amount is correct
+- Discount on return is correct
+- Return date is correct
+
+<Warning>
+Wrong sales return can affect stock, customer due, sales report, and inventory report.
+</Warning>
+
+---
+
+# How Sales Return Affects the System
+
+A sales return may affect different parts of the system.
+
+| Area | Effect |
+|---|---|
+| Stock | Returned product may be added back to stock |
+| Sales Report | Return amount may reduce net sales |
+| Customer Due | Due may reduce if customer had unpaid balance |
+| Customer Ledger | Return entry may show in customer ledger |
+| Warehouse Stock | Returned stock may increase in selected warehouse |
+| Reports | Sales return report will show the return entry |
+
+<Info>
+The exact effect depends on your system settings.
+</Info>
+
+---
+
+# Return Quantity Rule
+
+Return quantity should not be more than the sold quantity.
+
+| Sold Quantity | Already Returned | Can Return Now |
+|---|---|---|
+| `10` | `0` | Up to `10` |
+| `10` | `3` | Up to `7` |
+| `5` | `5` | No more return allowed |
+
+<Warning>
+Do not return more than the customer purchased.
+</Warning>
+
+---
+
+# Refund or Due Adjustment
+
+Sales return can affect customer payment in different ways.
+
+| Situation | Result |
+|---|---|
+| Customer paid full invoice | You may refund the return amount |
+| Customer had due | Return amount may reduce customer due |
+| Customer wants exchange | Return amount may adjust with another product |
+| Product is damaged | Stock handling may depend on your process |
+
+---
+
+# Example: Customer Paid Full Amount
+
+| Field | Example |
+|---|---|
+| Invoice Total | `1000` |
+| Paid Amount | `1000` |
+| Return Amount | `200` |
+| Refund / Adjustment | `200` |
+
+---
+
+# Example: Customer Had Due
+
+| Field | Example |
+|---|---|
+| Invoice Total | `1000` |
+| Paid Amount | `600` |
+| Previous Due | `400` |
+| Return Amount | `200` |
+| New Due | `200` |
+
+<Info>
+If the customer has due, the return amount can reduce the due balance.
+</Info>
+
+---
+
+# Search Sales Return
+
+Use the search box to find return records quickly.
+
+You can search by:
+
+- Reference number
+- Invoice number
+- Customer name
+- Return date
+- Amount, if supported
+
+---
+
+# Filter Sales Return
+
+Use **Filters** to find specific return records.
+
+You may filter by:
+
+- Date range
+- Customer
+- Warehouse
+- Sales person
+- Invoice number
+
+<Info>
+Filter options may depend on your system setup and permission.
+</Info>
+
+---
+
+# Analytics
+
+Click **Analytics** to view return analysis if available.
+
+Analytics may help you check:
+
+- Total return amount
+- Return count
+- Customer-wise return
+- Product-wise return
+- Date-wise return
+
+---
+
+# Action Menu
+
+Each return record has an **Action** menu.
+
+Common actions may include:
+
+| Action | Use |
+|---|---|
+| View | See return details |
+| Print | Print return copy |
+| Edit | Edit return if permission allows |
+| Delete | Delete return if permission allows |
+
+<Warning>
+Edit or delete sales return carefully. It may affect stock and reports.
+</Warning>
+
+---
+
+# Sales Return vs Direct Product Return
+
+| Option | Best Use |
+|---|---|
+| Sales Return List | Return product from an existing sales invoice |
+| Direct Product Return | Return product directly without invoice selection |
+
+<Info>
+For normal customer returns, use **Sales Return List**.
+</Info>
+
+---
+
+# Common Return Reasons
+
+You can use return reasons like:
+
+- Wrong product sold
+- Customer changed product
+- Expired product
+- Extra quantity sold
+- Price correction
+- Exchange request
+
+---
+
+# Common Mistakes
+
+| Mistake | Problem |
+|---|---|
+| Wrong invoice selected | Return affects wrong sale |
+| Wrong customer selected | Customer ledger becomes incorrect |
+| Wrong warehouse selected | Stock goes to wrong location |
+| Wrong product selected | Stock and report become incorrect |
+| Wrong return quantity | Stock and return amount become incorrect |
+| Wrong discount on return | Grand total becomes incorrect |
+| Return without checking due | Customer balance may become wrong |
+
+---
+
+# Best Practice
+
+- Always select the correct invoice
+- Check customer name before saving
+- Select the correct warehouse/shop
+- Check product and quantity carefully
+- Add return only for sold products
+- Use Direct Product Return only when invoice-based return is not needed
+- Print return copy if customer needs it
+- Review return records regularly
+
+---
+
+# Quick Guide
+
+| Need | Use |
+|---|---|
+| Return product from invoice | Sales Return List |
+| Return without invoice | Direct Product Return |
+| Find old return | Search Sales Return List |
+| Check today’s return | Overview section |
+| Print return copy | Action menu |
+| Customer has due | Return amount may adjust due |
+| Product goes back to stock | Select correct warehouse/shop |
+
+---
+
+# Related Sales Pages
+
+<CardGroup cols={2}>
+  <Card title="All Sales Records" href="/docs/user-guide/allSalesRecords" icon="list">
+    View previous sales invoices before creating a return.
+  </Card>
+
+  <Card title="Direct Product Return" href="/docs/user-guide/directProductReturn" icon="undo">
+    Learn how to return products directly.
+  </Card>
+</CardGroup>
